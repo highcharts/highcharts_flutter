@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   series: [
                     HighchartsColumnSeries(
-                      options: HighchartsColumnSeriesOptions(color: "#0277B6"),
+                      options: HighchartsColumnSeriesOptions(color: '#0277B6'),
                       name: 'FII',
                       data: List<List<num>>.generate(
                         _dataPoints,
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     HighchartsColumnSeries(
-                      options: HighchartsColumnSeriesOptions(color: "#9D6807"),
+                      options: HighchartsColumnSeriesOptions(color: '#9D6807'),
                       name: 'DII',
                       data: List<List<num>>.generate(
                         _dataPoints,

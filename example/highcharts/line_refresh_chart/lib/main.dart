@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           load: HighchartsCallback((_) {
             _timer = Timer.periodic(
               const Duration(seconds: 3),
-              (final Timer t) => setState(() {
+              (Timer t) => setState(() {
                 if (_chart != null) {
                   _data.add([_data.length, _random.nextInt(40) + 20]);
                   _chart!.refresh();

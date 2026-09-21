@@ -17,7 +17,6 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_chart_zooming_reset_button_position_options.dart';
-import 'highcharts_chart_zooming_reset_button_theme_options.dart';
 
 /* *
  *
@@ -26,7 +25,6 @@ import 'highcharts_chart_zooming_reset_button_theme_options.dart';
  * */
 
 export 'highcharts_chart_zooming_reset_button_position_options.dart';
-export 'highcharts_chart_zooming_reset_button_theme_options.dart';
 
 /* *
  *
@@ -64,7 +62,7 @@ class HighchartsChartZoomingResetButtonOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.theme
 
-  HighchartsChartZoomingResetButtonThemeOptions? theme;
+  String? theme;
 
   /// The button that appears after a selection zoom, allowing the user to reset zoom.
   ///
@@ -83,7 +81,7 @@ class HighchartsChartZoomingResetButtonOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"relativeTo":', jsonEncode(relativeTo), ','], '');
     }
     if (theme != null) {
-      buffer.writeAll(['"theme":', theme?.toJSON(), ','], '');
+      buffer.writeAll(['"theme":', jsonEncode(theme), ','], '');
     }
   }
 }

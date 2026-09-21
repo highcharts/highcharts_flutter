@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_arc_diagram_series_data_accessibility_options.dart';
+import 'highcharts_arc_diagram_series_data_data_labels_options.dart';
 import 'highcharts_arc_diagram_series_data_events_options.dart';
 
 /* *
@@ -26,6 +27,7 @@ import 'highcharts_arc_diagram_series_data_events_options.dart';
  * */
 
 export 'highcharts_arc_diagram_series_data_accessibility_options.dart';
+export 'highcharts_arc_diagram_series_data_data_labels_options.dart';
 export 'highcharts_arc_diagram_series_data_events_options.dart';
 
 /* *
@@ -89,12 +91,9 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
 
   Map<String, dynamic>? custom;
 
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.data.description
+  /// Highcharts Options Widget.
 
-  String? description;
+  HighchartsArcDiagramSeriesDataDataLabelsOptions? dataLabels;
 
   /// The individual point events.
   ///
@@ -115,13 +114,22 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.data.labelrank
 
   double? labelrank;
+
+  /// The link weight, in pixels. If not set, width is calculated per link,
+  /// depending on the weight value.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.data.linkWeight
+
+  double? linkWeight;
 
   /// The name of the point as shown in the legend, tooltip, dataLabels, etc.
   ///
@@ -156,11 +164,12 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
       this.color,
       this.colorIndex,
       this.custom,
-      this.description,
+      this.dataLabels,
       this.events,
       this.from,
       this.id,
       this.labelrank,
+      this.linkWeight,
       this.name,
       this.selected,
       this.to,
@@ -189,8 +198,8 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
       }
       buffer.write('},');
     }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
     if (events != null) {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
@@ -203,6 +212,9 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (labelrank != null) {
       buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
+    if (linkWeight != null) {
+      buffer.writeAll(['"linkWeight":', linkWeight, ','], '');
     }
     if (name != null) {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');

@@ -41,6 +41,7 @@ import 'highcharts_cmo_series_options.dart';
 import 'highcharts_column_series_options.dart';
 import 'highcharts_column_pyramid_series_options.dart';
 import 'highcharts_column_range_series_options.dart';
+import 'highcharts_contour_series_options.dart';
 import 'highcharts_cylinder_series_options.dart';
 import 'highcharts_dema_series_options.dart';
 import 'highcharts_dependency_wheel_series_options.dart';
@@ -166,6 +167,7 @@ export 'highcharts_cmo_series_options.dart';
 export 'highcharts_column_series_options.dart';
 export 'highcharts_column_pyramid_series_options.dart';
 export 'highcharts_column_range_series_options.dart';
+export 'highcharts_contour_series_options.dart';
 export 'highcharts_cylinder_series_options.dart';
 export 'highcharts_dema_series_options.dart';
 export 'highcharts_dependency_wheel_series_options.dart';
@@ -388,7 +390,7 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
 
   HighchartsAreaSeriesOptions? area;
 
-  /// The area range series is a carteseian series with higher and lower values for
+  /// The area range series is a cartesian series with higher and lower values for
   /// each point along an X axis, where the area between the values is shaded.
   ///
   /// Configuration options for the series are given in three levels:
@@ -685,7 +687,7 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
 
   HighchartsCMFSeriesOptions? cmf;
 
-  /// Chande Momentum Oscilator (CMO) technical indicator. This series
+  /// Chande Momentum Oscillator (CMO) technical indicator. This series
   /// requires the `linkedTo` option to be set and should be loaded after
   /// the `stock/indicators/indicators.js` file.
   ///
@@ -758,6 +760,23 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/plotOptions.columnrange
 
   HighchartsColumnRangeSeriesOptions? columnrange;
+
+  /// A contour plot is a graphical representation of three-dimensional data
+  ///
+  /// Configuration options for the series are given in three levels:
+  /// 1. Options for all series in a chart are defined in the
+  ///    plotOptions.series object.
+  /// 2. Options for all `contour` series are defined in
+  ///    plotOptions.contour.
+  /// 3. Options for one single series are given in
+  ///    the series instance array.
+  ///
+  ///
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/plotOptions.contour
+
+  HighchartsContourSeriesOptions? contour;
 
   /// A cylinder graph is a variation of a 3d column graph. The cylinder graph
   /// features cylindrical points.
@@ -1324,7 +1343,7 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
 
   HighchartsLinearregressionslopeSeriesOptions? linearregressionslope;
 
-  /// The lollipop series is a carteseian series with a line anchored from
+  /// The lollipop series is a cartesian series with a line anchored from
   /// the x axis and a dot at the end to mark the value.
   /// Requires `highcharts-more.js`, `modules/dumbbell.js` and
   /// `modules/lollipop.js`.
@@ -1490,7 +1509,7 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
 
   HighchartsNATRSeriesOptions? natr;
 
-  /// A networkgraph is a type of relationship chart, where connnections
+  /// A networkgraph is a type of relationship chart, where connections
   /// (links) attracts nodes (points) and other nodes repulse each other.
   ///
   /// Configuration options for the series are given in three levels:
@@ -2169,8 +2188,6 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
   /// The best examples of the dataStructures, which best reflect this chart
   /// are e.g. genealogy tree or directory structure.
   ///
-  /// TODO change back the demo path
-  ///
   /// Configuration options for the series are given in three levels:
   /// 1. Options for all series in a chart are defined in the
   ///    plotOptions.series object.
@@ -2514,6 +2531,7 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       this.column,
       this.columnpyramid,
       this.columnrange,
+      this.contour,
       this.cylinder,
       this.dema,
       this.dependencywheel,
@@ -2690,6 +2708,9 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
     }
     if (columnrange != null) {
       buffer.writeAll(['"columnrange":', columnrange?.toJSON(), ','], '');
+    }
+    if (contour != null) {
+      buffer.writeAll(['"contour":', contour?.toJSON(), ','], '');
     }
     if (cylinder != null) {
       buffer.writeAll(['"cylinder":', cylinder?.toJSON(), ','], '');

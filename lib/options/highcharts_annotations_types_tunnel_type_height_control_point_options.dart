@@ -14,13 +14,17 @@
  *
  * */
 
+import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_annotations_control_point_style_options.dart';
 
 /* *
  *
  *  Exports
  *
  * */
+
+export 'highcharts_annotations_control_point_style_options.dart';
 
 /* *
  *
@@ -31,11 +35,53 @@ import 'highcharts_options_base.dart';
 /// Options for the control point which controls
 /// the annotation's height.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.heightControlPoint
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.heightControlPoint
 class HighchartsAnnotationsTypesTunnelTypeHeightControlPointOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
+  double? height;
+
+  /// Highcharts Options Widget.
+
+  HighchartsAnnotationsControlPointStyleOptions? style;
+
+  /// Highcharts Options Widget.
+
+  String? symbol;
+
+  /// Highcharts Options Widget.
+
+  bool? visible;
+
+  /// Highcharts Options Widget.
+
+  double? width;
+
   /// Options for the control point which controls the annotation's height.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.heightControlPoint
-  HighchartsAnnotationsTypesTunnelTypeHeightControlPointOptions();
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.heightControlPoint
+  HighchartsAnnotationsTypesTunnelTypeHeightControlPointOptions(
+      {this.height, this.style, this.symbol, this.visible, this.width});
+
+  @override
+  void toOptionsJSON(StringBuffer buffer) {
+    super.toOptionsJSON(buffer);
+
+    if (height != null) {
+      buffer.writeAll(['"height":', height, ','], '');
+    }
+    if (style != null) {
+      buffer.writeAll(['"style":', style?.toJSON(), ','], '');
+    }
+    if (symbol != null) {
+      buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
+    }
+    if (visible != null) {
+      buffer.writeAll(['"visible":', visible, ','], '');
+    }
+    if (width != null) {
+      buffer.writeAll(['"width":', width, ','], '');
+    }
+  }
 }

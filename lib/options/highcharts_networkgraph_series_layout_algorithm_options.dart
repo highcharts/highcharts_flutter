@@ -46,7 +46,7 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions
 
   String? approximation;
 
-  /// Attraction force applied on a node which is conected to another
+  /// Attraction force applied on a node which is connected to another
   /// node by a link. Passed are two arguments:
   /// - `d` - which is current distance between two nodes
   /// - `k` - which is desired distance between two nodes
@@ -157,7 +157,7 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions
   String? repulsiveForce;
 
   /// Barnes-Hut approximation only.
-  /// Deteremines when distance between cell and node is small enough
+  /// Determines when distance between cell and node is small enough
   /// to calculate forces. Value of `theta` is compared directly with
   /// quotient `s / d`, where `s` is the size of the cell, and `d` is
   /// distance between center of cell's mass and currently compared

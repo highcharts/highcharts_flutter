@@ -40,7 +40,7 @@ class HighchartsAnnotationsTypesMeasureTypeLabelOptions
   ///
   /// Defaults to true.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.label.enabled
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.label.enabled
 
   bool? enabled;
 
@@ -89,13 +89,13 @@ class HighchartsAnnotationsTypesMeasureTypeLabelOptions
   ///
   /// </table>
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.label.formatter
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.label.formatter
 
   dynamic formatter;
 
   /// CSS styles for the measure label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.label.style
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.label.style
 
   HighchartsAnnotationsTypesMeasureTypeLabelStyleOptions? style;
 

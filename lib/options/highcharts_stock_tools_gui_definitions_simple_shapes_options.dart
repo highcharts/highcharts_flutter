@@ -54,7 +54,7 @@ class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.simpleShapes.items
 
-  String? items;
+  List<String>? items;
 
   /// Highcharts Options Widget.
 
@@ -79,7 +79,11 @@ class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions
       buffer.writeAll(['"ellipse":', ellipse?.toJSON(), ','], '');
     }
     if (items != null) {
-      buffer.writeAll(['"items":', jsonEncode(items), ','], '');
+      buffer.write('"items":[');
+      for (var item in items!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (label != null) {
       buffer.writeAll(['"label":', label?.toJSON(), ','], '');

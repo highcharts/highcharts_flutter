@@ -46,8 +46,9 @@ class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
 
   String? borderColor;
 
-  /// The border radius of the pane background when the shape is `arc`. Can be
-  /// a number (pixels) or a percentage string.
+  /// The specific border radius of the pane background when the shape is
+  /// `arc`. Can be a number (pixels) or a percentage string. Defaults to the
+  /// value of `pane.borderRadius`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/pane.background.borderRadius
 
@@ -59,14 +60,14 @@ class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
 
   double? borderWidth;
 
-  /// The class name for this background.
+  /// An additional class name to apply to the pane background.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/pane.background.className
 
   String? className;
 
   /// The inner radius of the pane background. Can be either numeric
-  /// (pixels) or a percentage string.
+  /// (pixels) or a percentage string. Defaults to match the `pane.innerSize`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/pane.background.innerRadius
 

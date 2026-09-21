@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_geo_heatmap_series_data_events_options.dart';
 import 'highcharts_geo_heatmap_series_data_geometry_options.dart';
+import 'highcharts_geo_heatmap_series_data_states_options.dart';
 
 /* *
  *
@@ -27,6 +28,7 @@ import 'highcharts_geo_heatmap_series_data_geometry_options.dart';
 
 export 'highcharts_geo_heatmap_series_data_events_options.dart';
 export 'highcharts_geo_heatmap_series_data_geometry_options.dart';
+export 'highcharts_geo_heatmap_series_data_states_options.dart';
 
 /* *
  *
@@ -149,6 +151,10 @@ class HighchartsGeoHeatmapSeriesDataOptions extends HighchartsOptionsBase {
 
   String? path;
 
+  /// Highcharts Options Widget.
+
+  HighchartsGeoHeatmapSeriesDataStatesOptions? states;
+
   /// The value of the point, resulting in a color controlled by options
   /// as set in the colorAxis configuration.
   ///
@@ -171,6 +177,7 @@ class HighchartsGeoHeatmapSeriesDataOptions extends HighchartsOptionsBase {
       this.middleY,
       this.name,
       this.path,
+      this.states,
       this.value});
 
   @override
@@ -209,6 +216,9 @@ class HighchartsGeoHeatmapSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (path != null) {
       buffer.writeAll(['"path":', jsonEncode(path), ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (value != null) {
       buffer.writeAll(['"value":', value, ','], '');

@@ -35,10 +35,10 @@ import '../../utilities/highcharts_callback.dart';
 ///
 /// API Docs: https://api.highcharts.com/highcharts/legend.events
 class HighchartsLegendEventsOptions extends HighchartsOptionsBase {
-  /// Fires when the legend item belonging to the series is clicked. One
-  /// parameter, `event`, is passed to the function. The default action
-  /// is to toggle the visibility of the series, point or data class. This
-  /// can be prevented by returning `false` or calling
+  /// Fires when the legend item belonging to the series is clicked.
+  /// One parameter, `event`, is passed to the function. The default
+  /// action is to toggle the visibility of the series, point or data
+  /// class. This can be prevented by returning `false` or calling
   /// `event.preventDefault()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/legend.events.itemClick

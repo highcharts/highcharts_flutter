@@ -20,6 +20,7 @@ import 'highcharts_exporting_accessibility_options.dart';
 import 'highcharts_exporting_buttons_options.dart';
 import 'highcharts_exporting_csv_options.dart';
 import '../../utilities/highcharts_callback.dart';
+import 'highcharts_exporting_menu_item_definitions_options.dart';
 import 'highcharts_exporting_pdf_font_options.dart';
 
 /* *
@@ -31,6 +32,7 @@ import 'highcharts_exporting_pdf_font_options.dart';
 export 'highcharts_exporting_accessibility_options.dart';
 export 'highcharts_exporting_buttons_options.dart';
 export 'highcharts_exporting_csv_options.dart';
+export 'highcharts_exporting_menu_item_definitions_options.dart';
 export 'highcharts_exporting_pdf_font_options.dart';
 
 /* *
@@ -52,16 +54,9 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
 
   HighchartsExportingAccessibilityOptions? accessibility;
 
-  /// Experimental setting to allow HTML inside the chart (added through
-  /// the `useHTML` options), directly in the exported image. This allows
-  /// you to preserve complicated HTML structures like tables or bi-directional
-  /// text in exported charts.
-  ///
-  /// Disclaimer: The HTML is rendered in a `foreignObject` tag in the
-  /// generated SVG. The official export server is based on PhantomJS,
-  /// which supports this, but other SVG clients, like Batik, does not
-  /// support it. This also applies to downloaded SVG that you want to
-  /// open in a desktop client.
+  /// Allow HTML inside the chart (added through the `useHTML` options),
+  /// directly in the exported image. This allows you to preserve complicated
+  /// HTML structures like tables or bi-directional text in exported charts.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.allowHTML
 
@@ -102,7 +97,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
 
   dynamic chartOptions;
 
-  /// Options for exporting data to CSV or ExCel, or displaying the data
+  /// Options for exporting data to CSV or Excel, or displaying the data
   /// in a HTML table or a JavaScript structure.
   ///
   /// This module adds data export options to the export menu and provides
@@ -130,6 +125,13 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   /// exception is thrown instead. Receives two parameters, the exporting
   /// options, and the error from the module.
   ///
+  /// Since v13, PDF client-side export dependencies are opt-in. If `jsPDF` and
+  /// `svg2pdf` are not present on `window` and `exporting.libURL` is not
+  /// defined, a console warning is emitted on chart load. When fallback is
+  /// disabled and no `exporting.error` handler is defined, the thrown error
+  /// will use the underlying error message when available (for example,
+  /// missing `jsPDF`/`svg2pdf`) instead of always throwing error `#28`.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.error
 
   HighchartsCallback? error;
@@ -143,6 +145,13 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   /// It is recommended to define the exporting.error
   /// handler if disabling fallback, in order to notify users in case export
   /// fails.
+  ///
+  /// Since v13, PDF client-side export dependencies are not auto-loaded unless
+  /// `exporting.libURL` is defined (or the scripts are already present on
+  /// the page). If dependencies are missing and no `exporting.libURL` is
+  /// configured, a console warning is emitted on chart load. Disabling
+  /// fallback without defining `exporting.error` will throw the underlying
+  /// error message when available.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.fallbackToExportServer
 
@@ -185,6 +194,14 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   /// svg2pdf.js, required for client
   /// side export in certain browsers.
   ///
+  /// Note: Highcharts cannot take responsibility for the security of any
+  /// external libraries (including optional dependencies)
+  /// loaded through `exporting.libURL`. These libraries are not licensed or
+  /// warrantied under the Highcharts license.
+  /// Since v13, this option has no default and must be configured explicitly.
+  /// To load dependencies from the Highcharts CDN, set it to
+  /// `https://code.highcharts.com/{version}/lib/`.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.libURL
 
   String? libURL;
@@ -220,7 +237,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.menuItemDefinitions
 
-  Map<String, Map<String, dynamic>>? menuItemDefinitions;
+  HighchartsExportingMenuItemDefinitionsOptions? menuItemDefinitions;
 
   /// Settings for a custom font for the exported PDF, when using the
   /// `offline-exporting` module. This is used for languages containing
@@ -258,10 +275,11 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
 
   double? scale;
 
-  /// Display a message when export is in progress.
-  /// Uses Chart.setLoading()
+  /// Display a message when export is in progress. Uses
+  /// Chart.showLoading().
   ///
-  /// The message can be altered by changing [](#lang.exporting.exportInProgress)
+  /// The message can be altered by changing
+  /// lang.exportInProgress.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.showExportInProgress
 
@@ -304,7 +322,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   String? type;
 
   /// The URL for the server module converting the SVG string to an image
-  /// format. By default this points to Highchart's free web service.
+  /// format. By default this points to Highcharts free web service.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.url
 
@@ -422,11 +440,8 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"local":', local, ','], '');
     }
     if (menuItemDefinitions != null) {
-      buffer.write('"menuItemDefinitions":{');
-      for (var item in menuItemDefinitions!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(
+          ['"menuItemDefinitions":', menuItemDefinitions?.toJSON(), ','], '');
     }
     if (pdfFont != null) {
       buffer.writeAll(['"pdfFont":', pdfFont?.toJSON(), ','], '');

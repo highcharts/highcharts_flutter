@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import 'highcharts_tooltip_header_options.dart';
 import '../../utilities/highcharts_callback.dart';
 import 'highcharts_tooltip_position_options.dart';
 
@@ -27,6 +28,7 @@ import 'highcharts_tooltip_position_options.dart';
  * */
 
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
+export 'highcharts_tooltip_header_options.dart';
 export 'highcharts_tooltip_position_options.dart';
 
 /* *
@@ -101,6 +103,14 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
 
   String? format;
 
+  /// Options for the tooltip header when tooltip.split
+  /// is enabled. The header is the box containing the X value in a split
+  /// tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.header
+
+  HighchartsTooltipHeaderOptions? header;
+
   /// The HTML of the tooltip header line. The context is the
   /// Point class.
   /// Variables are enclosed in curly brackets. Examples of common
@@ -109,23 +119,33 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
   /// contains the category name, x value or datetime string depending on
   /// the type of axis. For datetime axes, the `point.key` date format can
   /// be set using `tooltip.xDateFormat`.
+  /// In v12+, locale-aware date names follow the browser's casing and can
+  /// be lower-case, so use the `ucfirst` helper (for example
+  /// `{ucfirst point.key}`) if you want a capitalized header.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.headerFormat
 
   String? headerFormat;
 
-  /// The HTML of the point's line in the tooltip. Variables are
-  /// enclosed by curly brackets. Available variables are
-  /// `point.id`,  `point.fromNode.id`, `point.toNode.id`,
-  /// `series.name`, `series.color` and other properties on the
-  /// same form. Furthermore, This can also be overridden for each
-  /// series, which makes it a good hook for displaying units. In
-  /// styled mode, the dot is colored by a class name rather than
+  /// The HTML of the point's line in the tooltip. Variables are enclosed
+  /// by curly brackets. Available variables are `point.id`,
+  /// `point.fromNode.id`, `point.toNode.id`, `series.name`, `series.color`
+  /// and other properties on the same form. Furthermore, This can also be
+  /// overridden for each series, which makes it a good hook for displaying
+  /// units. In styled mode, the dot is colored by a class name rather than
   /// the point color.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.linkFormat
 
   String? linkFormat;
+
+  /// A callback function for formatting the HTML output for a
+  /// single link in the tooltip. Like the `linkFormat` string,
+  /// but with more flexibility.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.linkFormatter
+
+  HighchartsCallback? linkFormatter;
 
   /// The HTML of the null point's line in the tooltip. Works analogously
   /// to pointFormat.
@@ -136,7 +156,8 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
 
   /// Callback function to format the text of the tooltip for
   /// visible null points.
-  /// Works analogously to formatter.
+  /// Works analogously to formatter, including the
+  /// `ctx` callback argument added in v12.5.0.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.nullFormatter
 
@@ -148,7 +169,9 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
 
   /// A callback function for formatting the HTML output for a single point
   /// in the tooltip. Like the `pointFormat` string, but with more
-  /// flexibility.
+  /// flexibility. Since v12.6.0, the callback also receives `ctx` as the
+  /// first argument, so that arrow functions can access the same context
+  /// as regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.pointFormatter
 
@@ -160,6 +183,13 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.position
 
   HighchartsTooltipPositionOptions? position;
+
+  /// The number of milliseconds to wait until the tooltip is shown when
+  /// mouse over a point. Works on initial hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.tooltip.showDelay
+
+  double? showDelay;
 
   /// How many decimals to show in each series' y value. This is
   /// overridable in each series' tooltip options object. The default is to
@@ -199,13 +229,16 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
       this.followTouchMove,
       this.footerFormat,
       this.format,
+      this.header,
       this.headerFormat,
       this.linkFormat,
+      this.linkFormatter,
       this.nullFormat,
       this.nullFormatter,
       this.pointFormat,
       this.pointFormatter,
       this.position,
+      this.showDelay,
       this.valueDecimals,
       this.valuePrefix,
       this.valueSuffix,
@@ -234,11 +267,17 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
     if (format != null) {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
+    if (header != null) {
+      buffer.writeAll(['"header":', header?.toJSON(), ','], '');
+    }
     if (headerFormat != null) {
       buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], '');
     }
     if (linkFormat != null) {
       buffer.writeAll(['"linkFormat":', jsonEncode(linkFormat), ','], '');
+    }
+    if (linkFormatter != null) {
+      buffer.writeAll(['"linkFormatter":', linkFormatter?.toJSON(), ','], '');
     }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
@@ -254,6 +293,9 @@ class HighchartsTreegraphSeriesTooltipOptions extends HighchartsOptionsBase {
     }
     if (position != null) {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');
+    }
+    if (showDelay != null) {
+      buffer.writeAll(['"showDelay":', showDelay, ','], '');
     }
     if (valueDecimals != null) {
       buffer.writeAll(['"valueDecimals":', valueDecimals, ','], '');

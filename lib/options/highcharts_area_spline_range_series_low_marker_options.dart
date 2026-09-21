@@ -35,7 +35,7 @@ export 'highcharts_area_spline_range_series_low_marker_symbol_options.dart';
  * */
 
 /// Options for the lower markers of the arearange-like series. When `lowMarker`
-/// is not defined, options inherit form the marker.
+/// is not defined, options inherit from the marker.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.lowMarker
 class HighchartsAreaSplineRangeSeriesLowMarkerOptions
@@ -109,7 +109,7 @@ class HighchartsAreaSplineRangeSeriesLowMarkerOptions
 
   double? width;
 
-  /// Options for the lower markers of the arearange-like series. When `lowMarker` is not defined, options inherit form the marker.
+  /// Options for the lower markers of the arearange-like series. When `lowMarker` is not defined, options inherit from the marker.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.lowMarker
   HighchartsAreaSplineRangeSeriesLowMarkerOptions(

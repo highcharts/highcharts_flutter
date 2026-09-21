@@ -16,12 +16,15 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_series_marker_states_hover_animation_options.dart';
 
 /* *
  *
  *  Exports
  *
  * */
+
+export 'highcharts_series_marker_states_hover_animation_options.dart';
 
 /* *
  *
@@ -67,6 +70,25 @@ class HighchartsSeriesMarkerStatesSelectOptions extends HighchartsOptionsBase {
 
   double? radius;
 
+  /// Animation when hovering over the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.select.animation
+
+  HighchartsSeriesMarkerStatesHoverAnimationOptions? animation;
+
+  /// The additional line width for a hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.select.lineWidthPlus
+
+  double? lineWidthPlus;
+
+  /// The number of pixels to increase the radius of the
+  /// hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.select.radiusPlus
+
+  double? radiusPlus;
+
   /// The appearance of the point marker when selected. In order to allow a point to be selected, set the `series.allowPointSelect` option to true.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.select
@@ -75,7 +97,10 @@ class HighchartsSeriesMarkerStatesSelectOptions extends HighchartsOptionsBase {
       this.fillColor,
       this.lineColor,
       this.lineWidth,
-      this.radius});
+      this.radius,
+      this.animation,
+      this.lineWidthPlus,
+      this.radiusPlus});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -95,6 +120,15 @@ class HighchartsSeriesMarkerStatesSelectOptions extends HighchartsOptionsBase {
     }
     if (radius != null) {
       buffer.writeAll(['"radius":', radius, ','], '');
+    }
+    if (animation != null) {
+      buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
+    }
+    if (lineWidthPlus != null) {
+      buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], '');
+    }
+    if (radiusPlus != null) {
+      buffer.writeAll(['"radiusPlus":', radiusPlus, ','], '');
     }
   }
 }

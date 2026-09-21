@@ -32,7 +32,7 @@ export 'highcharts_treegraph_series_collapse_button_style_options.dart';
  *
  * */
 
-/// Options applied to collapse Button. The collape button is the
+/// Options applied to collapse Button. The collapse button is the
 /// small button which indicates, that the node is collapsable.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton
@@ -97,7 +97,7 @@ class HighchartsTreegraphSeriesCollapseButtonOptions
 
   double? y;
 
-  /// Options applied to collapse Button. The collape button is the small button which indicates, that the node is collapsable.
+  /// Options applied to collapse Button. The collapse button is the small button which indicates, that the node is collapsable.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton
   HighchartsTreegraphSeriesCollapseButtonOptions(

@@ -134,7 +134,7 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
   double? borderWidth;
 
   /// The center of the wheel relative to the plot area. Can be
-  /// percentages or pixel values. The default behaviour is to
+  /// percentages or pixel values. The default behavior is to
   /// center the wheel inside the plot area.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.center
@@ -203,7 +203,7 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.colors
 
-  List<dynamic>? colors;
+  List<String>? colors;
 
   /// You can set the cursor to "pointer" if you have click events attached
   /// to the series, to signal to the user that the points and lines can
@@ -248,6 +248,55 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsDependencyWheelSeriesDataLabelsOptions? dataLabels;
 
+  /// The mapping between the data table and the series data points. This is
+  /// used in conjunction with the `dataTable` option (on chart
+  /// or series level) to map columns from the
+  /// data table to the properties of the data points. The keys of the
+  /// `dataMapping` object correspond to the properties of the data points
+  /// (e.g. `x`, `y`, `name`), and the values are objects that specify which
+  /// column from which data table to use for that property.
+  ///
+  /// The keys can also be nested paths, for example `dataLabel.format`, to map
+  /// to nested properties of the data points.
+  ///
+  /// The values can also be strings, in which case they are interpreted as
+  /// column id's from the first data table.
+  ///
+  /// A typical use case is that multiple series share a common column, like
+  /// `name` or `x`. In this case, to avoid repetition, the common column can
+  /// be applied in `plotOptions.series.dataMapping` and the individual series
+  /// can specify only the columns that are unique to them.
+  ///
+  /// The series name defaults to the column ID of the main data column in the
+  /// mapping. The main data column is typically the `y` data for cartesian
+  /// series, or `value` for map series. For example, if the mapping is
+  /// `{ y: 'Cost' }`, the series name will be `Cost`.
+  ///
+  ///
+  /// If the columns of the DataTable have keys matching the series keys, the
+  /// data mapping is not necessary. For example, this DataTable will connect
+  /// directly to the series' `x` and `y` keys:
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataMapping
+
+  Map<String, dynamic>? dataMapping;
+
+  /// Options for a specific series-level data table or an array of data
+  /// tables. The `dataTable` option can be either a configuration object or an
+  /// instance of the `DataTable` class. If a `DataTable` instance is passed,
+  /// it will be used directly. If a configuration object or an array is
+  /// passed, a new `DataTable` instance will be created based on the provided
+  /// configuration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataTable
+
+  List<dynamic>? dataTable;
+
+  /// Deprecated. Use
+  /// plotOptions.series.accessibility.description
+  /// instead.
+  ///
   /// A description of the series to add to the screen reader information
   /// about the series.
   ///
@@ -336,8 +385,8 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
 
   double? legendIndex;
 
-  /// What type of legend symbol to render for this series. Can be one of
-  /// `areaMarker`, `lineMarker` or `rectangle`.
+  /// What type of legend symbol to render for this series. Can be one
+  /// of `areaMarker`, `lineMarker` or `rectangle`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.legendSymbol
 
@@ -377,6 +426,9 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
   /// If master series uses data sorting and linked series does not have
   /// its own sorting definition, the linked series will be sorted in the
   /// same order as the master one.
+  ///
+  /// If a `compare` value is not set on a linked series, it will be inherited
+  /// from the parent series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.linkedTo
 
@@ -426,9 +478,10 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
   /// Whether or not data-points with the value of `null` should be interactive.
   /// When this is set to `true`, tooltips may highlight these points, and this
   /// option also enables keyboard navigation for such points. Format options
-  /// for such points include `nullFormat` and `nullFormater`.
-  /// Works for these series: `line`, `spline`, `area`, `area-spline`,
-  /// `column`, `bar`, and* `timeline`.
+  /// for such points include `nullFormat` and
+  /// `nullFormatter`. Works for these series:
+  /// `line`, `spline`, `area`, `area-spline`, `column`, `bar`, and
+  /// `timeline`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.nullInteraction
 
@@ -453,6 +506,10 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesPointOptions? point;
 
+  /// Deprecated. Use
+  /// series.accessibility.point.descriptionFormat
+  /// instead.
+  ///
   /// Same as
   /// accessibility.point.descriptionFormat,
   /// but for an individual series. Overrides the chart wide configuration.
@@ -461,6 +518,10 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
 
   dynamic pointDescriptionFormat;
 
+  /// Deprecated. Use
+  /// series.accessibility.point.descriptionFormatter
+  /// instead.
+  ///
   /// Same as
   /// accessibility.series.descriptionFormatter,
   /// but for an individual series. Overrides the chart wide configuration.
@@ -507,6 +568,10 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
 
   dynamic size;
 
+  /// Deprecated. Use
+  /// series.accessibility.keyboardNavigation
+  /// instead.
+  ///
   /// If set to `true`, the accessibility module will skip past the points
   /// in this series for keyboard navigation.
   ///
@@ -599,7 +664,7 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
   /// allows to disable zooming on an individual non-cartesian series. By default
   /// zooming is enabled for all series.
   ///
-  /// Note: This option works only for non-cartesian series.
+  /// **Note**: This option works only for non-cartesian series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.zoomEnabled
 
@@ -629,6 +694,8 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
       this.dashStyle,
       this.dataGrouping,
       this.dataLabels,
+      this.dataMapping,
+      this.dataTable,
       this.description,
       this.enableMouseTracking,
       this.events,
@@ -753,6 +820,20 @@ class HighchartsDependencyWheelSeriesOptions extends HighchartsOptionsBase {
     }
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
+    }
+    if (dataMapping != null) {
+      buffer.write('"dataMapping":{');
+      for (var item in dataMapping!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
+    }
+    if (dataTable != null) {
+      buffer.write('"dataTable":[');
+      for (var item in dataTable!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (description != null) {
       buffer.writeAll(['"description":', jsonEncode(description), ','], '');

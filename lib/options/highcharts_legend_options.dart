@@ -214,7 +214,10 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
 
   /// Callback function to format each of the series' labels. The `this`
   /// keyword refers to the series object, or the point object in case of
-  /// pie charts. By default the series or point name is printed.
+  /// pie charts. By default the series or point name is printed. Since
+  /// v12.5.0, the callback also receives `ctx` as the first argument, so
+  /// that arrow functions can access the same context as regular
+  /// functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/legend.labelFormatter
 
@@ -253,6 +256,13 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/legend.maxHeight
 
   double? maxHeight;
+
+  /// Maximum width for the legend. Can be a percentage of the chart width,
+  /// or an integer representing how many pixels wide the legend can be.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.maxWidth
+
+  dynamic maxWidth;
 
   /// Options for the paging or navigation appearing when the legend is
   /// overflown. Navigation works well on screen, but not in static
@@ -450,6 +460,7 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       this.lineHeight,
       this.margin,
       this.maxHeight,
+      this.maxWidth,
       this.navigation,
       this.padding,
       this.reversed,
@@ -568,6 +579,9 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
     }
     if (maxHeight != null) {
       buffer.writeAll(['"maxHeight":', maxHeight, ','], '');
+    }
+    if (maxWidth != null) {
+      buffer.writeAll(['"maxWidth":', jsonEncode(maxWidth), ','], '');
     }
     if (navigation != null) {
       buffer.writeAll(['"navigation":', navigation?.toJSON(), ','], '');

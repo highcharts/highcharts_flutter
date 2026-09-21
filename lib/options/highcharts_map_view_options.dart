@@ -103,7 +103,7 @@ class HighchartsMapViewOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/mapView.padding
 
-  List<dynamic>? padding;
+  double? padding;
 
   /// The projection options allow applying client side projection to a map
   /// given in geographic coordinates, typically from TopoJSON or GeoJSON.
@@ -157,11 +157,7 @@ class HighchartsMapViewOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"maxZoom":', maxZoom, ','], '');
     }
     if (padding != null) {
-      buffer.write('"padding":[');
-      for (var item in padding!) {
-        buffer.writeAll([jsonEncode(item), ','], '');
-      }
-      buffer.write('],');
+      buffer.writeAll(['"padding":', padding, ','], '');
     }
     if (projection != null) {
       buffer.writeAll(['"projection":', projection?.toJSON(), ','], '');

@@ -19,7 +19,6 @@ import 'highcharts_options_base.dart';
 import 'highcharts_navigator_series_data_grouping_options.dart';
 import 'highcharts_navigator_series_data_labels_options.dart';
 import 'highcharts_navigator_series_marker_options.dart';
-import 'highcharts_navigator_series_point_range_options.dart';
 
 /* *
  *
@@ -30,7 +29,6 @@ import 'highcharts_navigator_series_point_range_options.dart';
 export 'highcharts_navigator_series_data_grouping_options.dart';
 export 'highcharts_navigator_series_data_labels_options.dart';
 export 'highcharts_navigator_series_marker_options.dart';
-export 'highcharts_navigator_series_point_range_options.dart';
 
 /* *
  *
@@ -53,7 +51,7 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
 
   String? className;
 
-  /// Sets the fill color of the navigator series.
+  /// Sets the color of the navigator series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.series.color
 
@@ -78,6 +76,13 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/navigator.series.dataLabels
 
   HighchartsNavigatorSeriesDataLabelsOptions? dataLabels;
+
+  /// Sets the fill color of the navigator series. Applies to series
+  /// types with a filled area, like the default `areaspline`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.series.fillColor
+
+  String? fillColor;
 
   /// The fill opacity of the navigator series.
   ///
@@ -114,7 +119,7 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.series.pointRange
 
-  HighchartsNavigatorSeriesPointRangeOptions? pointRange;
+  double? pointRange;
 
   /// The threshold option. Setting it to 0 will make the default
   /// navigator area series draw its area from the 0 value and up.
@@ -142,6 +147,7 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
       this.data,
       this.dataGrouping,
       this.dataLabels,
+      this.fillColor,
       this.fillOpacity,
       this.id,
       this.lineColor,
@@ -174,6 +180,9 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
+    if (fillColor != null) {
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
+    }
     if (fillOpacity != null) {
       buffer.writeAll(['"fillOpacity":', fillOpacity, ','], '');
     }
@@ -190,7 +199,7 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
     if (pointRange != null) {
-      buffer.writeAll(['"pointRange":', pointRange?.toJSON(), ','], '');
+      buffer.writeAll(['"pointRange":', pointRange, ','], '');
     }
     if (threshold != null) {
       buffer.writeAll(['"threshold":', threshold, ','], '');

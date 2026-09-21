@@ -238,13 +238,14 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
   double? crossing;
 
   /// For a datetime axis, the scale will automatically adjust to the
-  /// appropriate unit. This member gives the default string
-  /// representations used for each unit. For intermediate values,
-  /// different units may be used, for example the `day` unit can be used
-  /// on midnight and `hour` unit be used for intermediate values on the
-  /// same axis.
+  /// appropriate unit. This member gives the default representations used
+  /// for each unit. For easier data interpretation, `hour`, `day`, `month`
+  /// and `year` units can be used and formatted as boundary tick values.
+  /// Check boundaries map below to see where to format boundary ticks on
+  /// given main time units.
   ///
-  /// For an overview of the string or object configuration, see
+  ///
+  /// For an overview of the date time label formats configuration, see
   /// dateFormat.
   ///
   /// Defaults to:
@@ -410,20 +411,27 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
   /// The number of minor ticks per major tick. Works for `linear`,
   /// `logarithmic` and `datetime` axes.
   ///
+  /// For radial axes in gauges, the default value is 10.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.minorTicksPerMajor
 
   double? minorTicksPerMajor;
 
   /// The distance in pixels from the plot area to the axis line.
-  /// A positive offset moves the axis with it's line, labels and ticks
+  /// A positive offset moves the axis with its line, labels and ticks
   /// away from the plot area. This is typically used when two or more
   /// axes are displayed on the same side of the plot. With multiple
   /// axes the offset is dynamically adjusted to avoid collision, this
   /// can be overridden by setting offset explicitly.
   ///
+  /// For radial axes in gauges, the offset can be a percentage string, and
+  /// defaults to render the line and ticks on the inside of the pane and
+  /// plot bands (since v13). Labels are not affected by the offset in
+  /// radial axes.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.offset
 
-  double? offset;
+  dynamic offset;
 
   /// Whether to pan axis. If `chart.panning` is enabled, the option
   /// allows to disable panning on an individual axis.
@@ -444,6 +452,16 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.startOfWeek
 
   double? startOfWeek;
+
+  /// For vertical axes only. Setting the static scale ensures that each tick unit
+  /// is translated into a fixed pixel height. For example, setting the static
+  /// scale to 24 results in each Y axis category taking up 24 pixels, and the
+  /// height of the chart adjusts. Adding or removing items will make the chart
+  /// resize.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.staticScale
+
+  double? staticScale;
 
   /// The amount of ticks to draw on the axis. This opens up for aligning
   /// the ticks of multiple charts or panes within a chart. This option
@@ -498,16 +516,19 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
   String? tickPosition;
 
   /// A callback function returning array defining where the ticks are
-  /// laid out on the axis. This overrides the default behaviour of
+  /// laid out on the axis. This overrides the default behavior of
   /// tickPixelInterval and tickInterval. The automatic tick positions are accessible
   /// through `this.tickPositions` and can be modified by the callback.
+  /// Since v12.6.0, the callback also receives `ctx` as the third
+  /// argument, so that arrow functions can access the same context as
+  /// regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.tickPositioner
 
   HighchartsCallback? tickPositioner;
 
   /// An array defining where the ticks are laid out on the axis. This
-  /// overrides the default behaviour of tickPixelInterval and tickInterval.
+  /// overrides the default behavior of tickPixelInterval and tickInterval.
   ///
   /// Note: When working with date-time axes, be aware of time zone
   /// handling. See the documentation on time options
@@ -546,16 +567,6 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.zoomEnabled
 
   bool? zoomEnabled;
-
-  /// For vertical axes only. Setting the static scale ensures that each tick unit
-  /// is translated into a fixed pixel height. For example, setting the static
-  /// scale to 24 results in each Y axis category taking up 24 pixels, and the
-  /// height of the chart adjusts. Adding or removing items will make the chart
-  /// resize.
-  ///
-  /// API Docs: https://api.highcharts.com/gantt/navigator.yAxis.staticScale
-
-  double? staticScale;
 
   /// The type of axis. Can be one of `linear`, `logarithmic`, `datetime`,
   /// `category` or `treegrid`. Defaults to `treegrid` for Gantt charts,
@@ -672,6 +683,7 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       this.panningEnabled,
       this.showFirstLabel,
       this.startOfWeek,
+      this.staticScale,
       this.tickAmount,
       this.tickColor,
       this.tickInterval,
@@ -682,7 +694,6 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       this.width,
       this.zIndex,
       this.zoomEnabled,
-      this.staticScale,
       this.type,
       this.categories,
       this.grid,
@@ -870,7 +881,7 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minorTicksPerMajor":', minorTicksPerMajor, ','], '');
     }
     if (offset != null) {
-      buffer.writeAll(['"offset":', offset, ','], '');
+      buffer.writeAll(['"offset":', jsonEncode(offset), ','], '');
     }
     if (panningEnabled != null) {
       buffer.writeAll(['"panningEnabled":', panningEnabled, ','], '');
@@ -880,6 +891,9 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
     }
     if (startOfWeek != null) {
       buffer.writeAll(['"startOfWeek":', startOfWeek, ','], '');
+    }
+    if (staticScale != null) {
+      buffer.writeAll(['"staticScale":', staticScale, ','], '');
     }
     if (tickAmount != null) {
       buffer.writeAll(['"tickAmount":', tickAmount, ','], '');
@@ -914,9 +928,6 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
     }
     if (zoomEnabled != null) {
       buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
-    }
-    if (staticScale != null) {
-      buffer.writeAll(['"staticScale":', staticScale, ','], '');
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');

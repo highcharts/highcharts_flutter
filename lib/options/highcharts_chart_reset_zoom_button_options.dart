@@ -34,6 +34,10 @@ export 'highcharts_chart_reset_zoom_button_theme_options.dart';
  *
  * */
 
+/// Deprecated. Use
+/// chart.zooming.resetButton
+/// instead.
+///
 /// The button that appears after a selection zoom, allowing the user
 /// to reset zoom. This option is deprecated in favor of
 /// zooming.
@@ -63,7 +67,7 @@ class HighchartsChartResetZoomButtonOptions extends HighchartsOptionsBase {
 
   HighchartsChartResetZoomButtonThemeOptions? theme;
 
-  /// The button that appears after a selection zoom, allowing the user to reset zoom. This option is deprecated in favor of zooming.
+  /// Deprecated. Use chart.zooming.resetButton instead.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.resetZoomButton
   HighchartsChartResetZoomButtonOptions(

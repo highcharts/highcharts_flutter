@@ -34,19 +34,19 @@ class HighchartsAnnotationsTypesMeasureTypeBackgroundOptions
     extends HighchartsOptionsBase {
   /// The color of the rectangle.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.background.fill
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.background.fill
 
   String? fill;
 
   /// The color of border.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.background.stroke
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.background.stroke
 
   String? stroke;
 
   /// The width of border.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.background.strokeWidth
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.background.strokeWidth
 
   double? strokeWidth;
 

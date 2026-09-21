@@ -34,7 +34,7 @@ export 'highcharts_annotations_label_accessibility_options.dart';
 
 /// Label options.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label
 class HighchartsAnnotationsTypesVerticalLineTypeLabelOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -71,38 +71,38 @@ class HighchartsAnnotationsTypesVerticalLineTypeLabelOptions
 
   /// Accessibility options for an annotation label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.accessibility
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.accessibility
 
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
 
   /// The alignment of the annotation's label. If right,
   /// the right side of the label should be touching the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.align
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.align
 
   String? align;
 
   /// The border color for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.borderColor
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.borderColor
 
   String? borderColor;
 
   /// The border radius in pixels for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.borderRadius
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.borderRadius
 
   double? borderRadius;
 
   /// A class name for styling by CSS.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.className
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.className
 
   String? className;
 
   /// The label's pixel distance from the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.distance
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.distance
 
   double? distance;
 
@@ -110,30 +110,33 @@ class HighchartsAnnotationsTypesVerticalLineTypeLabelOptions
   /// format
   /// string for the data label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.format
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.format
 
   String? format;
 
   /// Callback JavaScript function to format the annotation's
   /// label. Note that if a `format` or `text` are defined,
   /// the format or text take precedence and the formatter is
-  /// ignored. `This` refers to a point object.
+  /// ignored. `This` refers to a point object. The callback also receives
+  /// an argument `ctx` so that arrow-functions can access the same
+  /// context (the point in this case) as normal functions can using
+  /// `this`. Since v12.6.0, the callback receives `ctx`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.formatter
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.formatter
 
   String? formatter;
 
-  /// Whether the annotation is visible in the exported data
-  /// table.
+  /// Whether all the labels for an annotation are visible in the exported
+  /// data table.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.includeInDataExport
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.includeInDataExport
 
   bool? includeInDataExport;
 
   /// When either the borderWidth or the backgroundColor is
   /// set, this is the padding within the box.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.padding
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.padding
 
   double? padding;
 
@@ -141,26 +144,26 @@ class HighchartsAnnotationsTypesVerticalLineTypeLabelOptions
   /// configuration containing `color`, `offsetX`, `offsetY`,
   /// `opacity` and `width`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.shadow
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.shadow
 
   Map<String, dynamic>? shadow;
 
   /// Styles for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.style
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.style
 
   Map<String, String>? style;
 
   /// Whether to use HTML
   /// to render the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.useHTML
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.useHTML
 
   bool? useHTML;
 
   /// The vertical alignment of the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.verticalAlign
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.verticalAlign
 
   String? verticalAlign;
 
@@ -168,7 +171,7 @@ class HighchartsAnnotationsTypesVerticalLineTypeLabelOptions
   /// Note that if a `distance` is defined, the distance takes
   /// precedence over `x` and `y` options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.x
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.x
 
   double? x;
 
@@ -176,13 +179,13 @@ class HighchartsAnnotationsTypesVerticalLineTypeLabelOptions
   /// Note that if a `distance` is defined, the distance takes
   /// precedence over `x` and `y` options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.y
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label.y
 
   double? y;
 
   /// Label options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label
   HighchartsAnnotationsTypesVerticalLineTypeLabelOptions(
       {this.allowOverlap,
       this.backgroundColor,

@@ -31,7 +31,7 @@ import 'highcharts_options_base.dart';
 
 /// Background options.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.background
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.background
 class HighchartsAnnotationsTypesTunnelTypeBackgroundOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -44,7 +44,7 @@ class HighchartsAnnotationsTypesTunnelTypeBackgroundOptions
 
   /// Background options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.background
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.background
   HighchartsAnnotationsTypesTunnelTypeBackgroundOptions(
       {this.fill, this.strokeWidth});
 

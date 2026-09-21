@@ -67,6 +67,7 @@ class HighchartsGantt extends StatelessWidget {
     ],
     this.events = const {},
     this.keepAlive = true,
+    this.scrollParentOnWheel = true,
     this.onError,
     this.onLoaded,
     this.onLoading,
@@ -80,11 +81,13 @@ class HighchartsGantt extends StatelessWidget {
     view = HighchartsView(
       debug: debug,
       keepAlive: keepAlive,
+      scrollParentOnWheel: scrollParentOnWheel,
       head: css == null ? null : HighchartsHelpers.styleTag(css),
       foot: [
         '''
           highcharts_flutter.debug=${debug};
           highcharts_flutter.factory=Highcharts.ganttChart;
+          highcharts_flutter.scrollParentOnWheel=${scrollParentOnWheel};
         ''',
         javaScript,
         'highcharts_flutter.init($json);',
@@ -137,6 +140,10 @@ class HighchartsGantt extends StatelessWidget {
   late final HighchartsExporting exporting;
 
   final bool keepAlive;
+
+  /// Whether mouse-wheel/trackpad scrolling over the chart should be routed
+  /// to the parent [Scrollable] instead of being consumed by the WebView.
+  final bool scrollParentOnWheel;
 
   final Widget Function(HighchartsGantt, Object?)? onError;
 

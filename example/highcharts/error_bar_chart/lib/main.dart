@@ -74,8 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   HighchartsYAxisOptions(
                     labels: HighchartsYAxisLabelsOptions(
                       format: '{value} °C',
-                      style:
-                          HighchartsXAxisLabelsStyleOptions(color: '#DF8500'),
                     ),
                     title: HighchartsYAxisTitleOptions(
                       text: 'Temperature',
@@ -85,9 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     id: 'rainfall',
                     labels: HighchartsYAxisLabelsOptions(
                       format: '{value} mm',
-                      style: HighchartsXAxisLabelsStyleOptions(
-                        color: '#6b8abc',
-                      ),
                     ),
                     title: HighchartsYAxisTitleOptions(
                       text: 'Rainfall',

@@ -32,7 +32,16 @@ import 'highcharts_options_base.dart';
 /// Highcharts Options Widget.
 class HighchartsXAxisDateTimeLabelFormatsMonthOptions
     extends HighchartsOptionsBase {
-  /// Highcharts Options Widget.
+  /// Label format that should be used when a tick is a boundary
+  /// tick, e.g. start of day, start of year, etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats.month.boundary
+
+  String? boundary;
+
+  /// List of possible format strings used for this unit.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats.month.list
 
   List<dynamic>? list;
 
@@ -41,12 +50,16 @@ class HighchartsXAxisDateTimeLabelFormatsMonthOptions
   String? main;
 
   /// Highcharts Options Widget.
-  HighchartsXAxisDateTimeLabelFormatsMonthOptions({this.list, this.main});
+  HighchartsXAxisDateTimeLabelFormatsMonthOptions(
+      {this.boundary, this.list, this.main});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
+    if (boundary != null) {
+      buffer.writeAll(['"boundary":', jsonEncode(boundary), ','], '');
+    }
     if (list != null) {
       buffer.write('"list":[');
       for (var item in list!) {

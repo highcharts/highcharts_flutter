@@ -56,6 +56,14 @@ class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
 
   HighchartsPointandfigureSeriesDataAccessibilityOptions? accessibility;
 
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.className
+
+  String? className;
+
   /// Individual color for the point. By default the color is pulled from
   /// the global `colors` array.
   ///
@@ -75,18 +83,12 @@ class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? custom;
 
   /// Individual data label for each point. The options are the same as
-  /// the ones for plotOptions.series.dataLabels.
+  /// the ones for plotOptions.series.dataLabels with exception of `zIndex` which is applied
+  /// on the data label's parent group.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.dataLabels
 
   List<HighchartsPointandfigureSeriesDataDataLabelsOptions>? dataLabels;
-
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.description
-
-  String? description;
 
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
@@ -108,9 +110,11 @@ class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.labelrank
 
@@ -156,10 +160,10 @@ class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highstock/series.pointandfigure.data
   HighchartsPointandfigureSeriesDataOptions(
       {this.accessibility,
+      this.className,
       this.color,
       this.custom,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.events,
       this.id,
@@ -177,6 +181,9 @@ class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
+    }
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
@@ -193,9 +200,6 @@ class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
         buffer.writeAll([item.toJSON(), ','], '');
       }
       buffer.write('],');
-    }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');

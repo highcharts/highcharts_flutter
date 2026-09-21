@@ -101,13 +101,6 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
 
   HighchartsVariablePieSeriesDataDataLabelsOptions? dataLabels;
 
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.description
-
-  String? description;
-
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
   ///
@@ -135,9 +128,11 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.labelrank
 
@@ -173,6 +168,12 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
 
   double? y;
 
+  /// The z value of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.z
+
+  double? z;
+
   /// An array of data points for the series. For the `variablepie` series type, points can be given in the following ways:
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data
@@ -183,7 +184,6 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
       this.colorIndex,
       this.custom,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.drilldown,
       this.events,
@@ -193,7 +193,8 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
       this.name,
       this.selected,
       this.sliced,
-      this.y});
+      this.y,
+      this.z});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -220,9 +221,6 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
-    }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');
@@ -253,6 +251,9 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (y != null) {
       buffer.writeAll(['"y":', y, ','], '');
+    }
+    if (z != null) {
+      buffer.writeAll(['"z":', z, ','], '');
     }
   }
 }

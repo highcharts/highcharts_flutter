@@ -33,10 +33,10 @@ import 'highcharts_options_base.dart';
 /// series - it is referenced by the point's id - or a new point
 /// with defined x, y properties and optionally axes.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.point
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.point
 class HighchartsAnnotationsShapesPointOptions extends HighchartsOptionsBase {
   /// This option defines the point to which the shape will be connected. It can be either the point which exists in the series - it is referenced by the point's id - or a new point with defined x, y properties and optionally axes.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.point
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.point
   HighchartsAnnotationsShapesPointOptions();
 }

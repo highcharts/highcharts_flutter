@@ -51,7 +51,7 @@ class HighchartsSankeySeriesNodesOptions extends HighchartsOptionsBase {
 
   double? colorIndex;
 
-  /// An optional column index of where to place the node. The default behaviour is
+  /// An optional column index of where to place the node. The default behavior is
   /// to place it next to the preceding node. Note that this option name is
   /// counter intuitive in inverted charts, like for example an organization chart
   /// rendered top down. In this case the "columns" are horizontal.
@@ -80,9 +80,9 @@ class HighchartsSankeySeriesNodesOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// An optional level index of where to place the node. The default behaviour is
+  /// An optional level index of where to place the node. The default behavior is
   /// to place it next to the preceding node. Alias of `nodes.column`, but in
-  /// inverted sankeys and org charts, the levels are laid out as rows.
+  /// inverted sankey and org chart, the levels are laid out as rows.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sankey.nodes.level
 

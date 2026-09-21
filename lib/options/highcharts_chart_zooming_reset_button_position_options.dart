@@ -38,9 +38,7 @@ import 'highcharts_options_base.dart';
 /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position
 class HighchartsChartZoomingResetButtonPositionOptions
     extends HighchartsOptionsBase {
-  /// The horizontal alignment of the button.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.align
+  /// Highcharts Options Widget.
 
   String? align;
 
@@ -50,15 +48,7 @@ class HighchartsChartZoomingResetButtonPositionOptions
 
   String? verticalAlign;
 
-  /// The horizontal offset of the button.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.x
-
-  double? x;
-
-  /// The vertical offset of the button.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.y
+  /// Highcharts Options Widget.
 
   double? y;
 
@@ -66,7 +56,7 @@ class HighchartsChartZoomingResetButtonPositionOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position
   HighchartsChartZoomingResetButtonPositionOptions(
-      {this.align, this.verticalAlign, this.x, this.y});
+      {this.align, this.verticalAlign, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -77,9 +67,6 @@ class HighchartsChartZoomingResetButtonPositionOptions
     }
     if (verticalAlign != null) {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
-    }
-    if (x != null) {
-      buffer.writeAll(['"x":', x, ','], '');
     }
     if (y != null) {
       buffer.writeAll(['"y":', y, ','], '');

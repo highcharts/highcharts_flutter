@@ -32,10 +32,9 @@ import '../../utilities/highcharts_callback.dart';
 /// Highcharts Options Widget.
 class HighchartsNavigationBreadcrumbsEventsOptions
     extends HighchartsOptionsBase {
-  /// Fires when clicking on the breadcrumbs button. Two arguments are
-  /// passed to the function. First breadcrumb button as an SVG element.
-  /// Second is the breadcrumbs class, containing reference to the chart,
-  /// series etc.
+  /// Fires when clicking on a breadcrumb button. Two arguments are passed
+  /// to the function. First is the click event. Second is the breadcrumb
+  /// options for the clicked button.
   ///
   ///
   /// Return false to stop default buttons click action.

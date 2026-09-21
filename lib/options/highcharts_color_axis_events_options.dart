@@ -59,12 +59,6 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
 
   dynamic legendItemClick;
 
-  /// An event fired when a point is outside a break after zoom.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.events.pointBreakOut
-
-  HighchartsCallback? pointBreakOut;
-
   /// Fires when the minimum and maximum is set for the axis, either by
   /// calling the `.setExtremes()` method or by selecting an area in the
   /// chart. One parameter, `event`, is passed to the function,
@@ -82,10 +76,7 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
 
   /// Highcharts Options Widget.
   HighchartsColorAxisEventsOptions(
-      {this.afterSetExtremes,
-      this.legendItemClick,
-      this.pointBreakOut,
-      this.setExtremes});
+      {this.afterSetExtremes, this.legendItemClick, this.setExtremes});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -98,9 +89,6 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
     if (legendItemClick != null) {
       buffer.writeAll(
           ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
-    }
-    if (pointBreakOut != null) {
-      buffer.writeAll(['"pointBreakOut":', pointBreakOut?.toJSON(), ','], '');
     }
     if (setExtremes != null) {
       buffer.writeAll(['"setExtremes":', setExtremes?.toJSON(), ','], '');

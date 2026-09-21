@@ -44,13 +44,13 @@ class HighchartsAnnotationsTypesElliottWaveTypePointsOptions
 
   /// The x position of the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.elliottWave.typeOptions.points.x
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave.typeOptions.points.x
 
   double? x;
 
   /// The y position of the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.elliottWave.typeOptions.points.y
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave.typeOptions.points.y
 
   double? y;
 

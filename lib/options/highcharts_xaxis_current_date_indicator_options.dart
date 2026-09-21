@@ -42,13 +42,6 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
 ///
 /// API Docs: https://api.highcharts.com/gantt/xAxis.currentDateIndicator
 class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
-  /// A custom class name, in addition to the default `highcharts-plot-line`,
-  /// to apply to each individual line.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/xAxis.currentDateIndicator.className
-
-  String? className;
-
   /// The color of the line.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.currentDateIndicator.color
@@ -99,8 +92,7 @@ class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/gantt/xAxis.currentDateIndicator
   HighchartsXAxisCurrentDateIndicatorOptions(
-      {this.className,
-      this.color,
+      {this.color,
       this.dashStyle,
       this.events,
       this.id,
@@ -113,9 +105,6 @@ class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-    if (className != null) {
-      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
-    }
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }

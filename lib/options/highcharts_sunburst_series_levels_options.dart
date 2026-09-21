@@ -91,6 +91,14 @@ class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
 
   double? level;
 
+  /// Whether the `level` number is absolute, or relative to the currently
+  /// visible root. Overrides the series option of the same name for this
+  /// level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.levels.levelIsConstant
+
+  bool? levelIsConstant;
+
   /// Can set a `levelSize` on all points which lies on the same level.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.levels.levelSize
@@ -109,6 +117,7 @@ class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
       this.colorVariation,
       this.dataLabels,
       this.level,
+      this.levelIsConstant,
       this.levelSize});
 
   @override
@@ -139,6 +148,9 @@ class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
     }
     if (level != null) {
       buffer.writeAll(['"level":', level, ','], '');
+    }
+    if (levelIsConstant != null) {
+      buffer.writeAll(['"levelIsConstant":', levelIsConstant, ','], '');
     }
     if (levelSize != null) {
       buffer.writeAll(['"levelSize":', jsonEncode(levelSize), ','], '');

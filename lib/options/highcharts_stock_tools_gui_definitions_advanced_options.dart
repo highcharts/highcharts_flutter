@@ -57,7 +57,7 @@ class HighchartsStockToolsGuiDefinitionsAdvancedOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.advanced.items
 
-  String? items;
+  List<String>? items;
 
   /// Highcharts Options Widget.
 
@@ -93,7 +93,11 @@ class HighchartsStockToolsGuiDefinitionsAdvancedOptions
           ['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
     }
     if (items != null) {
-      buffer.writeAll(['"items":', jsonEncode(items), ','], '');
+      buffer.write('"items":[');
+      for (var item in items!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (parallelChannel != null) {
       buffer

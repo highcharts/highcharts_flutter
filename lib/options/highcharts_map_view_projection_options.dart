@@ -60,7 +60,7 @@ class HighchartsMapViewProjectionOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/mapView.projection.rotation
 
-  String? rotation;
+  dynamic rotation;
 
   /// The projection options allow applying client side projection to a map given in geographic coordinates, typically from TopoJSON or GeoJSON.
   ///

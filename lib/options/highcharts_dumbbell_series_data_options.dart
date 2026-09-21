@@ -119,13 +119,6 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
 
   HighchartsDumbbellSeriesDataDataLabelsOptions? dataLabels;
 
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.dumbbell.data.description
-
-  String? description;
-
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
   ///
@@ -159,9 +152,11 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dumbbell.data.labelrank
 
@@ -216,7 +211,6 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
       this.connectorWidth,
       this.custom,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.drilldown,
       this.events,
@@ -261,9 +255,6 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
-    }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');

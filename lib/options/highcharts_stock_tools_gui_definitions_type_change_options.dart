@@ -50,7 +50,7 @@ class HighchartsStockToolsGuiDefinitionsTypeChangeOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.typeChange.items
 
-  String? items;
+  List<String>? items;
 
   /// Highcharts Options Widget.
 
@@ -94,7 +94,11 @@ class HighchartsStockToolsGuiDefinitionsTypeChangeOptions
     super.toOptionsJSON(buffer);
 
     if (items != null) {
-      buffer.writeAll(['"items":', jsonEncode(items), ','], '');
+      buffer.write('"items":[');
+      for (var item in items!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (typeCandlestick != null) {
       buffer

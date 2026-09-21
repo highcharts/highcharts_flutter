@@ -38,7 +38,7 @@ export 'highcharts_annotations_control_point_style_options.dart';
 /// Options from the controlPointOptions can be overwritten
 /// by options in a specific control point.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.controlPointOptions
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.controlPointOptions
 class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
 
@@ -70,7 +70,7 @@ class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
 
   /// Options for annotation's control points. Each control point inherits options from controlPointOptions object. Options from the controlPointOptions can be overwritten by options in a specific control point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.controlPointOptions
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.controlPointOptions
   HighchartsAnnotationsControlPointOptions(
       {this.events,
       this.height,

@@ -16,12 +16,15 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_series_marker_states_hover_animation_options.dart';
 
 /* *
  *
  *  Exports
  *
  * */
+
+export 'highcharts_series_marker_states_hover_animation_options.dart';
 
 /* *
  *
@@ -32,6 +35,12 @@ import 'highcharts_options_base.dart';
 /// Highcharts Options Widget.
 class HighchartsTreegraphSeriesDataMarkerStatesSelectOptions
     extends HighchartsOptionsBase {
+  /// Animation when hovering over the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.data.marker.states.select.animation
+
+  HighchartsSeriesMarkerStatesHoverAnimationOptions? animation;
+
   /// Enable or disable visible feedback for selection.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.data.marker.states.select.enabled
@@ -70,6 +79,19 @@ class HighchartsTreegraphSeriesDataMarkerStatesSelectOptions
 
   double? lineWidth;
 
+  /// The additional line width for a hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.data.marker.states.select.lineWidthPlus
+
+  double? lineWidthPlus;
+
+  /// The number of pixels to increase the radius of the
+  /// hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.data.marker.states.select.radiusPlus
+
+  double? radiusPlus;
+
   /// Set the marker's fixed width on select state.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.data.marker.states.select.width
@@ -85,12 +107,15 @@ class HighchartsTreegraphSeriesDataMarkerStatesSelectOptions
 
   /// Highcharts Options Widget.
   HighchartsTreegraphSeriesDataMarkerStatesSelectOptions(
-      {this.enabled,
+      {this.animation,
+      this.enabled,
       this.fillColor,
       this.height,
       this.heightPlus,
       this.lineColor,
       this.lineWidth,
+      this.lineWidthPlus,
+      this.radiusPlus,
       this.width,
       this.widthPlus});
 
@@ -98,6 +123,9 @@ class HighchartsTreegraphSeriesDataMarkerStatesSelectOptions
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
+    if (animation != null) {
+      buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -115,6 +143,12 @@ class HighchartsTreegraphSeriesDataMarkerStatesSelectOptions
     }
     if (lineWidth != null) {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
+    }
+    if (lineWidthPlus != null) {
+      buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], '');
+    }
+    if (radiusPlus != null) {
+      buffer.writeAll(['"radiusPlus":', radiusPlus, ','], '');
     }
     if (width != null) {
       buffer.writeAll(['"width":', width, ','], '');

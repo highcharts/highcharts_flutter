@@ -38,9 +38,8 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  * */
 
 /// Extended data labels for range series types. Range series data
-/// labels use no `x` and `y` options. Instead, they have `xLow`,
-/// `xHigh`, `yLow` and `yHigh` options to allow the higher and lower
-/// data label sets individually.
+/// labels can be positioned individually by defining them as an array
+/// and setting `alignToKey` to `high` or `low`.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels
 class HighchartsAreaSplineRangeSeriesDataLabelsOptions
@@ -59,6 +58,14 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.alignTo
 
   String? alignTo;
+
+  /// The point key to use for positioning this data label.
+  /// Possible values are `low` and `high`. In the legacy array form, the first
+  /// label defaults to `high` and the second label defaults to `low`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.alignToKey
+
+  String? alignToKey;
 
   /// Whether to allow data labels to overlap. To make the labels less
   /// sensitive for overlapping, the
@@ -84,8 +91,13 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
 
   HighchartsSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.backgroundColor
 
@@ -154,6 +166,14 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
 
   bool? defer;
 
+  /// The distance of the data label from the data point. Note that the
+  /// `padding` setting also affects the rendered distance, but is not
+  /// visible unless the data label has a border or background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.distance
+
+  double? distance;
+
   /// Enable or disable the data labels.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.enabled
@@ -166,6 +186,7 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// a pure JSON structure or for use with graphical editors. For
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
+  ///
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.filter
 
@@ -184,6 +205,11 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// `format` is defined, the format takes precedence and the formatter is
   /// ignored.
   ///
+  /// By default, the data label renders the value of the point key it is
+  /// aligned to. Define a
+  /// format or `formatter` to
+  /// display other values.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.formatter
 
   HighchartsCallback? formatter;
@@ -195,6 +221,14 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.inside
 
   bool? inside;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.labelrank
+
+  double? labelrank;
 
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
@@ -210,10 +244,12 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -235,9 +271,13 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// When either the `borderWidth` or the `backgroundColor` is set,
   /// this is the padding within the box.
   ///
+  /// An array of numbers sets padding for the respective sides. An array
+  /// of two numbers repeats the values for the horizontal and vertical
+  /// sides.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.padding
 
-  double? padding;
+  List<double>? padding;
 
   /// Aligns data labels relative to points. If `center` alignment is
   /// not possible, it defaults to `right`.
@@ -283,7 +323,11 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// text outline doesn't work well, in which cases it can be disabled
   /// by setting it to `"none"`. When `useHTML` is true, the
   /// `textOutline` will not be picked up. In this, case, the same
-  /// effect can be acheived through the `text-shadow` CSS property.
+  /// effect can be achieved through the `text-shadow` CSS property. As a
+  /// complementary or alternative to the `textOutline`, a
+  /// `dataLabels.backgroundColor` can be used. It provides a more calm
+  /// impression and ensures readable text label, at the cost of a risk of
+  /// overshadowing the underlying chart elements.
   ///
   /// For some series types, where each point has an extent, like for
   /// example tree maps, the data label may overflow the point. There
@@ -303,6 +347,10 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
   ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.textPath
 
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
@@ -319,7 +367,17 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
 
   String? verticalAlign;
 
+  /// The x position offset of the label relative to the point in
+  /// pixels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.x
+
+  double? x;
+
   /// X offset of the higher data labels relative to the point value.
+  ///
+  /// Deprecated. Use a data labels array with `alignToKey: 'high'` and
+  /// the regular `x` option instead.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.xHigh
 
@@ -327,11 +385,24 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
 
   /// X offset of the lower data labels relative to the point value.
   ///
+  /// Deprecated. Use a data labels array with `alignToKey: 'low'` and
+  /// the regular `x` option instead.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.xLow
 
   double? xLow;
 
+  /// The y position offset of the label relative to the point in
+  /// pixels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.y
+
+  double? y;
+
   /// Y offset of the higher data labels relative to the point value.
+  ///
+  /// Deprecated. Use a data labels array with `alignToKey: 'high'` and
+  /// the regular `y` option instead.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.yHigh
 
@@ -339,23 +410,30 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
 
   /// Y offset of the lower data labels relative to the point value.
   ///
+  /// Deprecated. Use a data labels array with `alignToKey: 'low'` and
+  /// the regular `y` option instead.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.yLow
 
   double? yLow;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels.zIndex
 
   double? zIndex;
 
-  /// Extended data labels for range series types. Range series data labels use no `x` and `y` options. Instead, they have `xLow`, `xHigh`, `yLow` and `yHigh` options to allow the higher and lower data label sets individually.
+  /// Extended data labels for range series types. Range series data labels can be positioned individually by defining them as an array and setting `alignToKey` to `high` or `low`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.areasplinerange.dataLabels
   HighchartsAreaSplineRangeSeriesDataLabelsOptions(
       {this.align,
       this.alignTo,
+      this.alignToKey,
       this.allowOverlap,
       this.animation,
       this.backgroundColor,
@@ -366,11 +444,13 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
       this.color,
       this.crop,
       this.defer,
+      this.distance,
       this.enabled,
       this.filter,
       this.format,
       this.formatter,
       this.inside,
+      this.labelrank,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
@@ -383,8 +463,10 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
       this.textPath,
       this.useHTML,
       this.verticalAlign,
+      this.x,
       this.xHigh,
       this.xLow,
+      this.y,
       this.yHigh,
       this.yLow,
       this.zIndex});
@@ -398,6 +480,9 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
     }
     if (alignTo != null) {
       buffer.writeAll(['"alignTo":', jsonEncode(alignTo), ','], '');
+    }
+    if (alignToKey != null) {
+      buffer.writeAll(['"alignToKey":', jsonEncode(alignToKey), ','], '');
     }
     if (allowOverlap != null) {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
@@ -430,6 +515,9 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -445,6 +533,9 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
     }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
@@ -455,7 +546,11 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');
     }
     if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], '');
+      buffer.write('"padding":[');
+      for (var item in padding!) {
+        buffer.writeAll([item, ','], '');
+      }
+      buffer.write('],');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');
@@ -489,11 +584,17 @@ class HighchartsAreaSplineRangeSeriesDataLabelsOptions
     if (verticalAlign != null) {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
     }
+    if (x != null) {
+      buffer.writeAll(['"x":', x, ','], '');
+    }
     if (xHigh != null) {
       buffer.writeAll(['"xHigh":', xHigh, ','], '');
     }
     if (xLow != null) {
       buffer.writeAll(['"xLow":', xLow, ','], '');
+    }
+    if (y != null) {
+      buffer.writeAll(['"y":', y, ','], '');
     }
     if (yHigh != null) {
       buffer.writeAll(['"yHigh":', yHigh, ','], '');

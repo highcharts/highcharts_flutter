@@ -73,7 +73,7 @@ class HighchartsMapSeriesDataGeometryOptions extends HighchartsOptionsBase {
     if (coordinates != null) {
       buffer.write('"coordinates":[');
       for (var item in coordinates!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }

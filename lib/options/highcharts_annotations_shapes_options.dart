@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_annotations_shapes_control_points_options.dart';
 import 'highcharts_annotations_shapes_point_options.dart';
 import 'highcharts_annotations_shapes_points_options.dart';
 
@@ -25,6 +26,7 @@ import 'highcharts_annotations_shapes_points_options.dart';
  *
  * */
 
+export 'highcharts_annotations_shapes_control_points_options.dart';
 export 'highcharts_annotations_shapes_point_options.dart';
 export 'highcharts_annotations_shapes_points_options.dart';
 
@@ -38,19 +40,25 @@ export 'highcharts_annotations_shapes_points_options.dart';
 /// to multiple shapes, then can be added to the
 /// shapeOptions.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.shapes
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes
 class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
+  /// The array of control points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.controlPoints
+
+  HighchartsAnnotationsShapesControlPointsOptions? controlPoints;
+
   /// Id of the marker which will be drawn at the final vertex of
   /// the path. Custom markers can be defined in defs property.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.markerEnd
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.markerEnd
 
   String? markerEnd;
 
   /// Id of the marker which will be drawn at the first vertex of
   /// the path. Custom markers can be defined in defs property.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.markerStart
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.markerStart
 
   String? markerStart;
 
@@ -59,7 +67,7 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
   /// series - it is referenced by the point's id - or a new point
   /// with defined x, y properties and optionally axes.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.point
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.point
 
   HighchartsAnnotationsShapesPointOptions? point;
 
@@ -70,109 +78,129 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
   /// for shapes which can use multiple points such as path. A
   /// point can be either a point object or a point's id.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.points
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.points
 
   HighchartsAnnotationsShapesPointsOptions? points;
 
-  /// The URL for an image to use as the annotation shape. Note,
-  /// type has to be set to `'image'`.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.src
-
-  String? src;
-
   /// Name of the dash style to use for the shape's stroke.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.dashStyle
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.dashStyle
 
   String? dashStyle;
 
   /// The color of the shape's fill.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.fill
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.fill
 
-  Map<String, dynamic>? fill;
+  String? fill;
 
-  /// The height of the shape.
+  /// The height of the `rect` shape. Can be defined in pixels or yAxis
+  /// units, if shapes.yAxis index is
+  /// defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.height
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.height
 
   double? height;
 
-  /// The radius of the shape.
+  /// The radius of the `circle` shape. Can be defined in pixels or yAxis
+  /// units, if shapes.yAxis index is
+  /// defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.r
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.r
 
   double? r;
 
-  /// The radius of the shape in y direction.
-  /// Used for the ellipse.
+  /// The radius of the `ellipse` shape in y direction. Can be defined in
+  /// pixels or yAxis units, if
+  /// shapes.yAxis index is defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.ry
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.ry
 
   double? ry;
 
   /// Defines additional snapping area around an annotation
   /// making this annotation to focus. Defined in pixels.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.snap
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.snap
 
   double? snap;
 
+  /// The URL for an image to use as the annotation shape.
+  /// Note, type has to be set to `'image'`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.src
+
+  String? src;
+
   /// The color of the shape's stroke.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.stroke
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.stroke
 
   String? stroke;
 
   /// The pixel stroke width of the shape.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.strokeWidth
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.strokeWidth
 
   double? strokeWidth;
 
   /// The type of the shape.
-  /// Available options are circle, rect and ellipse.
+  /// Available options are `circle`, `rect`, `ellipse` and `path`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.type
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.type
 
   String? type;
 
-  /// The width of the shape.
+  /// The width of the `rect` shape. Can be defined in pixels or xAxis
+  /// units, if shapes.xAxis index is
+  /// defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.width
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.width
 
   double? width;
 
-  /// The xAxis index to which the points should be attached.
-  /// Used for the ellipse.
+  /// The xAxis index which should be used for annotation's sizes and
+  /// points coordinates conversion.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.xAxis
+  /// This option is used for `rect` shape
+  /// width, and all shapes
+  /// point and
+  /// points coordinates.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.xAxis
 
   double? xAxis;
 
-  /// The yAxis index to which the points should be attached.
-  /// Used for the ellipse.
+  /// The yAxis index which should be used for annotation's sizes and
+  /// points coordinates conversion.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapes.yAxis
+  /// This option is used for `rect` shape
+  /// height, `circle` shape
+  /// radius, `ellipse`
+  /// y direction radius, and all shapes
+  /// point and
+  /// points coordinates.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes.yAxis
 
   double? yAxis;
 
   /// An array of shapes for the annotation. For options that apply to multiple shapes, then can be added to the shapeOptions.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.shapes
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapes
   HighchartsAnnotationsShapesOptions(
-      {this.markerEnd,
+      {this.controlPoints,
+      this.markerEnd,
       this.markerStart,
       this.point,
       this.points,
-      this.src,
       this.dashStyle,
       this.fill,
       this.height,
       this.r,
       this.ry,
       this.snap,
+      this.src,
       this.stroke,
       this.strokeWidth,
       this.type,
@@ -184,6 +212,9 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
+    if (controlPoints != null) {
+      buffer.writeAll(['"controlPoints":', controlPoints?.toJSON(), ','], '');
+    }
     if (markerEnd != null) {
       buffer.writeAll(['"markerEnd":', jsonEncode(markerEnd), ','], '');
     }
@@ -196,18 +227,11 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
     if (points != null) {
       buffer.writeAll(['"points":', points?.toJSON(), ','], '');
     }
-    if (src != null) {
-      buffer.writeAll(['"src":', jsonEncode(src), ','], '');
-    }
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
     }
     if (fill != null) {
-      buffer.write('"fill":{');
-      for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
     if (height != null) {
       buffer.writeAll(['"height":', height, ','], '');
@@ -220,6 +244,9 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
     }
     if (snap != null) {
       buffer.writeAll(['"snap":', snap, ','], '');
+    }
+    if (src != null) {
+      buffer.writeAll(['"src":', jsonEncode(src), ','], '');
     }
     if (stroke != null) {
       buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], '');

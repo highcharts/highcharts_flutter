@@ -42,11 +42,7 @@ export 'highcharts_sonification_point_grouping_options.dart';
  *
  * */
 
-/// Options for configuring sonification and audio charts. Requires the
-/// sonification module
-/// to be loaded.
-///
-/// API Docs: https://api.highcharts.com/highcharts/sonification
+/// Highcharts Options Widget.
 class HighchartsSonificationOptions extends HighchartsOptionsBase {
   /// The time to wait in milliseconds after each data series when playing
   /// the series one after the other.
@@ -165,9 +161,7 @@ class HighchartsSonificationOptions extends HighchartsOptionsBase {
 
   double? updateInterval;
 
-  /// Options for configuring sonification and audio charts. Requires the sonification module to be loaded.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/sonification
+  /// Highcharts Options Widget.
   HighchartsSonificationOptions(
       {this.afterSeriesWait,
       this.defaultInstrumentOptions,

@@ -38,6 +38,10 @@ class HighchartsGeoHeatmapSeriesDataLabelsOptions
 
   /// Highcharts Options Widget.
 
+  double? distance;
+
+  /// Highcharts Options Widget.
+
   bool? inside;
 
   /// Highcharts Options Widget.
@@ -46,18 +50,14 @@ class HighchartsGeoHeatmapSeriesDataLabelsOptions
 
   /// Highcharts Options Widget.
 
-  double? padding;
-
-  /// Highcharts Options Widget.
-
   String? verticalAlign;
 
   /// Highcharts Options Widget.
   HighchartsGeoHeatmapSeriesDataLabelsOptions(
       {this.crop,
+      this.distance,
       this.inside,
       this.overflow,
-      this.padding,
       this.verticalAlign});
 
   @override
@@ -67,14 +67,14 @@ class HighchartsGeoHeatmapSeriesDataLabelsOptions
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
     }
     if (overflow != null) {
       buffer.writeAll(['"overflow":', overflow, ','], '');
-    }
-    if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], '');
     }
     if (verticalAlign != null) {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');

@@ -15,7 +15,7 @@
  * */
 
 import 'highcharts_options_base.dart';
-import 'highcharts_navigation_annotations_types_time_cycles_type_options_points_options.dart';
+import 'highcharts_navigation_bindings_vertical_line_annotations_types_time_cycles_type_options_points_options.dart';
 import 'highcharts_annotations_types_crooked_line_type_line_options.dart';
 
 /* *
@@ -24,7 +24,7 @@ import 'highcharts_annotations_types_crooked_line_type_line_options.dart';
  *
  * */
 
-export 'highcharts_navigation_annotations_types_time_cycles_type_options_points_options.dart';
+export 'highcharts_navigation_bindings_vertical_line_annotations_types_time_cycles_type_options_points_options.dart';
 export 'highcharts_annotations_types_crooked_line_type_line_options.dart';
 
 /* *
@@ -38,28 +38,28 @@ class HighchartsAnnotationsTypesTimeCyclesTypeOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
 
-  HighchartsNavigationAnnotationsTypesTimeCyclesTypeOptionsPointsOptions?
+  HighchartsNavigationBindingsVerticalLineAnnotationsTypesTimeCyclesTypeOptionsPointsOptions?
       points;
 
   /// Line options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.timeCycles.typeOptions.line
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.timeCycles.typeOptions.line
 
   HighchartsAnnotationsTypesCrookedLineTypeLineOptions? line;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.timeCycles.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.timeCycles.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.timeCycles.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.timeCycles.typeOptions.yAxis
 
   double? yAxis;
 

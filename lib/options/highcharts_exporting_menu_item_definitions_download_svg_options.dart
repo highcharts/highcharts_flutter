@@ -1,0 +1,50 @@
+/* *
+ *
+ *  Highcharts Flutter
+ *
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
+
+/* *
+ *
+ *  Imports
+ *
+ * */
+
+import 'dart:convert';
+import 'highcharts_options_base.dart';
+
+/* *
+ *
+ *  Exports
+ *
+ * */
+
+/* *
+ *
+ *  Classes
+ *
+ * */
+
+/// Highcharts Options Widget.
+class HighchartsExportingMenuItemDefinitionsDownloadSVGOptions
+    extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
+  String? textKey;
+
+  /// Highcharts Options Widget.
+  HighchartsExportingMenuItemDefinitionsDownloadSVGOptions({this.textKey});
+
+  @override
+  void toOptionsJSON(StringBuffer buffer) {
+    super.toOptionsJSON(buffer);
+
+    if (textKey != null) {
+      buffer.writeAll(['"textKey":', jsonEncode(textKey), ','], '');
+    }
+  }
+}

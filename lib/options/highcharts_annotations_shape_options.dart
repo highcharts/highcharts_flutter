@@ -33,95 +33,114 @@ import 'highcharts_options_base.dart';
 /// from the shapeOptions object. An option from the shapeOptions
 /// can be overwritten by config for a specific shape.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.shapeOptions
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions
 class HighchartsAnnotationsShapeOptions extends HighchartsOptionsBase {
   /// Name of the dash style to use for the shape's stroke.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.dashStyle
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.dashStyle
 
   String? dashStyle;
 
   /// The color of the shape's fill.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.fill
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.fill
 
-  Map<String, dynamic>? fill;
+  String? fill;
 
-  /// The height of the shape.
+  /// The height of the `rect` shape. Can be defined in pixels or yAxis
+  /// units, if shapes.yAxis index is
+  /// defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.height
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.height
 
   double? height;
 
-  /// The radius of the shape.
+  /// The radius of the `circle` shape. Can be defined in pixels or yAxis
+  /// units, if shapes.yAxis index is
+  /// defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.r
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.r
 
   double? r;
 
-  /// The radius of the shape in y direction.
-  /// Used for the ellipse.
+  /// The radius of the `ellipse` shape in y direction. Can be defined in
+  /// pixels or yAxis units, if
+  /// shapes.yAxis index is defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.ry
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.ry
 
   double? ry;
 
   /// Defines additional snapping area around an annotation
   /// making this annotation to focus. Defined in pixels.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.snap
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.snap
 
   double? snap;
 
   /// The URL for an image to use as the annotation shape.
   /// Note, type has to be set to `'image'`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.src
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.src
 
   String? src;
 
   /// The color of the shape's stroke.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.stroke
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.stroke
 
   String? stroke;
 
   /// The pixel stroke width of the shape.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.strokeWidth
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.strokeWidth
 
   double? strokeWidth;
 
   /// The type of the shape.
-  /// Available options are circle, rect and ellipse.
+  /// Available options are `circle`, `rect`, `ellipse` and `path`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.type
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.type
 
   String? type;
 
-  /// The width of the shape.
+  /// The width of the `rect` shape. Can be defined in pixels or xAxis
+  /// units, if shapes.xAxis index is
+  /// defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.width
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.width
 
   double? width;
 
-  /// The xAxis index to which the points should be attached.
-  /// Used for the ellipse.
+  /// The xAxis index which should be used for annotation's sizes and
+  /// points coordinates conversion.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.xAxis
+  /// This option is used for `rect` shape
+  /// width, and all shapes
+  /// point and
+  /// points coordinates.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.xAxis
 
   double? xAxis;
 
-  /// The yAxis index to which the points should be attached.
-  /// Used for the ellipse.
+  /// The yAxis index which should be used for annotation's sizes and
+  /// points coordinates conversion.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.shapeOptions.yAxis
+  /// This option is used for `rect` shape
+  /// height, `circle` shape
+  /// radius, `ellipse`
+  /// y direction radius, and all shapes
+  /// point and
+  /// points coordinates.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions.yAxis
 
   double? yAxis;
 
   /// Options for annotation's shapes. Each shape inherits options from the shapeOptions object. An option from the shapeOptions can be overwritten by config for a specific shape.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.shapeOptions
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.shapeOptions
   HighchartsAnnotationsShapeOptions(
       {this.dashStyle,
       this.fill,
@@ -145,11 +164,7 @@ class HighchartsAnnotationsShapeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
     }
     if (fill != null) {
-      buffer.write('"fill":{');
-      for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
     if (height != null) {
       buffer.writeAll(['"height":', height, ','], '');

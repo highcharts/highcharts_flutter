@@ -67,8 +67,13 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.backgroundColor
 
@@ -151,7 +156,7 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
   ///   `'center'` (data label overlaps the pie).
   ///
   /// - An object that holds the information about the position of the
-  ///   connector. Its `touchingSliceAt`  porperty tells the position of
+  ///   connector. Its `touchingSliceAt` property tells the position of
   ///   the place where the connector touches the slice.
   ///
   /// - Data label options
@@ -163,12 +168,17 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   String? connectorShape;
 
-  /// Highcharts Options Widget.
+  /// The width of the line connecting the data label to the pie slice.
+  ///
+  /// In styled mode, the connector stroke width is given in the
+  /// `.highcharts-data-label-connector` class.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.connectorWidth
 
   double? connectorWidth;
 
   /// Works only if `connectorShape` is `'crookedLine'`. It defines how
-  /// far from the vertical plot edge the coonnector path should be
+  /// far from the vertical plot edge the connector path should be
   /// crooked. With the default, `undefined`, the crook is placed so that
   /// the horizontal line from the label intersects with the radial line
   /// extending through the center of the pie slice.
@@ -216,6 +226,7 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
   ///
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.filter
 
   HighchartsSeriesDataLabelsFilterOptions? filter;
@@ -237,6 +248,21 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   HighchartsCallback? formatter;
 
+  /// Whether to render the data label inside the funnel item instead of
+  /// outside, connected by a connector line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.inside
+
+  bool? inside;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.labelrank
+
+  double? labelrank;
+
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
   /// be applied only to series which support displaying null points.
@@ -251,10 +277,12 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -276,9 +304,13 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// When either the `borderWidth` or the `backgroundColor` is set,
   /// this is the padding within the box.
   ///
+  /// An array of numbers sets padding for the respective sides. An array
+  /// of two numbers repeats the values for the horizontal and vertical
+  /// sides.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.padding
 
-  double? padding;
+  List<double>? padding;
 
   /// Aligns data labels relative to points. If `center` alignment is
   /// not possible, it defaults to `right`.
@@ -329,6 +361,10 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
   ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.textPath
 
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
@@ -359,8 +395,11 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.dataLabels.zIndex
 
@@ -388,6 +427,8 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
       this.filter,
       this.format,
       this.formatter,
+      this.inside,
+      this.labelrank,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
@@ -472,6 +513,12 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
     if (formatter != null) {
       buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
+    if (inside != null) {
+      buffer.writeAll(['"inside":', inside, ','], '');
+    }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
@@ -482,7 +529,11 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');
     }
     if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], '');
+      buffer.write('"padding":[');
+      for (var item in padding!) {
+        buffer.writeAll([item, ','], '');
+      }
+      buffer.write('],');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');

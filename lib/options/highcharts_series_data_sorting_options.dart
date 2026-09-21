@@ -29,7 +29,7 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/// Options for the series data sorting.
+/// Options for series data sorting.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataSorting
 class HighchartsSeriesDataSortingOptions extends HighchartsOptionsBase {
@@ -52,7 +52,7 @@ class HighchartsSeriesDataSortingOptions extends HighchartsOptionsBase {
 
   String? sortKey;
 
-  /// Options for the series data sorting.
+  /// Options for series data sorting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataSorting
   HighchartsSeriesDataSortingOptions(

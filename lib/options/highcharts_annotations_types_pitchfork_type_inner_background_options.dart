@@ -31,7 +31,7 @@ import 'highcharts_options_base.dart';
 
 /// Inner background options.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground
 class HighchartsAnnotationsTypesPitchforkTypeInnerBackgroundOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -44,54 +44,67 @@ class HighchartsAnnotationsTypesPitchforkTypeInnerBackgroundOptions
 
   /// Name of the dash style to use for the shape's stroke.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.dashStyle
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.dashStyle
 
   String? dashStyle;
 
-  /// The radius of the shape in y direction.
-  /// Used for the ellipse.
+  /// The radius of the `ellipse` shape in y direction. Can be defined in
+  /// pixels or yAxis units, if
+  /// shapes.yAxis index is defined.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.ry
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.ry
 
   double? ry;
 
   /// Defines additional snapping area around an annotation
   /// making this annotation to focus. Defined in pixels.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.snap
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.snap
 
   double? snap;
 
   /// The URL for an image to use as the annotation shape.
   /// Note, type has to be set to `'image'`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.src
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.src
 
   String? src;
 
   /// The color of the shape's stroke.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.stroke
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.stroke
 
   String? stroke;
 
-  /// The xAxis index to which the points should be attached.
-  /// Used for the ellipse.
+  /// The xAxis index which should be used for annotation's sizes and
+  /// points coordinates conversion.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.xAxis
+  /// This option is used for `rect` shape
+  /// width, and all shapes
+  /// point and
+  /// points coordinates.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.xAxis
 
   double? xAxis;
 
-  /// The yAxis index to which the points should be attached.
-  /// Used for the ellipse.
+  /// The yAxis index which should be used for annotation's sizes and
+  /// points coordinates conversion.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground.yAxis
+  /// This option is used for `rect` shape
+  /// height, `circle` shape
+  /// radius, `ellipse`
+  /// y direction radius, and all shapes
+  /// point and
+  /// points coordinates.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground.yAxis
 
   double? yAxis;
 
   /// Inner background options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground
   HighchartsAnnotationsTypesPitchforkTypeInnerBackgroundOptions(
       {this.fill,
       this.strokeWidth,

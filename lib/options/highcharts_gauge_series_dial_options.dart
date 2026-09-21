@@ -43,18 +43,23 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
   String? backgroundColor;
 
   /// The length of the dial's base part, relative to the total
-  /// radius or length of the dial.
+  /// radius or length of the dial. Accepts a pixel value if given
+  /// as a number, or a percentage value if given as a percentage
+  /// string. If the base length is greater than 0, the dial's base
+  /// will have an even width, before it narrows in to the top.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.baseLength
 
-  String? baseLength;
+  dynamic baseLength;
 
-  /// The pixel width of the base of the gauge dial. The base is
-  /// the part closest to the pivot, defined by baseLength.
+  /// The width of the base of the gauge dial. The base is the part
+  /// closest to the pivot, defined by baseLength. Accepts a pixel
+  /// value if given as a number, or a percentage value if given as
+  /// a percentage string.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.baseWidth
 
-  double? baseWidth;
+  dynamic baseWidth;
 
   /// The border color or stroke of the gauge's dial. By default,
   /// the borderWidth is 0, so this must be set in addition to a
@@ -63,6 +68,12 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.borderColor
 
   String? borderColor;
+
+  /// The border radius of the gauge dial
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.borderRadius
+
+  dynamic borderRadius;
 
   /// The width of the gauge dial border in pixels.
   ///
@@ -76,27 +87,31 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
 
   dynamic path;
 
-  /// The radius or length of the dial, in percentages relative to
-  /// the radius of the gauge itself.
+  /// The radius or length of the dial, relative to the radius of
+  /// the gauge itself. Accepts a pixel value if given as a number,
+  /// or a percentage value if given as a percentage string.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.radius
 
-  String? radius;
+  dynamic radius;
 
   /// The length of the dial's rear end, the part that extends out
-  /// on the other side of the pivot. Relative to the dial's
-  /// length.
+  /// on the other side of the pivot. Accepts a pixel value if
+  /// given as a number, or a percentage value of the dial's length
+  /// if given as a percentage string.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.rearLength
 
-  String? rearLength;
+  dynamic rearLength;
 
   /// The width of the top of the dial, closest to the perimeter.
-  /// The pivot narrows in from the base to the top.
+  /// The pivot narrows in from the base to the top. Accepts a
+  /// pixel value if given as a number, or a percentage of the dial
+  /// radius if given as a percentage string.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dial.topWidth
 
-  double? topWidth;
+  dynamic topWidth;
 
   /// Options for the dial or arrow pointer of the gauge.
   ///
@@ -106,6 +121,7 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
       this.baseLength,
       this.baseWidth,
       this.borderColor,
+      this.borderRadius,
       this.borderWidth,
       this.path,
       this.radius,
@@ -124,10 +140,13 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"baseLength":', jsonEncode(baseLength), ','], '');
     }
     if (baseWidth != null) {
-      buffer.writeAll(['"baseWidth":', baseWidth, ','], '');
+      buffer.writeAll(['"baseWidth":', jsonEncode(baseWidth), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
+    }
+    if (borderRadius != null) {
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], '');
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
@@ -142,7 +161,7 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"rearLength":', jsonEncode(rearLength), ','], '');
     }
     if (topWidth != null) {
-      buffer.writeAll(['"topWidth":', topWidth, ','], '');
+      buffer.writeAll(['"topWidth":', jsonEncode(topWidth), ','], '');
     }
   }
 }

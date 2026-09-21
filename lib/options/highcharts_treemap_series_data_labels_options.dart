@@ -87,8 +87,13 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.dataLabels.backgroundColor
 
@@ -157,6 +162,14 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   bool? defer;
 
+  /// The distance of the data label from the data point. Note that the
+  /// `padding` setting also affects the rendered distance, but is not
+  /// visible unless the data label has a border or background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.dataLabels.distance
+
+  double? distance;
+
   /// Highcharts Options Widget.
 
   bool? enabled;
@@ -167,6 +180,7 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// a pure JSON structure or for use with graphical editors. For
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
+  ///
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.dataLabels.filter
 
@@ -201,6 +215,14 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   bool? inside;
 
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.dataLabels.labelrank
+
+  double? labelrank;
+
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
   /// be applied only to series which support displaying null points.
@@ -215,10 +237,12 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -283,6 +307,10 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
   ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.dataLabels.textPath
 
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
@@ -313,8 +341,11 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.dataLabels.zIndex
 
@@ -334,12 +365,14 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
       this.color,
       this.crop,
       this.defer,
+      this.distance,
       this.enabled,
       this.filter,
       this.format,
       this.formatter,
       this.headers,
       this.inside,
+      this.labelrank,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
@@ -397,6 +430,9 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -414,6 +450,9 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
+    }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
     }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');

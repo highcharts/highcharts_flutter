@@ -31,6 +31,15 @@ import 'highcharts_options_base.dart';
 
 /// Highcharts Options Widget.
 class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
+  /// For the orthogonal link type, this defines how far down the link
+  /// bends. A number defines the pixel offset from the start of the link,
+  /// and a percentage defines the relative position on the link. For
+  /// example, a `bendAt` of `50%` means that the link bends in the middle.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.link.bendAt
+
+  dynamic bendAt;
+
   /// The color of the links between nodes.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.link.color
@@ -56,7 +65,7 @@ class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
   double? lineWidth;
 
   /// Radius for the rounded corners of the links between nodes.
-  /// Works for `default` link type.
+  /// Works for the `orthogonal` link type.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.link.radius
 
@@ -70,7 +79,8 @@ class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
 
   /// Highcharts Options Widget.
   HighchartsTreegraphSeriesLinkOptions(
-      {this.color,
+      {this.bendAt,
+      this.color,
       this.cursor,
       this.curveFactor,
       this.lineWidth,
@@ -81,6 +91,9 @@ class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
+    if (bendAt != null) {
+      buffer.writeAll(['"bendAt":', jsonEncode(bendAt), ','], '');
+    }
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }

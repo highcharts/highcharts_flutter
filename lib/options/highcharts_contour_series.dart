@@ -1,0 +1,154 @@
+/* *
+ *
+ *  Highcharts Flutter
+ *
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
+
+/* *
+ *
+ *  Imports
+ *
+ * */
+
+import 'dart:convert';
+import 'highcharts_series.dart';
+import 'highcharts_contour_series_options.dart';
+import 'highcharts_contour_series_data_options.dart';
+
+/* *
+ *
+ *  Exports
+ *
+ * */
+
+export 'highcharts_contour_series_options.dart';
+export 'highcharts_contour_series_data_options.dart';
+
+/* *
+ *
+ *  Classes
+ *
+ * */
+
+/// A contour plot is a graphical representation of three-dimensional data
+/// in two dimensions using contour lines or color-coded regions.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `contour` series are defined in
+///    plotOptions.contour.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.contour
+/// {@category series}
+class HighchartsContourSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `contour` series
+  /// type, points can be given in the following ways:
+  ///
+  /// 1.  An array of arrays with 3 or 2 values. In this case, the values
+  /// correspond to `x,y,value`. If the first value is a string, it is
+  /// applied as the name of the point, and the `x` value is inferred.
+  /// Unlike the heatmap, the contour series data points, do not have to appear
+  /// in any specific order.
+  ///
+  ///
+  /// 2.  An array of objects with named values. The following snippet shows only a
+  /// few settings, see the complete options set below. If the total number of data
+  /// points exceeds the series' turboThreshold,
+  /// this option is not available.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.contour.data
+  List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc. If a `dataTable`
+  /// and `dataMapping` are used, the name defaults to the id of the primary data
+  /// table column. Otherwise, it defaults to "Series {n}", where n is the index of
+  /// the series, starting at 1.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.contour.name
+  String? name;
+
+  /// Configuration options for the HighchartsContourSeries.
+  HighchartsContourSeriesOptions? options;
+
+  /// List of data point objects for the HighchartsContourSeries series.
+  ///
+  /// Use this property to define individual data points using the
+  /// HighchartsContourSeriesDataOptions class, which allows full configuration of each
+  /// point, including all properties supported by Highcharts (e.g., `x`, `y`, `name`, `marker`, etc.).
+  ///
+  /// This is an alternative to the simpler `data` property, and provides more flexibility
+  /// for advanced use cases.
+  List<HighchartsContourSeriesDataOptions>? dataPoints;
+  @override
+  get type => 'contour';
+
+  /// A contour plot is a graphical representation of three-dimensional data in two dimensions using contour lines or color-coded regions.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.contour
+  HighchartsContourSeries({
+    this.data,
+    this.name,
+    this.options,
+    this.dataPoints,
+  });
+
+  @override
+  void toOptionsJSON(StringBuffer buffer) {
+    super.toOptionsJSON(buffer);
+
+    buffer.writeAll(['"type": "', type, '",'], '');
+
+    if (data != null && dataPoints == null) {
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in data!) {
+        if (point.length > 1) {
+          seriesData.writeAll(['['], '');
+        }
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(['"', sub, '"'], '');
+          } else {
+            seriesData.writeAll([sub], ',');
+          }
+          seriesData.write(',');
+        }
+        if (point.length > 1) {
+          seriesData.writeAll(['],'], '');
+        }
+      }
+
+      buffer.writeAll(['"data":[', seriesData, '],'], '');
+    } else if (dataPoints != null) {
+      // Go through the dataPoints and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in dataPoints!) {
+        seriesData.writeAll(['{'], '');
+        point.toOptionsJSON(seriesData);
+        seriesData.writeAll(['},'], '');
+      }
+
+      buffer.writeAll(['"data": [', seriesData, '],'], '');
+    }
+
+    if (options != null) {
+      options!.toOptionsJSON(buffer);
+    }
+
+    if (name != null) {
+      buffer.writeAll(['"name":', jsonEncode(name), ','], '');
+    }
+  }
+}

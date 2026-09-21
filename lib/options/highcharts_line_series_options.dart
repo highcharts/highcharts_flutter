@@ -227,7 +227,8 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// or absolute change depending on whether `compare` is set to `"percent"`
   /// or `"value"`. When this is applied to multiple series, it allows
   /// comparing the development of the series against each other. Adds
-  /// a `change` field to every point object.
+  /// a `change` field to every point object. If a `compare` value is not set on a
+  /// linked series, it will be inherited from the parent series.
   ///
   /// API Docs: https://api.highcharts.com/highstock/series.line.compare
 
@@ -363,8 +364,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesDataGroupingOptions? dataGrouping;
 
-  /// Options for the series data labels, appearing next to each data
-  /// point.
+  /// Options for the series data labels, appearing next to each data point.
   ///
   /// Since v6.2.0, multiple data labels can be applied to each single
   /// point by defining them as an array of configs.
@@ -377,12 +377,61 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   List<HighchartsSeriesDataLabelsOptions>? dataLabels;
 
-  /// Options for the series data sorting.
+  /// The mapping between the data table and the series data points. This is
+  /// used in conjunction with the `dataTable` option (on chart
+  /// or series level) to map columns from the
+  /// data table to the properties of the data points. The keys of the
+  /// `dataMapping` object correspond to the properties of the data points
+  /// (e.g. `x`, `y`, `name`), and the values are objects that specify which
+  /// column from which data table to use for that property.
+  ///
+  /// The keys can also be nested paths, for example `dataLabel.format`, to map
+  /// to nested properties of the data points.
+  ///
+  /// The values can also be strings, in which case they are interpreted as
+  /// column id's from the first data table.
+  ///
+  /// A typical use case is that multiple series share a common column, like
+  /// `name` or `x`. In this case, to avoid repetition, the common column can
+  /// be applied in `plotOptions.series.dataMapping` and the individual series
+  /// can specify only the columns that are unique to them.
+  ///
+  /// The series name defaults to the column ID of the main data column in the
+  /// mapping. The main data column is typically the `y` data for cartesian
+  /// series, or `value` for map series. For example, if the mapping is
+  /// `{ y: 'Cost' }`, the series name will be `Cost`.
+  ///
+  ///
+  /// If the columns of the DataTable have keys matching the series keys, the
+  /// data mapping is not necessary. For example, this DataTable will connect
+  /// directly to the series' `x` and `y` keys:
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.dataMapping
+
+  Map<String, dynamic>? dataMapping;
+
+  /// Options for series data sorting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.dataSorting
 
   HighchartsSeriesDataSortingOptions? dataSorting;
 
+  /// Options for a specific series-level data table or an array of data
+  /// tables. The `dataTable` option can be either a configuration object or an
+  /// instance of the `DataTable` class. If a `DataTable` instance is passed,
+  /// it will be used directly. If a configuration object or an array is
+  /// passed, a new `DataTable` instance will be created based on the provided
+  /// configuration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.dataTable
+
+  List<dynamic>? dataTable;
+
+  /// Deprecated. Use
+  /// plotOptions.series.accessibility.description
+  /// instead.
+  ///
   /// A description of the series to add to the screen reader information
   /// about the series.
   ///
@@ -446,7 +495,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// for daytime hours, while gaps will appear in nights and
   /// weekends.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/series.line.gapSize
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.gapSize
 
   double? gapSize;
 
@@ -463,7 +512,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// also applies to the navigator series that inherits gap
   /// options from the base series.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/series.line.gapUnit
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.gapUnit
 
   String? gapUnit;
 
@@ -549,8 +598,8 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   double? legendIndex;
 
-  /// What type of legend symbol to render for this series. Can be one of
-  /// `areaMarker`, `lineMarker` or `rectangle`.
+  /// What type of legend symbol to render for this series. Can be one
+  /// of `areaMarker`, `lineMarker` or `rectangle`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.legendSymbol
 
@@ -570,9 +619,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   double? lineWidth;
 
-  /// The SVG value used for the `stroke-linecap` and `stroke-linejoin`
-  /// of a line graph. Round means that lines are rounded in the ends and
-  /// bends.
+  /// The line cap used for line ends and line joins on the graph.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.linecap
 
@@ -586,6 +633,9 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// If master series uses data sorting and linked series does not have
   /// its own sorting definition, the linked series will be sorted in the
   /// same order as the master one.
+  ///
+  /// If a `compare` value is not set on a linked series, it will be inherited
+  /// from the parent series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.linkedTo
 
@@ -628,9 +678,10 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// Whether or not data-points with the value of `null` should be interactive.
   /// When this is set to `true`, tooltips may highlight these points, and this
   /// option also enables keyboard navigation for such points. Format options
-  /// for such points include `nullFormat` and `nullFormater`.
-  /// Works for these series: `line`, `spline`, `area`, `area-spline`,
-  /// `column`, `bar`, and* `timeline`.
+  /// for such points include `nullFormat` and
+  /// `nullFormatter`. Works for these series:
+  /// `line`, `spline`, `area`, `area-spline`, `column`, `bar`, and
+  /// `timeline`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.nullInteraction
 
@@ -655,6 +706,10 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesPointOptions? point;
 
+  /// Deprecated. Use
+  /// series.accessibility.point.descriptionFormat
+  /// instead.
+  ///
   /// Same as
   /// accessibility.point.descriptionFormat,
   /// but for an individual series. Overrides the chart wide configuration.
@@ -663,6 +718,10 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   dynamic pointDescriptionFormat;
 
+  /// Deprecated. Use
+  /// series.accessibility.point.descriptionFormatter
+  /// instead.
+  ///
   /// Same as
   /// accessibility.series.descriptionFormatter,
   /// but for an individual series. Overrides the chart wide configuration.
@@ -711,7 +770,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// create any padding of the X axis. In a polar column chart this means
   /// that the first column points directly north. If the pointPlacement is
   /// `"between"`, the columns will be laid out between ticks. This is
-  /// useful for example for visualising an amount between two points in
+  /// useful for example for visualizing an amount between two points in
   /// time or in a certain sector of a polar chart.
   ///
   /// Since Highcharts 3.0.2, the point placement can also be numeric,
@@ -816,6 +875,10 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   bool? showInNavigator;
 
+  /// Deprecated. Use
+  /// series.accessibility.keyboardNavigation
+  /// instead.
+  ///
   /// If set to `true`, the accessibility module will skip past the points
   /// in this series for keyboard navigation.
   ///
@@ -851,7 +914,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   dynamic stack;
 
   /// Whether to stack the values of each series on top of each other.
-  /// Possible values are `undefined` to disable, `"normal"` to stack by
+  /// Possible values are null to disable, `"normal"` to stack by
   /// value or `"percent"`.
   ///
   /// When stacking is enabled, data must be sorted
@@ -866,7 +929,12 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
 
   String? stacking;
 
-  /// Highcharts Options Widget.
+  /// A collection of options for different series states.
+  ///
+  /// In addition to the options documented under each state, any option from
+  /// the parent series type can be set, with exception of `data` and `states`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.states
 
   HighchartsSeriesStatesOptions? states;
 
@@ -989,7 +1057,7 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
   /// allows to disable zooming on an individual non-cartesian series. By default
   /// zooming is enabled for all series.
   ///
-  /// Note: This option works only for non-cartesian series.
+  /// **Note**: This option works only for non-cartesian series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.zoomEnabled
 
@@ -1025,7 +1093,9 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
       this.dashStyle,
       this.dataGrouping,
       this.dataLabels,
+      this.dataMapping,
       this.dataSorting,
+      this.dataTable,
       this.description,
       this.dragDrop,
       this.enableMouseTracking,
@@ -1178,8 +1248,22 @@ class HighchartsLineSeriesOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
+    if (dataMapping != null) {
+      buffer.write('"dataMapping":{');
+      for (var item in dataMapping!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
+    }
     if (dataSorting != null) {
       buffer.writeAll(['"dataSorting":', dataSorting?.toJSON(), ','], '');
+    }
+    if (dataTable != null) {
+      buffer.write('"dataTable":[');
+      for (var item in dataTable!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (description != null) {
       buffer.writeAll(['"description":', jsonEncode(description), ','], '');

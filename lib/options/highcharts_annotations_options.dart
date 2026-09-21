@@ -23,6 +23,7 @@ import 'highcharts_annotations_label_options.dart';
 import 'highcharts_annotations_labels_options.dart';
 import 'highcharts_annotations_shape_options.dart';
 import 'highcharts_annotations_shapes_options.dart';
+import 'highcharts_annotations_type_options.dart';
 import 'highcharts_annotations_types_options.dart';
 
 /* *
@@ -38,6 +39,7 @@ export 'highcharts_annotations_label_options.dart';
 export 'highcharts_annotations_labels_options.dart';
 export 'highcharts_annotations_shape_options.dart';
 export 'highcharts_annotations_shapes_options.dart';
+export 'highcharts_annotations_type_options.dart';
 export 'highcharts_annotations_types_options.dart';
 
 /* *
@@ -72,6 +74,12 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/annotations.animation
 
   HighchartsAnnotationsAnimationOptions? animation;
+
+  /// A class name for styling by CSS.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.className
+
+  String? className;
 
   /// Options for annotation's control points. Each control point
   /// inherits options from controlPointOptions object.
@@ -148,6 +156,12 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
   String? type;
 
+  /// Additional options for an annotation with the type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.typeOptions
+
+  HighchartsAnnotationsTypeOptions? typeOptions;
+
   /// Option override for specific advanced annotation types. This collection
   /// is intended for general theming using `Highcharts.setOptions()`.
   ///
@@ -172,6 +186,7 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/annotations
   HighchartsAnnotationsOptions(
       {this.animation,
+      this.className,
       this.controlPointOptions,
       this.crop,
       this.draggable,
@@ -182,6 +197,7 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       this.shapeOptions,
       this.shapes,
       this.type,
+      this.typeOptions,
       this.types,
       this.visible,
       this.zIndex});
@@ -192,6 +208,9 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
+    }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
     if (controlPointOptions != null) {
       buffer.writeAll(
@@ -231,6 +250,9 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
+    }
+    if (typeOptions != null) {
+      buffer.writeAll(['"typeOptions":', typeOptions?.toJSON(), ','], '');
     }
     if (types != null) {
       buffer.writeAll(['"types":', types?.toJSON(), ','], '');

@@ -20,6 +20,7 @@ import 'highcharts_renko_series_data_accessibility_options.dart';
 import 'highcharts_renko_series_data_data_labels_options.dart';
 import 'highcharts_renko_series_data_drag_drop_options.dart';
 import 'highcharts_renko_series_data_events_options.dart';
+import 'highcharts_renko_series_data_states_options.dart';
 
 /* *
  *
@@ -31,6 +32,7 @@ export 'highcharts_renko_series_data_accessibility_options.dart';
 export 'highcharts_renko_series_data_data_labels_options.dart';
 export 'highcharts_renko_series_data_drag_drop_options.dart';
 export 'highcharts_renko_series_data_events_options.dart';
+export 'highcharts_renko_series_data_states_options.dart';
 
 /* *
  *
@@ -80,6 +82,14 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
 
   double? borderWidth;
 
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.renko.data.className
+
+  String? className;
+
   /// Individual color for the point. By default the color is pulled from
   /// the global `colors` array.
   ///
@@ -109,18 +119,12 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
   String? dashStyle;
 
   /// Individual data label for each point. The options are the same as
-  /// the ones for plotOptions.series.dataLabels.
+  /// the ones for plotOptions.series.dataLabels with exception of `zIndex` which is applied
+  /// on the data label's parent group.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.renko.data.dataLabels
 
   List<HighchartsRenkoSeriesDataDataLabelsOptions>? dataLabels;
-
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.renko.data.description
-
-  String? description;
 
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
@@ -142,9 +146,11 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.renko.data.labelrank
 
@@ -170,6 +176,10 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
 
   bool? selected;
 
+  /// Highcharts Options Widget.
+
+  HighchartsRenkoSeriesDataStatesOptions? states;
+
   /// The x value of the point.
   ///
   /// For datetime axes, a number value is the timestamp in milliseconds since
@@ -194,11 +204,11 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
       {this.accessibility,
       this.borderColor,
       this.borderWidth,
+      this.className,
       this.color,
       this.custom,
       this.dashStyle,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.events,
       this.id,
@@ -206,6 +216,7 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
       this.name,
       this.pointWidth,
       this.selected,
+      this.states,
       this.x,
       this.y});
 
@@ -221,6 +232,9 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
+    }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -242,9 +256,6 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
-    }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');
     }
@@ -265,6 +276,9 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (selected != null) {
       buffer.writeAll(['"selected":', selected, ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (x != null) {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');

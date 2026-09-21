@@ -51,21 +51,7 @@ class HighchartsNavigationOptions extends HighchartsOptionsBase {
 
   HighchartsNavigationAnnotationsOptions? annotationsOptions;
 
-  /// Bindings definitions for custom HTML buttons. Each binding implements
-  /// simple event-driven interface:
-  ///
-  /// - `className`: classname used to bind event to
-  ///
-  /// - `init`: initial event, fired on button click
-  ///
-  /// - `start`: fired on first click on a chart
-  ///
-  /// - `steps`: array of sequential events fired one after another on each
-  ///   of users clicks
-  ///
-  /// - `end`: last event to be called after last step event
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings
+  /// Highcharts Options Widget.
 
   HighchartsNavigationBindingsOptions? bindings;
 
@@ -105,7 +91,8 @@ class HighchartsNavigationOptions extends HighchartsOptionsBase {
   HighchartsNavigationEventsOptions? events;
 
   /// Path where Highcharts will look for icons. Change this to use icons
-  /// from a different server.
+  /// from a different server. When undefined, icons are loaded from
+  /// the library's internal source.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigation.iconsURL
 

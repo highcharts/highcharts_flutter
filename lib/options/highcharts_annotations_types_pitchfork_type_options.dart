@@ -17,7 +17,6 @@
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_types_pitchfork_type_inner_background_options.dart';
 import 'highcharts_annotations_types_pitchfork_type_outer_background_options.dart';
-import 'highcharts_annotations_types_crooked_line_type_line_options.dart';
 import 'highcharts_annotations_types_crooked_line_type_points_options.dart';
 
 /* *
@@ -28,7 +27,6 @@ import 'highcharts_annotations_types_crooked_line_type_points_options.dart';
 
 export 'highcharts_annotations_types_pitchfork_type_inner_background_options.dart';
 export 'highcharts_annotations_types_pitchfork_type_outer_background_options.dart';
-export 'highcharts_annotations_types_crooked_line_type_line_options.dart';
 export 'highcharts_annotations_types_crooked_line_type_points_options.dart';
 
 /* *
@@ -42,41 +40,35 @@ class HighchartsAnnotationsTypesPitchforkTypeOptions
     extends HighchartsOptionsBase {
   /// Inner background options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.innerBackground
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.innerBackground
 
   HighchartsAnnotationsTypesPitchforkTypeInnerBackgroundOptions?
       innerBackground;
 
   /// Outer background options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.outerBackground
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.outerBackground
 
   HighchartsAnnotationsTypesPitchforkTypeOuterBackgroundOptions?
       outerBackground;
-
-  /// Line options.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.line
-
-  HighchartsAnnotationsTypesCrookedLineTypeLineOptions? line;
 
   /// Highcharts Options Widget.
 
   List<HighchartsAnnotationsTypesCrookedLineTypePointsOptions>? points;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.pitchfork.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork.typeOptions.yAxis
 
   double? yAxis;
 
@@ -84,7 +76,6 @@ class HighchartsAnnotationsTypesPitchforkTypeOptions
   HighchartsAnnotationsTypesPitchforkTypeOptions(
       {this.innerBackground,
       this.outerBackground,
-      this.line,
       this.points,
       this.xAxis,
       this.yAxis});
@@ -100,9 +91,6 @@ class HighchartsAnnotationsTypesPitchforkTypeOptions
     if (outerBackground != null) {
       buffer
           .writeAll(['"outerBackground":', outerBackground?.toJSON(), ','], '');
-    }
-    if (line != null) {
-      buffer.writeAll(['"line":', line?.toJSON(), ','], '');
     }
     if (points != null) {
       buffer.write('"points":[');

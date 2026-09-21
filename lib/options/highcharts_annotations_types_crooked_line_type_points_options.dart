@@ -37,13 +37,13 @@ class HighchartsAnnotationsTypesCrookedLineTypePointsOptions
 
   /// The x position of the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.points.x
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.points.x
 
   double? x;
 
   /// The y position of the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.points.y
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.points.y
 
   double? y;
 

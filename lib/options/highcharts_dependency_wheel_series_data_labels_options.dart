@@ -55,12 +55,7 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
 
   String? alignTo;
 
-  /// Whether to allow data labels to overlap. To make the labels less
-  /// sensitive for overlapping, the
-  /// dataLabels.padding
-  /// can be set to 0.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.allowOverlap
+  /// Highcharts Options Widget.
 
   bool? allowOverlap;
 
@@ -157,6 +152,7 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
   ///
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.filter
 
   HighchartsSeriesDataLabelsFilterOptions? filter;
@@ -178,6 +174,14 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
   /// Highcharts Options Widget.
 
   bool? inside;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.labelrank
+
+  double? labelrank;
 
   /// The format string specifying what to show for nodes in the sankey
   /// diagram. By default the nodeFormatter returns `{point.name}`. Available
@@ -208,10 +212,12 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -233,9 +239,13 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
   /// When either the `borderWidth` or the `backgroundColor` is set,
   /// this is the padding within the box.
   ///
+  /// An array of numbers sets padding for the respective sides. An array
+  /// of two numbers repeats the values for the horizontal and vertical
+  /// sides.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.padding
 
-  double? padding;
+  List<double>? padding;
 
   /// Aligns data labels relative to points. If `center` alignment is
   /// not possible, it defaults to `right`.
@@ -281,7 +291,11 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
   /// text outline doesn't work well, in which cases it can be disabled
   /// by setting it to `"none"`. When `useHTML` is true, the
   /// `textOutline` will not be picked up. In this, case, the same
-  /// effect can be acheived through the `text-shadow` CSS property.
+  /// effect can be achieved through the `text-shadow` CSS property. As a
+  /// complementary or alternative to the `textOutline`, a
+  /// `dataLabels.backgroundColor` can be used. It provides a more calm
+  /// impression and ensures readable text label, at the cost of a risk of
+  /// overshadowing the underlying chart elements.
   ///
   /// For some series types, where each point has an extent, like for
   /// example tree maps, the data label may overflow the point. There
@@ -324,8 +338,11 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.zIndex
 
@@ -351,6 +368,7 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
       this.format,
       this.formatter,
       this.inside,
+      this.labelrank,
       this.nodeFormat,
       this.nodeFormatter,
       this.nullFormat,
@@ -428,6 +446,9 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
     }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
     if (nodeFormat != null) {
       buffer.writeAll(['"nodeFormat":', jsonEncode(nodeFormat), ','], '');
     }
@@ -444,7 +465,11 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');
     }
     if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], '');
+      buffer.write('"padding":[');
+      for (var item in padding!) {
+        buffer.writeAll([item, ','], '');
+      }
+      buffer.write('],');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');

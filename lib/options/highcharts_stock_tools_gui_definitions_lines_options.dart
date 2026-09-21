@@ -71,7 +71,7 @@ class HighchartsStockToolsGuiDefinitionsLinesOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.lines.items
 
-  String? items;
+  List<String>? items;
 
   /// Highcharts Options Widget.
 
@@ -119,7 +119,11 @@ class HighchartsStockToolsGuiDefinitionsLinesOptions
       buffer.writeAll(['"horizontalLine":', horizontalLine?.toJSON(), ','], '');
     }
     if (items != null) {
-      buffer.writeAll(['"items":', jsonEncode(items), ','], '');
+      buffer.write('"items":[');
+      for (var item in items!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (line != null) {
       buffer.writeAll(['"line":', line?.toJSON(), ','], '');

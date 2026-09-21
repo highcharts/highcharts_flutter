@@ -38,13 +38,13 @@ class HighchartsAnnotationsTypesFibonacciTimeZonesTypeLineOptions
 
   /// The color of the lines.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacciTimeZones.typeOptions.line.stroke
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacciTimeZones.typeOptions.line.stroke
 
   String? stroke;
 
   /// The width of the lines.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacciTimeZones.typeOptions.line.strokeWidth
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacciTimeZones.typeOptions.line.strokeWidth
 
   double? strokeWidth;
 

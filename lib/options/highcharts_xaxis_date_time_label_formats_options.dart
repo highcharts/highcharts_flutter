@@ -46,13 +46,14 @@ export 'highcharts_xaxis_date_time_label_formats_year_options.dart';
  * */
 
 /// For a datetime axis, the scale will automatically adjust to the
-/// appropriate unit. This member gives the default string
-/// representations used for each unit. For intermediate values,
-/// different units may be used, for example the `day` unit can be used
-/// on midnight and `hour` unit be used for intermediate values on the
-/// same axis.
+/// appropriate unit. This member gives the default representations used
+/// for each unit. For easier data interpretation, `hour`, `day`, `month`
+/// and `year` units can be used and formatted as boundary tick values.
+/// Check boundaries map below to see where to format boundary ticks on
+/// given main time units.
 ///
-/// For an overview of the string or object configuration, see
+///
+/// For an overview of the date time label formats configuration, see
 /// dateFormat.
 ///
 /// Defaults to:
@@ -91,7 +92,7 @@ class HighchartsXAxisDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
 
   HighchartsXAxisDateTimeLabelFormatsYearOptions? year;
 
-  /// For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the `day` unit can be used on midnight and `hour` unit be used for intermediate values on the same axis.
+  /// For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default representations used for each unit. For easier data interpretation, `hour`, `day`, `month` and `year` units can be used and formatted as boundary tick values. Check boundaries map below to see where to format boundary ticks on given main time units.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/zAxis.dateTimeLabelFormats
   HighchartsXAxisDateTimeLabelFormatsOptions(

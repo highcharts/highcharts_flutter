@@ -42,7 +42,7 @@ import '../../utilities/highcharts_callback.dart';
 ///
 /// API Docs: https://api.highcharts.com/highcharts/data
 class HighchartsDataOptions extends HighchartsOptionsBase {
-  /// A callback function to modify the CSV before parsing it. Return the modified
+  /// A callback function to modify the CSV before parsing it. Returns the modified
   /// string.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/data.beforeParse
@@ -199,6 +199,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
   /// If given, it takes precedence over `startColumn`, `endColumn`, `startRow` and
   /// `endRow`.
   ///
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/data.googleSpreadsheetRange
 
   String? googleSpreadsheetRange;
@@ -228,8 +229,11 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
 
   String? lineDelimiter;
 
-  /// A callback function to parse string representations of dates into
-  /// JavaScript timestamps. Should return an integer timestamp on success.
+  /// A callback function to parse string representations of dates into JavaScript
+  /// timestamps. Should return an integer timestamp on success.
+  ///
+  /// Set `false` to disable date parsing. Highcharts supports internal date
+  /// parsing as of v12.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/data.parseDate
 
@@ -344,7 +348,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
     if (columns != null) {
       buffer.write('"columns":[');
       for (var item in columns!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }
@@ -418,7 +422,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
     if (rows != null) {
       buffer.write('"rows":[');
       for (var item in rows!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }

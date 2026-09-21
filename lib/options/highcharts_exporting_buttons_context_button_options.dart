@@ -80,12 +80,6 @@ class HighchartsExportingButtonsContextButtonOptions
 
   String? symbol;
 
-  /// See navigation.buttonOptions.symbolFill.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/exporting.buttons.contextButton.symbolFill
-
-  String? symbolFill;
-
   /// The key to a lang option setting that is used for the
   /// button's title tooltip. When the key is `contextButtonTitle`, it
   /// refers to lang.contextButtonTitle
@@ -126,6 +120,12 @@ class HighchartsExportingButtonsContextButtonOptions
   /// API Docs: https://api.highcharts.com/highcharts/exporting.buttons.contextButton.height
 
   double? height;
+
+  /// Fill color for the symbol within the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.buttons.contextButton.symbolFill
+
+  String? symbolFill;
 
   /// The pixel size of the symbol on the button.
   ///
@@ -208,13 +208,13 @@ class HighchartsExportingButtonsContextButtonOptions
       this.menuItems,
       this.onclick,
       this.symbol,
-      this.symbolFill,
       this.titleKey,
       this.x,
       this.align,
       this.buttonSpacing,
       this.enabled,
       this.height,
+      this.symbolFill,
       this.symbolSize,
       this.symbolStroke,
       this.symbolStrokeWidth,
@@ -250,9 +250,6 @@ class HighchartsExportingButtonsContextButtonOptions
     if (symbol != null) {
       buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
     }
-    if (symbolFill != null) {
-      buffer.writeAll(['"symbolFill":', jsonEncode(symbolFill), ','], '');
-    }
     if (titleKey != null) {
       buffer.writeAll(['"titleKey":', jsonEncode(titleKey), ','], '');
     }
@@ -270,6 +267,9 @@ class HighchartsExportingButtonsContextButtonOptions
     }
     if (height != null) {
       buffer.writeAll(['"height":', height, ','], '');
+    }
+    if (symbolFill != null) {
+      buffer.writeAll(['"symbolFill":', jsonEncode(symbolFill), ','], '');
     }
     if (symbolSize != null) {
       buffer.writeAll(['"symbolSize":', symbolSize, ','], '');

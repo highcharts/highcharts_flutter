@@ -53,6 +53,14 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
 
   HighchartsFlagsSeriesDataAccessibilityOptions? accessibility;
 
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flags.data.className
+
+  String? className;
+
   /// Individual color for the point. By default the color is pulled from
   /// the global `colors` array.
   ///
@@ -70,13 +78,6 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.flags.data.custom
 
   Map<String, dynamic>? custom;
-
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.flags.data.description
-
-  String? description;
 
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
@@ -105,9 +106,11 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.flags.data.labelrank
 
@@ -147,9 +150,9 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highstock/series.flags.data
   HighchartsFlagsSeriesDataOptions(
       {this.accessibility,
+      this.className,
       this.color,
       this.custom,
-      this.description,
       this.dragDrop,
       this.events,
       this.fillColor,
@@ -167,6 +170,9 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
+    }
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
@@ -176,9 +182,6 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
       buffer.write('},');
-    }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');

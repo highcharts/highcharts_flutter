@@ -30,7 +30,7 @@ import 'highcharts_options_base.dart';
 
 /// Animation when hovering over the marker.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.hover.animation
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.select.animation
 class HighchartsSeriesMarkerStatesHoverAnimationOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -39,7 +39,7 @@ class HighchartsSeriesMarkerStatesHoverAnimationOptions
 
   /// Animation when hovering over the marker.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.hover.animation
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.select.animation
   HighchartsSeriesMarkerStatesHoverAnimationOptions({this.duration});
 
   @override

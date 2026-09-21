@@ -140,7 +140,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   double? axisLayoutRuns;
 
-  /// The background color or gradient for the outer chart area.
+  /// The background color of the outer chart area.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.backgroundColor
 
@@ -292,6 +292,9 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   /// Callback function to override the default function that formats all
   /// the numbers in the chart. Returns a string with the formatted number.
+  /// Since v12.6.0, the callback also receives `ctx` as the last argument,
+  /// so that arrow functions can access the same context as regular
+  /// functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.numberFormatter
 
@@ -322,6 +325,10 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   /// requires two fingers. To allow panning with one finger, set
   /// `followTouchMove` to `false`.
   ///
+  /// **Note:** If both zooming and panning are enabled without keys, zooming
+  /// will take precedence by default. To prioritize panning, either set
+  /// chart.zooming.key or panKey.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.panning
 
   HighchartsChartPanningOptions? panning;
@@ -344,6 +351,10 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   bool? parallelCoordinates;
 
+  /// Deprecated. Use
+  /// chart.zooming.pinchType
+  /// instead.
+  ///
   /// Equivalent to zoomType, but for multitouch
   /// gestures only. By default, the `pinchType` is the same as the
   /// `zoomType` setting. However, pinching can be enabled separately in
@@ -355,7 +366,8 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   String? pinchType;
 
-  /// The background color or gradient for the plot area.
+  /// The background color or gradient for the plot area. If not set, the
+  /// plot area will have the background color set to `'none'`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.plotBackgroundColor
 
@@ -375,6 +387,14 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/chart.plotBorderColor
 
   String? plotBorderColor;
+
+  /// The corner radius of the plot area border in pixels. Also applies clip
+  /// to the plot area background and data inside, like columns in a column
+  /// series or fill in an area series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.plotBorderRadius
+
+  double? plotBorderRadius;
 
   /// The pixel width of the plot area border.
   ///
@@ -423,6 +443,10 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   String? renderTo;
 
+  /// Deprecated. Use
+  /// chart.zooming.resetButton
+  /// instead.
+  ///
   /// The button that appears after a selection zoom, allowing the user
   /// to reset zoom. This option is deprecated in favor of
   /// zooming.
@@ -441,6 +465,13 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   /// vertical scrolling, depending on whether the `minWidth` or `minHeight`
   /// option is set.
   ///
+  /// **Note:** Because native browser scrollbars are used, they may
+  /// overlap with fixed chart elements such as credits or the chart
+  /// border. To avoid this collision, it is recommended to manually add
+  /// extra space to the corresponding side using `chart.spacingBottom`
+  /// (for horizontal scrollbars) or `chart.spacingRight` (for vertical
+  /// scrollbars).
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.scrollablePlotArea
 
   HighchartsChartScrollablePlotAreaOptions? scrollablePlotArea;
@@ -450,7 +481,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.selectionMarkerFill
 
-  Map<String, dynamic>? selectionMarkerFill;
+  String? selectionMarkerFill;
 
   /// Whether to apply a drop shadow to the global series group. This causes
   /// all the series to have the same shadow. Contrary to the `series.shadow`
@@ -567,6 +598,25 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   dynamic width;
 
+  /// Deprecated. Use
+  /// chart.zooming.singleTouch
+  /// instead.
+  ///
+  /// Enables zooming by a single touch, in combination with
+  /// chart.zoomType. When enabled, two-finger pinch
+  /// will still work as set up by chart.pinchType.
+  /// However, `zoomBySingleTouch` will interfere with touch-dragging the
+  /// chart to read the tooltip. And especially when vertical zooming is
+  /// enabled, it will make it hard to scroll vertically on the page.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zoomBySingleTouch
+
+  bool? zoomBySingleTouch;
+
+  /// Deprecated. Use
+  /// chart.zooming.key
+  /// instead.
+  ///
   /// Set a key to hold when dragging to zoom the chart. This is useful to
   /// avoid zooming while moving points. Should be set different than
   /// chart.panKey.
@@ -575,6 +625,10 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   String? zoomKey;
 
+  /// Deprecated. Use
+  /// chart.zooming.type
+  /// instead.
+  ///
   /// Decides in what dimensions the user can zoom by dragging the mouse.
   /// Can be one of `x`, `y` or `xy`.
   ///
@@ -625,6 +679,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       this.plotBackgroundColor,
       this.plotBackgroundImage,
       this.plotBorderColor,
+      this.plotBorderRadius,
       this.plotBorderWidth,
       this.plotShadow,
       this.polar,
@@ -646,6 +701,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       this.styledMode,
       this.type,
       this.width,
+      this.zoomBySingleTouch,
       this.zoomKey,
       this.zoomType,
       this.zooming});
@@ -762,6 +818,9 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(
           ['"plotBorderColor":', jsonEncode(plotBorderColor), ','], '');
     }
+    if (plotBorderRadius != null) {
+      buffer.writeAll(['"plotBorderRadius":', plotBorderRadius, ','], '');
+    }
     if (plotBorderWidth != null) {
       buffer.writeAll(['"plotBorderWidth":', plotBorderWidth, ','], '');
     }
@@ -793,11 +852,8 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
           ['"scrollablePlotArea":', scrollablePlotArea?.toJSON(), ','], '');
     }
     if (selectionMarkerFill != null) {
-      buffer.write('"selectionMarkerFill":{');
-      for (var item in selectionMarkerFill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(
+          ['"selectionMarkerFill":', jsonEncode(selectionMarkerFill), ','], '');
     }
     if (seriesGroupShadow != null) {
       buffer.write('"seriesGroupShadow":{');
@@ -850,6 +906,9 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
     }
     if (width != null) {
       buffer.writeAll(['"width":', jsonEncode(width), ','], '');
+    }
+    if (zoomBySingleTouch != null) {
+      buffer.writeAll(['"zoomBySingleTouch":', zoomBySingleTouch, ','], '');
     }
     if (zoomKey != null) {
       buffer.writeAll(['"zoomKey":', jsonEncode(zoomKey), ','], '');

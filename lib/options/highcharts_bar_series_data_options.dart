@@ -20,6 +20,7 @@ import 'highcharts_bar_series_data_accessibility_options.dart';
 import 'highcharts_bar_series_data_data_labels_options.dart';
 import 'highcharts_bar_series_data_drag_drop_options.dart';
 import 'highcharts_bar_series_data_events_options.dart';
+import 'highcharts_bar_series_data_states_options.dart';
 
 /* *
  *
@@ -31,6 +32,7 @@ export 'highcharts_bar_series_data_accessibility_options.dart';
 export 'highcharts_bar_series_data_data_labels_options.dart';
 export 'highcharts_bar_series_data_drag_drop_options.dart';
 export 'highcharts_bar_series_data_events_options.dart';
+export 'highcharts_bar_series_data_states_options.dart';
 
 /* *
  *
@@ -133,18 +135,12 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
   String? dashStyle;
 
   /// Individual data label for each point. The options are the same as
-  /// the ones for plotOptions.series.dataLabels.
+  /// the ones for plotOptions.series.dataLabels with exception of `zIndex` which is applied
+  /// on the data label's parent group.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.bar.data.dataLabels
 
   List<HighchartsBarSeriesDataDataLabelsOptions>? dataLabels;
-
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.bar.data.description
-
-  String? description;
 
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
@@ -173,9 +169,11 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.bar.data.labelrank
 
@@ -200,6 +198,10 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.bar.data.selected
 
   bool? selected;
+
+  /// Highcharts Options Widget.
+
+  HighchartsBarSeriesDataStatesOptions? states;
 
   /// The x value of the point.
   ///
@@ -231,7 +233,6 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
       this.custom,
       this.dashStyle,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.drilldown,
       this.events,
@@ -240,6 +241,7 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
       this.name,
       this.pointWidth,
       this.selected,
+      this.states,
       this.x,
       this.y});
 
@@ -282,9 +284,6 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
-    }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');
     }
@@ -308,6 +307,9 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (selected != null) {
       buffer.writeAll(['"selected":', selected, ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (x != null) {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');

@@ -14,16 +14,14 @@
  *
  * */
 
+import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_dependency_wheel_series_data_labels_text_path_attributes_options.dart';
 
 /* *
  *
  *  Exports
  *
  * */
-
-export 'highcharts_dependency_wheel_series_data_labels_text_path_attributes_options.dart';
 
 /* *
  *
@@ -36,13 +34,9 @@ class HighchartsDependencyWheelSeriesDataLabelsTextPathOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
 
-  HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions?
-      attributes;
+  String? attributes;
 
-  /// Enable or disable `textPath` option for link's or marker's data
-  /// labels.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.textPath.enabled
+  /// Highcharts Options Widget.
 
   bool? enabled;
 
@@ -55,7 +49,7 @@ class HighchartsDependencyWheelSeriesDataLabelsTextPathOptions
     super.toOptionsJSON(buffer);
 
     if (attributes != null) {
-      buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
+      buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], '');
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');

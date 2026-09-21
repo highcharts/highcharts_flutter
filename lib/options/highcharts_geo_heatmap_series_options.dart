@@ -106,7 +106,7 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.colors
 
-  List<dynamic>? colors;
+  List<String>? colors;
 
   /// The column size - how many longitude units each column in the
   /// geoheatmap should span.
@@ -151,11 +151,7 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
 
   String? legendSymbol;
 
-  /// The SVG value used for the `stroke-linecap` and `stroke-linejoin` of
-  /// the map borders. Round means that borders are rounded in the ends and
-  /// bends.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.linecap
+  /// Highcharts Options Widget.
 
   String? linecap;
 
@@ -185,16 +181,6 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsGeoHeatmapSeriesTooltipOptions? tooltip;
 
-  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
-  /// allows to disable zooming on an individual non-cartesian series. By default
-  /// zooming is enabled for all series.
-  ///
-  /// Note: This option works only for non-cartesian series.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.zoomEnabled
-
-  bool? zoomEnabled;
-
   /// A `geoheatmap` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap
@@ -218,8 +204,7 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
       this.nullInteraction,
       this.rowsize,
       this.states,
-      this.tooltip,
-      this.zoomEnabled});
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -288,9 +273,6 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
     }
     if (tooltip != null) {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
-    }
-    if (zoomEnabled != null) {
-      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

@@ -47,6 +47,7 @@ export 'options/highcharts_bullet_series.dart';
 export 'options/highcharts_column_series.dart';
 export 'options/highcharts_column_pyramid_series.dart';
 export 'options/highcharts_column_range_series.dart';
+export 'options/highcharts_contour_series.dart';
 export 'options/highcharts_cylinder_series.dart';
 export 'options/highcharts_dependency_wheel_series.dart';
 export 'options/highcharts_dumbbell_series.dart';
@@ -118,6 +119,7 @@ class HighchartsChart extends StatelessWidget {
     ],
     this.events = const {},
     this.keepAlive = true,
+    this.scrollParentOnWheel = true,
     this.onError,
     this.onLoaded,
     this.onLoading,
@@ -131,11 +133,13 @@ class HighchartsChart extends StatelessWidget {
     view = HighchartsView(
       debug: debug,
       keepAlive: keepAlive,
+      scrollParentOnWheel: scrollParentOnWheel,
       head: css == null ? null : HighchartsHelpers.styleTag(css),
       foot: [
         '''
           highcharts_flutter.debug=${debug};
           highcharts_flutter.factory=Highcharts.chart;
+          highcharts_flutter.scrollParentOnWheel=${scrollParentOnWheel};
         ''',
         javaScript,
         'highcharts_flutter.init($json);',
@@ -188,6 +192,10 @@ class HighchartsChart extends StatelessWidget {
   late final HighchartsExporting exporting;
 
   final bool keepAlive;
+
+  /// Whether mouse-wheel/trackpad scrolling over the chart should be routed
+  /// to the parent [Scrollable] instead of being consumed by the WebView.
+  final bool scrollParentOnWheel;
 
   final Widget Function(HighchartsChart, Object?)? onError;
 

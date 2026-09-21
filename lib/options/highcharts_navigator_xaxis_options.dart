@@ -182,13 +182,14 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
   double? crossing;
 
   /// For a datetime axis, the scale will automatically adjust to the
-  /// appropriate unit. This member gives the default string
-  /// representations used for each unit. For intermediate values,
-  /// different units may be used, for example the `day` unit can be used
-  /// on midnight and `hour` unit be used for intermediate values on the
-  /// same axis.
+  /// appropriate unit. This member gives the default representations used
+  /// for each unit. For easier data interpretation, `hour`, `day`, `month`
+  /// and `year` units can be used and formatted as boundary tick values.
+  /// Check boundaries map below to see where to format boundary ticks on
+  /// given main time units.
   ///
-  /// For an overview of the string or object configuration, see
+  ///
+  /// For an overview of the date time label formats configuration, see
   /// dateFormat.
   ///
   /// Defaults to:
@@ -419,20 +420,27 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
   /// The number of minor ticks per major tick. Works for `linear`,
   /// `logarithmic` and `datetime` axes.
   ///
+  /// For radial axes in gauges, the default value is 10.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.xAxis.minorTicksPerMajor
 
   double? minorTicksPerMajor;
 
   /// The distance in pixels from the plot area to the axis line.
-  /// A positive offset moves the axis with it's line, labels and ticks
+  /// A positive offset moves the axis with its line, labels and ticks
   /// away from the plot area. This is typically used when two or more
   /// axes are displayed on the same side of the plot. With multiple
   /// axes the offset is dynamically adjusted to avoid collision, this
   /// can be overridden by setting offset explicitly.
   ///
+  /// For radial axes in gauges, the offset can be a percentage string, and
+  /// defaults to render the line and ticks on the inside of the pane and
+  /// plot bands (since v13). Labels are not affected by the offset in
+  /// radial axes.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.xAxis.offset
 
-  double? offset;
+  dynamic offset;
 
   /// In an ordinal axis, the points are equally spaced in the chart
   /// regardless of the actual time or x distance between them. This means
@@ -539,6 +547,16 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
 
   bool? startOnTick;
 
+  /// For vertical axes only. Setting the static scale ensures that each tick unit
+  /// is translated into a fixed pixel height. For example, setting the static
+  /// scale to 24 results in each Y axis category taking up 24 pixels, and the
+  /// height of the chart adjusts. Adding or removing items will make the chart
+  /// resize.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.xAxis.staticScale
+
+  double? staticScale;
+
   /// The amount of ticks to draw on the axis. This opens up for aligning
   /// the ticks of multiple charts or panes within a chart. This option
   /// overrides the `tickPixelInterval` option.
@@ -592,16 +610,19 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
   String? tickPosition;
 
   /// A callback function returning array defining where the ticks are
-  /// laid out on the axis. This overrides the default behaviour of
+  /// laid out on the axis. This overrides the default behavior of
   /// tickPixelInterval and tickInterval. The automatic tick positions are accessible
   /// through `this.tickPositions` and can be modified by the callback.
+  /// Since v12.6.0, the callback also receives `ctx` as the third
+  /// argument, so that arrow functions can access the same context as
+  /// regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.xAxis.tickPositioner
 
   HighchartsCallback? tickPositioner;
 
   /// An array defining where the ticks are laid out on the axis. This
-  /// overrides the default behaviour of tickPixelInterval and tickInterval.
+  /// overrides the default behavior of tickPixelInterval and tickInterval.
   ///
   /// Note: When working with date-time axes, be aware of time zone
   /// handling. See the documentation on time options
@@ -800,6 +821,7 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
       this.softMin,
       this.startOfWeek,
       this.startOnTick,
+      this.staticScale,
       this.tickAmount,
       this.tickColor,
       this.tickInterval,
@@ -967,7 +989,7 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minorTicksPerMajor":', minorTicksPerMajor, ','], '');
     }
     if (offset != null) {
-      buffer.writeAll(['"offset":', offset, ','], '');
+      buffer.writeAll(['"offset":', jsonEncode(offset), ','], '');
     }
     if (ordinal != null) {
       buffer.writeAll(['"ordinal":', ordinal, ','], '');
@@ -1013,6 +1035,9 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
     if (startOnTick != null) {
       buffer.writeAll(['"startOnTick":', startOnTick, ','], '');
     }
+    if (staticScale != null) {
+      buffer.writeAll(['"staticScale":', staticScale, ','], '');
+    }
     if (tickAmount != null) {
       buffer.writeAll(['"tickAmount":', tickAmount, ','], '');
     }
@@ -1047,7 +1072,7 @@ class HighchartsNavigatorXAxisOptions extends HighchartsOptionsBase {
     if (units != null) {
       buffer.write('"units":[');
       for (var item in units!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }

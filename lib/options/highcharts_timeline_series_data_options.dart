@@ -96,7 +96,8 @@ class HighchartsTimelineSeriesDataOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? custom;
 
   /// Individual data label for each point. The options are the same as
-  /// the ones for plotOptions.series.dataLabels.
+  /// the ones for plotOptions.series.dataLabels with exception of `zIndex` which is applied
+  /// on the data label's parent group.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.timeline.data.dataLabels
 
@@ -141,9 +142,11 @@ class HighchartsTimelineSeriesDataOptions extends HighchartsOptionsBase {
 
   String? label;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.timeline.data.labelrank
 

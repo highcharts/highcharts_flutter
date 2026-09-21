@@ -35,7 +35,7 @@ export 'highcharts_area_range_series_low_marker_symbol_options.dart';
  * */
 
 /// Options for the lower markers of the arearange-like series. When `lowMarker`
-/// is not defined, options inherit form the marker.
+/// is not defined, options inherit from the marker.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.arearange.lowMarker
 class HighchartsAreaRangeSeriesLowMarkerOptions extends HighchartsOptionsBase {
@@ -108,7 +108,7 @@ class HighchartsAreaRangeSeriesLowMarkerOptions extends HighchartsOptionsBase {
 
   double? width;
 
-  /// Options for the lower markers of the arearange-like series. When `lowMarker` is not defined, options inherit form the marker.
+  /// Options for the lower markers of the arearange-like series. When `lowMarker` is not defined, options inherit from the marker.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.arearange.lowMarker
   HighchartsAreaRangeSeriesLowMarkerOptions(

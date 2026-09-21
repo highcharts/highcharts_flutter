@@ -110,18 +110,12 @@ class HighchartsLineSeriesDataOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? custom;
 
   /// Individual data label for each point. The options are the same as
-  /// the ones for plotOptions.series.dataLabels.
+  /// the ones for plotOptions.series.dataLabels with exception of `zIndex` which is applied
+  /// on the data label's parent group.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.data.dataLabels
 
   List<HighchartsLineSeriesDataDataLabelsOptions>? dataLabels;
-
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.line.data.description
-
-  String? description;
 
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
@@ -150,9 +144,11 @@ class HighchartsLineSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.line.data.labelrank
 
@@ -203,7 +199,6 @@ class HighchartsLineSeriesDataOptions extends HighchartsOptionsBase {
       this.colorIndex,
       this.custom,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.drilldown,
       this.events,
@@ -244,9 +239,6 @@ class HighchartsLineSeriesDataOptions extends HighchartsOptionsBase {
         buffer.writeAll([item.toJSON(), ','], '');
       }
       buffer.write('],');
-    }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');

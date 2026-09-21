@@ -40,46 +40,46 @@ export 'highcharts_annotations_types_crooked_line_type_points_options.dart';
 class HighchartsAnnotationsTypesFibonacciTypeOptions
     extends HighchartsOptionsBase {
   /// An array of background colors:
-  /// Default to:
+  /// Defaults to:
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.backgroundColors
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.backgroundColors
 
   dynamic backgroundColors;
 
   /// The height of the fibonacci in terms of yAxis.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.height
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.height
 
   double? height;
 
   /// An array with options for the labels.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels
 
   List<HighchartsAnnotationsTypesFibonacciTypeLabelsOptions>? labels;
 
   /// The color of line.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.lineColor
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.lineColor
 
   String? lineColor;
 
   /// An array of colors for the lines.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.lineColors
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.lineColors
 
   dynamic lineColors;
 
   /// Whether the annotation levels should be reversed. By default
   /// they start from 0 and go to 1.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.reversed
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.reversed
 
   bool? reversed;
 
   /// Line options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.line
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.line
 
   HighchartsAnnotationsTypesCrookedLineTypeLineOptions? line;
 
@@ -87,19 +87,19 @@ class HighchartsAnnotationsTypesFibonacciTypeOptions
 
   List<HighchartsAnnotationsTypesCrookedLineTypePointsOptions>? points;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.yAxis
 
   double? yAxis;
 

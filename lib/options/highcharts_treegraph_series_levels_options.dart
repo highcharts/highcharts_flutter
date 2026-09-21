@@ -86,12 +86,19 @@ class HighchartsTreegraphSeriesLevelsOptions extends HighchartsOptionsBase {
 
   /// Can set the options of dataLabels on each point which lies on the
   /// level.
-  /// plotOptions.treemap.dataLabels for
-  /// possible values.
+  /// plotOptions.treegraph.dataLabels
+  /// for possible values.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels
 
   HighchartsTreegraphSeriesLevelsDataLabelsOptions? dataLabels;
+
+  /// Can set the group padding on a specific level. Overrides the series
+  /// option of the same name.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.groupPadding
+
+  double? groupPadding;
 
   /// Decides which level takes effect from the options set in the levels
   /// object.
@@ -99,6 +106,14 @@ class HighchartsTreegraphSeriesLevelsOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.level
 
   double? level;
+
+  /// Whether the `level` number is absolute, or relative to the currently
+  /// visible root. Overrides the series option of the same name for this
+  /// level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.levelIsConstant
+
+  bool? levelIsConstant;
 
   /// Set marker options for nodes at the level.
   ///
@@ -115,7 +130,9 @@ class HighchartsTreegraphSeriesLevelsOptions extends HighchartsOptionsBase {
       this.color,
       this.colorVariation,
       this.dataLabels,
+      this.groupPadding,
       this.level,
+      this.levelIsConstant,
       this.marker});
 
   @override
@@ -144,8 +161,14 @@ class HighchartsTreegraphSeriesLevelsOptions extends HighchartsOptionsBase {
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
+    if (groupPadding != null) {
+      buffer.writeAll(['"groupPadding":', groupPadding, ','], '');
+    }
     if (level != null) {
       buffer.writeAll(['"level":', level, ','], '');
+    }
+    if (levelIsConstant != null) {
+      buffer.writeAll(['"levelIsConstant":', levelIsConstant, ','], '');
     }
     if (marker != null) {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');

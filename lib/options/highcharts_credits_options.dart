@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_credits_events_options.dart';
 import 'highcharts_credits_position_options.dart';
 import 'highcharts_credits_style_options.dart';
 
@@ -25,6 +26,7 @@ import 'highcharts_credits_style_options.dart';
  *
  * */
 
+export 'highcharts_credits_events_options.dart';
 export 'highcharts_credits_position_options.dart';
 export 'highcharts_credits_style_options.dart';
 
@@ -34,7 +36,7 @@ export 'highcharts_credits_style_options.dart';
  *
  * */
 
-/// Highchart by default puts a credits label in the lower right corner
+/// Highcharts by default puts a credits label in the lower right corner
 /// of the chart. This can be changed using these options.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/credits
@@ -44,6 +46,12 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/credits.enabled
 
   bool? enabled;
+
+  /// Events for the credits label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.events
+
+  HighchartsCreditsEventsOptions? events;
 
   /// The URL for the credits label.
   ///
@@ -85,17 +93,25 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
 
   String? text;
 
-  /// Highchart by default puts a credits label in the lower right corner of the chart. This can be changed using these options.
+  /// Whether to render the credits as HTML
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.useHTML
+
+  bool? useHTML;
+
+  /// Highcharts by default puts a credits label in the lower right corner of the chart. This can be changed using these options.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/credits
   HighchartsCreditsOptions(
       {this.enabled,
+      this.events,
       this.href,
       this.mapText,
       this.mapTextFull,
       this.position,
       this.style,
-      this.text});
+      this.text,
+      this.useHTML});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -103,6 +119,9 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
+    }
+    if (events != null) {
+      buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (href != null) {
       buffer.writeAll(['"href":', jsonEncode(href), ','], '');
@@ -121,6 +140,9 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
     }
     if (text != null) {
       buffer.writeAll(['"text":', jsonEncode(text), ','], '');
+    }
+    if (useHTML != null) {
+      buffer.writeAll(['"useHTML":', useHTML, ','], '');
     }
   }
 }

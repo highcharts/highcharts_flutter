@@ -41,7 +41,7 @@ class HighchartsPackedBubbleSeriesDataLabelsTextPathOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.dataLabels.textPath.attributes
 
-  dynamic attributes;
+  String? attributes;
 
   /// Enable or disable `textPath` option for link's or marker's data
   /// labels.

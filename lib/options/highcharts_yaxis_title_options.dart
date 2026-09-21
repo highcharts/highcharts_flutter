@@ -54,14 +54,20 @@ class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
 
   double? margin;
 
-  /// The distance of the axis title from the axis line. By default,
-  /// this distance is computed from the offset width of the labels,
-  /// the labels' distance from the axis and the title's margin.
-  /// However when the offset option is set, it overrides all this.
+  /// The distance from the plot area to the axis line. A positive
+  /// offset moves the axis with its line, labels and ticks away from
+  /// the plot area. With multiple axes the offset is dynamically
+  /// adjusted to avoid collision, this can be overridden by setting
+  /// offset explicitly.
+  ///
+  /// For radial axes in gauges, the offset can be a percentage string,
+  /// and defaults to render the line and ticks on the inside of the
+  /// pane and plot bands (since v13). Labels are not affected by the
+  /// offset in radial axes.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.title.offset
 
-  double? offset;
+  dynamic offset;
 
   /// Defines how the title is repositioned according to the 3D chart
   /// orientation.
@@ -131,7 +137,7 @@ class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
   /// The actual text of the axis title. Horizontal texts can contain
   /// HTML, but rotated texts are painted using vector techniques and
   /// must be clean text. The Y axis title is disabled by setting the
-  /// `text` option to `undefined`. The default value is overriden by
+  /// `text` option to `undefined`. The default value is overridden by
   /// the `lang.yAxisTitle` language option.
   ///
   /// The actual text of the axis title. It can contain basic HTML tags
@@ -215,7 +221,7 @@ class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"margin":', margin, ','], '');
     }
     if (offset != null) {
-      buffer.writeAll(['"offset":', offset, ','], '');
+      buffer.writeAll(['"offset":', jsonEncode(offset), ','], '');
     }
     if (position3d != null) {
       buffer.writeAll(['"position3d":', jsonEncode(position3d), ','], '');

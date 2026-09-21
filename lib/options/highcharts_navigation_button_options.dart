@@ -69,7 +69,7 @@ class HighchartsNavigationButtonOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigation.buttonOptions.symbolFill
 
-  Map<String, dynamic>? symbolFill;
+  String? symbolFill;
 
   /// The pixel size of the symbol on the button.
   ///
@@ -181,11 +181,7 @@ class HighchartsNavigationButtonOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"height":', height, ','], '');
     }
     if (symbolFill != null) {
-      buffer.write('"symbolFill":{');
-      for (var item in symbolFill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"symbolFill":', jsonEncode(symbolFill), ','], '');
     }
     if (symbolSize != null) {
       buffer.writeAll(['"symbolSize":', symbolSize, ','], '');

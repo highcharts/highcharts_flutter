@@ -61,7 +61,7 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
 
   bool? connectorAllowed;
 
-  /// If the label is closer than this to a neighbour graph, draw a
+  /// If the label is closer than this to a neighbor graph, draw a
   /// connector.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.label.connectorNeighbourDistance
@@ -87,6 +87,9 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
   /// Callback function to format each of the series' labels. The
   /// `this` keyword refers to the series object. By default the
   /// `formatter` is undefined and the `series.name` is rendered.
+  /// Since v12.6.0, the callback also receives `ctx` as the first argument,
+  /// so that arrow functions can access the same context as regular
+  /// functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.label.formatter
 

@@ -42,6 +42,10 @@ class HighchartsChartZoomingOptions extends HighchartsOptionsBase {
   /// avoid zooming while moving points. Should be set different than
   /// chart.panKey.
   ///
+  /// **Note:** If both zooming and panning are enabled without keys,
+  /// zooming will take precedence by default. To prioritize panning,
+  /// either set zooming key or chart.panKey.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.key
 
   String? key;

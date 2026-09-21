@@ -43,7 +43,7 @@ class HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.linkTextPath.attributes
 
-  dynamic attributes;
+  String? attributes;
 
   /// Highcharts Options Widget.
 

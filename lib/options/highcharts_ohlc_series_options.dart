@@ -242,14 +242,15 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.colors
 
-  List<dynamic>? colors;
+  List<String>? colors;
 
   /// Compare the values of the series against the first non-null, non-
   /// zero value in the visible range. The y axis will show percentage
   /// or absolute change depending on whether `compare` is set to `"percent"`
   /// or `"value"`. When this is applied to multiple series, it allows
   /// comparing the development of the series against each other. Adds
-  /// a `change` field to every point object.
+  /// a `change` field to every point object. If a `compare` value is not set on a
+  /// linked series, it will be inherited from the parent series.
   ///
   /// API Docs: https://api.highcharts.com/highstock/series.ohlc.compare
 
@@ -274,7 +275,7 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
   bool? compareStart;
 
   /// When the series contains less points than the crop threshold, all
-  /// points are drawn, event if the points fall outside the visible plot
+  /// points are drawn, even if the points fall outside the visible plot
   /// area at the current zoom. The advantage of drawing all points
   /// (including markers and columns), is that animation is performed on
   /// updates. On the other hand, when the series contains more points than
@@ -348,12 +349,61 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsOHLCSeriesDataLabelsOptions? dataLabels;
 
-  /// Options for the series data sorting.
+  /// The mapping between the data table and the series data points. This is
+  /// used in conjunction with the `dataTable` option (on chart
+  /// or series level) to map columns from the
+  /// data table to the properties of the data points. The keys of the
+  /// `dataMapping` object correspond to the properties of the data points
+  /// (e.g. `x`, `y`, `name`), and the values are objects that specify which
+  /// column from which data table to use for that property.
+  ///
+  /// The keys can also be nested paths, for example `dataLabel.format`, to map
+  /// to nested properties of the data points.
+  ///
+  /// The values can also be strings, in which case they are interpreted as
+  /// column id's from the first data table.
+  ///
+  /// A typical use case is that multiple series share a common column, like
+  /// `name` or `x`. In this case, to avoid repetition, the common column can
+  /// be applied in `plotOptions.series.dataMapping` and the individual series
+  /// can specify only the columns that are unique to them.
+  ///
+  /// The series name defaults to the column ID of the main data column in the
+  /// mapping. The main data column is typically the `y` data for cartesian
+  /// series, or `value` for map series. For example, if the mapping is
+  /// `{ y: 'Cost' }`, the series name will be `Cost`.
+  ///
+  ///
+  /// If the columns of the DataTable have keys matching the series keys, the
+  /// data mapping is not necessary. For example, this DataTable will connect
+  /// directly to the series' `x` and `y` keys:
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.dataMapping
+
+  Map<String, dynamic>? dataMapping;
+
+  /// Options for series data sorting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.dataSorting
 
   HighchartsSeriesDataSortingOptions? dataSorting;
 
+  /// Options for a specific series-level data table or an array of data
+  /// tables. The `dataTable` option can be either a configuration object or an
+  /// instance of the `DataTable` class. If a `DataTable` instance is passed,
+  /// it will be used directly. If a configuration object or an array is
+  /// passed, a new `DataTable` instance will be created based on the provided
+  /// configuration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.dataTable
+
+  List<dynamic>? dataTable;
+
+  /// Deprecated. Use
+  /// plotOptions.series.accessibility.description
+  /// instead.
+  ///
   /// A description of the series to add to the screen reader information
   /// about the series.
   ///
@@ -490,10 +540,11 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
 
   double? legendIndex;
 
-  /// What type of legend symbol to render for this series. Can be one of
-  /// `areaMarker`, `lineMarker` or `rectangle`.
+  /// What type of legend symbol to render for this series. For OHLC series,
+  /// the default is `ohlc`, a vertical stem with an open tick on the left
+  /// and a close tick on the right.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.legendSymbol
+  /// API Docs: https://api.highcharts.com/highstock/series.ohlc.legendSymbol
 
   String? legendSymbol;
 
@@ -519,6 +570,9 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
   /// If master series uses data sorting and linked series does not have
   /// its own sorting definition, the linked series will be sorted in the
   /// same order as the master one.
+  ///
+  /// If a `compare` value is not set on a linked series, it will be inherited
+  /// from the parent series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.linkedTo
 
@@ -567,9 +621,10 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
   /// Whether or not data-points with the value of `null` should be interactive.
   /// When this is set to `true`, tooltips may highlight these points, and this
   /// option also enables keyboard navigation for such points. Format options
-  /// for such points include `nullFormat` and `nullFormater`.
-  /// Works for these series: `line`, `spline`, `area`, `area-spline`,
-  /// `column`, `bar`, and* `timeline`.
+  /// for such points include `nullFormat` and
+  /// `nullFormatter`. Works for these series:
+  /// `line`, `spline`, `area`, `area-spline`, `column`, `bar`, and
+  /// `timeline`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.nullInteraction
 
@@ -594,6 +649,10 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesPointOptions? point;
 
+  /// Deprecated. Use
+  /// series.accessibility.point.descriptionFormat
+  /// instead.
+  ///
   /// Same as
   /// accessibility.point.descriptionFormat,
   /// but for an individual series. Overrides the chart wide configuration.
@@ -602,6 +661,10 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
 
   dynamic pointDescriptionFormat;
 
+  /// Deprecated. Use
+  /// series.accessibility.point.descriptionFormatter
+  /// instead.
+  ///
   /// Same as
   /// accessibility.series.descriptionFormatter,
   /// but for an individual series. Overrides the chart wide configuration.
@@ -656,7 +719,7 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
   /// create any padding of the X axis. In a polar column chart this means
   /// that the first column points directly north. If the pointPlacement is
   /// `"between"`, the columns will be laid out between ticks. This is
-  /// useful for example for visualising an amount between two points in
+  /// useful for example for visualizing an amount between two points in
   /// time or in a certain sector of a polar chart.
   ///
   /// Since Highcharts 3.0.2, the point placement can also be numeric,
@@ -785,6 +848,10 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
 
   bool? showInNavigator;
 
+  /// Deprecated. Use
+  /// series.accessibility.keyboardNavigation
+  /// instead.
+  ///
   /// If set to `true`, the accessibility module will skip past the points
   /// in this series for keyboard navigation.
   ///
@@ -914,7 +981,7 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
   /// allows to disable zooming on an individual non-cartesian series. By default
   /// zooming is enabled for all series.
   ///
-  /// Note: This option works only for non-cartesian series.
+  /// **Note**: This option works only for non-cartesian series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.zoomEnabled
 
@@ -950,7 +1017,9 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
       this.dashStyle,
       this.dataGrouping,
       this.dataLabels,
+      this.dataMapping,
       this.dataSorting,
+      this.dataTable,
       this.description,
       this.dragDrop,
       this.enableMouseTracking,
@@ -1104,8 +1173,22 @@ class HighchartsOHLCSeriesOptions extends HighchartsOptionsBase {
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
+    if (dataMapping != null) {
+      buffer.write('"dataMapping":{');
+      for (var item in dataMapping!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
+    }
     if (dataSorting != null) {
       buffer.writeAll(['"dataSorting":', dataSorting?.toJSON(), ','], '');
+    }
+    if (dataTable != null) {
+      buffer.write('"dataTable":[');
+      for (var item in dataTable!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (description != null) {
       buffer.writeAll(['"description":', jsonEncode(description), ','], '');

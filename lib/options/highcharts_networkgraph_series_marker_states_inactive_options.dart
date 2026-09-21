@@ -14,16 +14,14 @@
  *
  * */
 
+import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_networkgraph_series_marker_states_inactive_animation_options.dart';
 
 /* *
  *
  *  Exports
  *
  * */
-
-export 'highcharts_networkgraph_series_marker_states_inactive_animation_options.dart';
 
 /* *
  *
@@ -41,7 +39,7 @@ class HighchartsNetworkgraphSeriesMarkerStatesInactiveOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.marker.states.inactive.animation
 
-  HighchartsNetworkgraphSeriesMarkerStatesInactiveAnimationOptions? animation;
+  dynamic animation;
 
   /// Opacity of inactive markers.
   ///
@@ -60,7 +58,7 @@ class HighchartsNetworkgraphSeriesMarkerStatesInactiveOptions
     super.toOptionsJSON(buffer);
 
     if (animation != null) {
-      buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
+      buffer.writeAll(['"animation":', jsonEncode(animation), ','], '');
     }
     if (opacity != null) {
       buffer.writeAll(['"opacity":', opacity, ','], '');

@@ -53,7 +53,7 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotBands.borderRadius
 
-  dynamic borderRadius;
+  Map<String, dynamic>? borderRadius;
 
   /// Border width for the plot band. Also requires `borderColor` to be set.
   ///
@@ -118,11 +118,10 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
 
   dynamic outerRadius;
 
-  /// In a gauge chart, this option sets the width of the plot band
-  /// stretching along the perimeter. It can be given as a percentage
-  /// string, like `"10%"`, or as a pixel number, like `10`. The default
-  /// value 10 is the same as the default tickLength,
-  /// thus making the plot band act as a background for the tick markers.
+  /// In a gauge chart, this option sets the width of the plot band stretching
+  /// along the perimeter. It can be given as a percentage string, like `'10%'`, or
+  /// as a pixel number, like `10`. If `undefined`, the plot band fills out the
+  /// range between `pane.size` and `pane.innerSize`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotBands.thickness
 
@@ -174,7 +173,11 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], '');
+      buffer.write('"borderRadius":{');
+      for (var item in borderRadius!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');

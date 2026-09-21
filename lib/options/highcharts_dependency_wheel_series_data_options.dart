@@ -42,6 +42,8 @@ export 'highcharts_dependency_wheel_series_data_events_options.dart';
 /// points exceeds the series' turboThreshold,
 /// this option is not available.
 ///
+///  When you provide the data as tuples, the keys option has to be set as well.
+///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.data
 class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
@@ -89,13 +91,6 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
 
   Map<String, dynamic>? custom;
 
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.data.description
-
-  String? description;
-
   /// The individual point events.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.data.events
@@ -115,9 +110,11 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.data.labelrank
 
@@ -141,11 +138,18 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
 
   String? to;
 
-  /// The weight of the link.
+  /// The weight of the link from the node.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.data.weight
 
   double? weight;
+
+  /// The weight of the link to the node.
+  /// When not specified, the `weight` is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.data.weightTo
+
+  double? weightTo;
 
   /// An array of data points for the series. For the `dependencywheel` series type, points can be given in the following way:
   ///
@@ -156,7 +160,6 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
       this.color,
       this.colorIndex,
       this.custom,
-      this.description,
       this.events,
       this.from,
       this.id,
@@ -164,7 +167,8 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
       this.name,
       this.selected,
       this.to,
-      this.weight});
+      this.weight,
+      this.weightTo});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -189,9 +193,6 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
       }
       buffer.write('},');
     }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
-    }
     if (events != null) {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
@@ -215,6 +216,9 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (weight != null) {
       buffer.writeAll(['"weight":', weight, ','], '');
+    }
+    if (weightTo != null) {
+      buffer.writeAll(['"weightTo":', weightTo, ','], '');
     }
   }
 }

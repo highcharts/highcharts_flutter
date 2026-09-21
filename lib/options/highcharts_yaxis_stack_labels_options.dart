@@ -43,10 +43,10 @@ export 'highcharts_yaxis_stack_labels_style_options.dart';
 ///
 /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels
 class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
-  /// Defines the horizontal alignment of the stack total label. Can be one
-  /// of `"left"`, `"center"` or `"right"`. The default value is calculated
-  /// at runtime and depends on orientation and whether the stack is
-  /// positive or negative.
+  /// Defines the horizontal alignment of the stack total label. Can be
+  /// one of `"left"`, `"center"` or `"right"`. The default value is
+  /// calculated at runtime and depends on orientation and whether the
+  /// stack is positive or negative.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.align
 
@@ -112,15 +112,17 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
 
   bool? enabled;
 
-  /// A format string for the data label. Available variables are the same
-  /// as for `formatter`.
+  /// A format string for the data label. Available variables are the
+  /// same as for `formatter`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.format
 
   String? format;
 
   /// Callback JavaScript function to format the label. The value is
-  /// given by `this.total`.
+  /// given by `this.total`. Since v12.6.0, the callback also receives
+  /// `ctx` as the first argument, so that arrow functions can access
+  /// the same context as regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.formatter
 
@@ -152,12 +154,12 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
 
   HighchartsYAxisStackLabelsStyleOptions? style;
 
-  /// The text alignment for the label. While `align` determines where the
-  /// texts anchor point is placed with regards to the stack, `textAlign`
-  /// determines how the text is aligned against its anchor point. Possible
-  /// values are `"left"`, `"center"` and `"right"`. The default value is
-  /// calculated at runtime and depends on orientation and whether the
-  /// stack is positive or negative.
+  /// The text alignment for the label. While `align` determines where
+  /// the texts anchor point is placed with regards to the stack,
+  /// `textAlign` determines how the text is aligned against its anchor
+  /// point. Possible values are `"left"`, `"center"` and `"right"`.
+  /// The default value is calculated at runtime and depends on
+  /// orientation and whether the stack is positive or negative.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.textAlign
 
@@ -170,26 +172,28 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
 
   bool? useHTML;
 
-  /// Defines the vertical alignment of the stack total label. Can be one
-  /// of `"top"`, `"middle"` or `"bottom"`. The default value is calculated
-  /// at runtime and depends on orientation and whether the stack is
-  /// positive or negative.
+  /// Defines the vertical alignment of the stack total label. Can be
+  /// one of `"top"`, `"middle"` or `"bottom"`. The default value is
+  /// calculated at runtime and depends on orientation and whether the
+  /// stack is positive or negative.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.verticalAlign
 
   String? verticalAlign;
 
   /// The x position offset of the label relative to the left of the
-  /// stacked bar. The default value is calculated at runtime and depends
-  /// on orientation and whether the stack is positive or negative.
+  /// stacked bar. The default value is calculated at runtime and
+  /// depends on orientation and whether the stack is positive or
+  /// negative.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.x
 
   double? x;
 
   /// The y position offset of the label relative to the tick position
-  /// on the axis. The default value is calculated at runtime and depends
-  /// on orientation and whether the stack is positive or negative.
+  /// on the axis. The default value is calculated at runtime and
+  /// depends on orientation and whether the stack is positive or
+  /// negative.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.y
 

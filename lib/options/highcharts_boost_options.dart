@@ -54,6 +54,14 @@ class HighchartsBoostOptions extends HighchartsOptionsBase {
 
   bool? allowForce;
 
+  /// The number of points processed per frame when building the k-d tree for
+  /// boosted series. Lower values improve responsiveness but increase the time it
+  /// takes to build the tree.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/boost.chunkSize
+
+  double? chunkSize;
+
   /// Debugging options for boost.
   /// Useful for benchmarking, and general timing.
   ///
@@ -132,6 +140,7 @@ class HighchartsBoostOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/boost
   HighchartsBoostOptions(
       {this.allowForce,
+      this.chunkSize,
       this.debug,
       this.enabled,
       this.pixelRatio,
@@ -145,6 +154,9 @@ class HighchartsBoostOptions extends HighchartsOptionsBase {
 
     if (allowForce != null) {
       buffer.writeAll(['"allowForce":', allowForce, ','], '');
+    }
+    if (chunkSize != null) {
+      buffer.writeAll(['"chunkSize":', chunkSize, ','], '');
     }
     if (debug != null) {
       buffer.writeAll(['"debug":', debug?.toJSON(), ','], '');

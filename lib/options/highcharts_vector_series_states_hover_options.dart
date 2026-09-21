@@ -37,7 +37,7 @@ export 'highcharts_series_states_hover_marker_options.dart';
 
 /// Highcharts Options Widget.
 class HighchartsVectorSeriesStatesHoverOptions extends HighchartsOptionsBase {
-  /// Additonal line width for the vector errors when they are
+  /// Additional line width for the vector errors when they are
   /// hovered.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.vector.states.hover.lineWidthPlus

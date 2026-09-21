@@ -32,7 +32,7 @@ export 'highcharts_linear_regression_angle_series_options.dart';
  *
  * */
 
-/// A linear regression intercept series. If the
+/// A linear regression angle series. If the
 /// type option is not specified, it is
 /// inherited from chart.type.
 ///
@@ -53,7 +53,10 @@ class HighchartsLinearRegressionAngleSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;
 
-  /// The name of the series as shown in the legend, tooltip etc.
+  /// The name of the series as shown in the legend, tooltip etc. If a `dataTable`
+  /// and `dataMapping` are used, the name defaults to the id of the primary data
+  /// table column. Otherwise, it defaults to "Series {n}", where n is the index of
+  /// the series, starting at 1.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.linearregressionangle.name
   String? name;
@@ -73,7 +76,7 @@ class HighchartsLinearRegressionAngleSeries extends HighchartsSeries {
   @override
   get type => 'linearregressionangle';
 
-  /// A linear regression intercept series. If the type option is not specified, it is inherited from chart.type.
+  /// A linear regression angle series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highstock/series.linearregressionangle
   HighchartsLinearRegressionAngleSeries({

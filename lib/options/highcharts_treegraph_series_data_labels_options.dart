@@ -41,13 +41,7 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  *
  * */
 
-/// Options for the data labels appearing on top of the nodes and
-/// links. For treegraph charts, data labels are visible for the
-/// nodes by default, but hidden for links. This is controlled by
-/// modifying the `nodeFormat`, and the `format` that applies to
-/// links and is an empty string by default.
-///
-/// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels
+/// Highcharts Options Widget.
 class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// The alignment of the data label compared to the point. If `right`,
   /// the right side of the label should be touching the point. For points
@@ -95,8 +89,13 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.backgroundColor
 
@@ -160,6 +159,14 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   bool? defer;
 
+  /// The distance of the data label from the data point. Note that the
+  /// `padding` setting also affects the rendered distance, but is not
+  /// visible unless the data label has a border or background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.distance
+
+  double? distance;
+
   /// Highcharts Options Widget.
 
   bool? enabled;
@@ -170,6 +177,7 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// a pure JSON structure or for use with graphical editors. For
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
+  ///
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.filter
 
@@ -204,6 +212,14 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   bool? inside;
 
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.labelrank
+
+  double? labelrank;
+
   /// Options for a _link_ label text which should follow link
   /// connection. Border and background are disabled for a label
   /// that follows a path.
@@ -229,10 +245,12 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -254,6 +272,23 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
 
   double? padding;
+
+  /// The
+  /// format string
+  /// specifying what to show for _nodes_ in the treegraph. Overrides
+  /// `format`. Use `pointFormat` and `linkFormat` to differentiate between
+  /// node and link data labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.pointFormat
+
+  String? pointFormat;
+
+  /// Callback function to format data labels for _nodes_ in the
+  /// treegraph, when `pointFormat` is not sufficient.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.pointFormatter
+
+  dynamic pointFormatter;
 
   /// Aligns data labels relative to points. If `center` alignment is
   /// not possible, it defaults to `right`.
@@ -297,6 +332,10 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
   ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.textPath
 
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
@@ -327,16 +366,17 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels.zIndex
 
   double? zIndex;
 
-  /// Options for the data labels appearing on top of the nodes and links. For treegraph charts, data labels are visible for the nodes by default, but hidden for links. This is controlled by modifying the `nodeFormat`, and the `format` that applies to links and is an empty string by default.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.dataLabels
+  /// Highcharts Options Widget.
   HighchartsTreegraphSeriesDataLabelsOptions(
       {this.align,
       this.alignTo,
@@ -350,17 +390,21 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
       this.color,
       this.crop,
       this.defer,
+      this.distance,
       this.enabled,
       this.filter,
       this.format,
       this.formatter,
       this.headers,
       this.inside,
+      this.labelrank,
       this.linkTextPath,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
       this.padding,
+      this.pointFormat,
+      this.pointFormatter,
       this.position,
       this.rotation,
       this.shadow,
@@ -414,6 +458,9 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -432,6 +479,9 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
     }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
     if (linkTextPath != null) {
       buffer.writeAll(['"linkTextPath":', linkTextPath?.toJSON(), ','], '');
     }
@@ -446,6 +496,13 @@ class HighchartsTreegraphSeriesDataLabelsOptions extends HighchartsOptionsBase {
     }
     if (padding != null) {
       buffer.writeAll(['"padding":', padding, ','], '');
+    }
+    if (pointFormat != null) {
+      buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
+    }
+    if (pointFormatter != null) {
+      buffer
+          .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');

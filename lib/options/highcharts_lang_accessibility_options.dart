@@ -27,6 +27,7 @@ import 'highcharts_lang_accessibility_screen_reader_section_options.dart';
 import 'highcharts_lang_accessibility_series_options.dart';
 import 'highcharts_lang_accessibility_series_type_descriptions_options.dart';
 import 'highcharts_lang_accessibility_sonification_options.dart';
+import 'highcharts_lang_accessibility_stock_tools_options.dart';
 import 'highcharts_lang_accessibility_table_options.dart';
 import 'highcharts_lang_accessibility_zoom_options.dart';
 
@@ -47,6 +48,7 @@ export 'highcharts_lang_accessibility_screen_reader_section_options.dart';
 export 'highcharts_lang_accessibility_series_options.dart';
 export 'highcharts_lang_accessibility_series_type_descriptions_options.dart';
 export 'highcharts_lang_accessibility_sonification_options.dart';
+export 'highcharts_lang_accessibility_stock_tools_options.dart';
 export 'highcharts_lang_accessibility_table_options.dart';
 export 'highcharts_lang_accessibility_zoom_options.dart';
 
@@ -197,6 +199,12 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
 
   HighchartsLangAccessibilitySonificationOptions? sonification;
 
+  /// Stock tools language options for accessibility.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.stockTools
+
+  HighchartsLangAccessibilityStockToolsOptions? stockTools;
+
   /// Accessible label for the chart SVG element.
   /// `{chartTitle}` refers to the chart title.
   ///
@@ -257,6 +265,7 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
       this.series,
       this.seriesTypeDescriptions,
       this.sonification,
+      this.stockTools,
       this.svgContainerLabel,
       this.svgContainerTitle,
       this.table,
@@ -326,6 +335,9 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
+    }
+    if (stockTools != null) {
+      buffer.writeAll(['"stockTools":', stockTools?.toJSON(), ','], '');
     }
     if (svgContainerLabel != null) {
       buffer.writeAll(

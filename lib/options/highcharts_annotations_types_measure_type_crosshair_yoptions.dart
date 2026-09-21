@@ -32,39 +32,39 @@ import 'highcharts_options_base.dart';
 /// Configure a crosshair that is vertically placed in middle of
 /// rectangle.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY
 class HighchartsAnnotationsTypesMeasureTypeCrosshairYOptions
     extends HighchartsOptionsBase {
   /// The dash or dot style of the crosshair's line. For possible
   /// values, see
   /// this demonstration.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY.dashStyle
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY.dashStyle
 
   String? dashStyle;
 
   /// Enable or disable the vertical crosshair.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY.enabled
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY.enabled
 
   bool? enabled;
 
   /// The marker-end defines the arrowhead that will be drawn
   /// at the final vertex of the given crosshair's path.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY.markerEnd
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY.markerEnd
 
   String? markerEnd;
 
   /// The Z index of the crosshair in annotation.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY.zIndex
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY.zIndex
 
   double? zIndex;
 
   /// Configure a crosshair that is vertically placed in middle of rectangle.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY
   HighchartsAnnotationsTypesMeasureTypeCrosshairYOptions(
       {this.dashStyle, this.enabled, this.markerEnd, this.zIndex});
 

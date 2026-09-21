@@ -38,6 +38,13 @@ import 'highcharts_options_base.dart';
 /// vertical scrolling, depending on whether the `minWidth` or `minHeight`
 /// option is set.
 ///
+/// **Note:** Because native browser scrollbars are used, they may
+/// overlap with fixed chart elements such as credits or the chart
+/// border. To avoid this collision, it is recommended to manually add
+/// extra space to the corresponding side using `chart.spacingBottom`
+/// (for horizontal scrollbars) or `chart.spacingRight` (for vertical
+/// scrollbars).
+///
 /// API Docs: https://api.highcharts.com/highcharts/chart.scrollablePlotArea
 class HighchartsChartScrollablePlotAreaOptions extends HighchartsOptionsBase {
   /// The minimum height for the plot area. If it gets smaller than this, the plot

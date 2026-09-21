@@ -59,7 +59,7 @@ class HighchartsMapViewInsetsProjectionOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/mapView.insets.projection.rotation
 
-  String? rotation;
+  dynamic rotation;
 
   /// The projection options for the inset.
   ///

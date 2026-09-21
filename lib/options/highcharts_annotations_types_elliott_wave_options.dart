@@ -14,11 +14,10 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_types_elliott_wave_label_options.dart';
 import 'highcharts_annotations_types_elliott_wave_type_options.dart';
-import 'highcharts_annotations_types_crooked_line_shape_options.dart';
+import 'highcharts_annotations_types_crooked_line_control_point_options.dart';
 
 /* *
  *
@@ -28,7 +27,7 @@ import 'highcharts_annotations_types_crooked_line_shape_options.dart';
 
 export 'highcharts_annotations_types_elliott_wave_label_options.dart';
 export 'highcharts_annotations_types_elliott_wave_type_options.dart';
-export 'highcharts_annotations_types_crooked_line_shape_options.dart';
+export 'highcharts_annotations_types_crooked_line_control_point_options.dart';
 
 /* *
  *
@@ -38,7 +37,7 @@ export 'highcharts_annotations_types_crooked_line_shape_options.dart';
 
 /// Options for the elliott wave annotation type.
 ///
-/// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.elliottWave
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave
 class HighchartsAnnotationsTypesElliottWaveOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -51,20 +50,13 @@ class HighchartsAnnotationsTypesElliottWaveOptions
 
   /// Highcharts Options Widget.
 
-  dynamic controlPointOptions;
-
-  /// Highcharts Options Widget.
-
-  HighchartsAnnotationsTypesCrookedLineShapeOptions? shapeOptions;
+  HighchartsAnnotationsTypesCrookedLineControlPointOptions? controlPointOptions;
 
   /// Options for the elliott wave annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.elliottWave
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave
   HighchartsAnnotationsTypesElliottWaveOptions(
-      {this.labelOptions,
-      this.typeOptions,
-      this.controlPointOptions,
-      this.shapeOptions});
+      {this.labelOptions, this.typeOptions, this.controlPointOptions});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -78,10 +70,7 @@ class HighchartsAnnotationsTypesElliottWaveOptions
     }
     if (controlPointOptions != null) {
       buffer.writeAll(
-          ['"controlPointOptions":', jsonEncode(controlPointOptions), ','], '');
-    }
-    if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ','], '');
+          ['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
     }
   }
 }

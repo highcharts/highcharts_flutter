@@ -116,7 +116,9 @@ class HighchartsXAxisLabelsOptions extends HighchartsOptionsBase {
   /// Callback JavaScript function to format the label. The value
   /// is given by `this.value`. Additional properties for `this` are
   /// `axis`, `chart`, `isFirst`, `isLast` and `text` which holds the
-  /// value of the default formatter.
+  /// value of the default formatter. Since v12.6.0, the callback also
+  /// receives `ctx` as the first argument, so that arrow functions can
+  /// access the same context as regular functions using `this`.
   ///
   /// Defaults to a built in function returning a formatted string
   /// depending on whether the axis is `category`, `datetime`,

@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_gantt_series_data_completed_options.dart';
 import 'highcharts_gantt_series_data_dependency_options.dart';
+import 'highcharts_gantt_series_data_partial_fill_options.dart';
 
 /* *
  *
@@ -27,6 +28,7 @@ import 'highcharts_gantt_series_data_dependency_options.dart';
 
 export 'highcharts_gantt_series_data_completed_options.dart';
 export 'highcharts_gantt_series_data_dependency_options.dart';
+export 'highcharts_gantt_series_data_partial_fill_options.dart';
 
 /* *
  *
@@ -45,8 +47,8 @@ class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
 
   bool? collapsed;
 
-  /// Progress indicator, how much of the task completed. If it is a number, the
-  /// `fill` will be applied automatically.
+  /// Progress indicator, how much of the task completed. When set as a number,
+  /// works as `{ amount: number }`.
   ///
   /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.completed
 
@@ -87,6 +89,14 @@ class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
 
   String? parent;
 
+  /// A partial fill for each point, typically used to visualize how much of
+  /// a task is performed. The partial fill object can be set either on series
+  /// or point level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.data.partialFill
+
+  HighchartsGanttSeriesDataPartialFillOptions? partialFill;
+
   /// The start time of a task. May be a timestamp or a date string.
   ///
   /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.start
@@ -110,6 +120,7 @@ class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
       this.milestone,
       this.name,
       this.parent,
+      this.partialFill,
       this.start,
       this.y});
 
@@ -141,6 +152,9 @@ class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (parent != null) {
       buffer.writeAll(['"parent":', jsonEncode(parent), ','], '');
+    }
+    if (partialFill != null) {
+      buffer.writeAll(['"partialFill":', partialFill?.toJSON(), ','], '');
     }
     if (start != null) {
       buffer.writeAll(['"start":', jsonEncode(start), ','], '');

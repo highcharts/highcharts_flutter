@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import 'highcharts_tooltip_header_options.dart';
 import '../../utilities/highcharts_callback.dart';
 import 'highcharts_tooltip_position_options.dart';
 
@@ -27,6 +28,7 @@ import 'highcharts_tooltip_position_options.dart';
  * */
 
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
+export 'highcharts_tooltip_header_options.dart';
 export 'highcharts_tooltip_position_options.dart';
 
 /* *
@@ -37,12 +39,12 @@ export 'highcharts_tooltip_position_options.dart';
 
 /// Highcharts Options Widget.
 class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
-  /// The HTML of the grouped point's nodes in the tooltip. Works only for
-  /// Treemap series grouping and analogously to
+  /// The HTML of the cluster point's in the tooltip. Works only with
+  /// marker-clusters module and analogously to
   /// pointFormat.
   ///
-  /// The grouped nodes point tooltip can be also formatted using
-  /// `tooltip.formatter` callback function and `point.isGroupNode` flag.
+  /// The cluster tooltip can be also formatted using
+  /// `tooltip.formatter` callback function and `point.isCluster` flag.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.clusterFormat
 
@@ -110,6 +112,14 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
 
   String? format;
 
+  /// Options for the tooltip header when tooltip.split
+  /// is enabled. The header is the box containing the X value in a split
+  /// tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.header
+
+  HighchartsTooltipHeaderOptions? header;
+
   /// The HTML of the tooltip header line. The context is the
   /// Point class.
   /// Variables are enclosed in curly brackets. Examples of common
@@ -118,6 +128,9 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
   /// contains the category name, x value or datetime string depending on
   /// the type of axis. For datetime axes, the `point.key` date format can
   /// be set using `tooltip.xDateFormat`.
+  /// In v12+, locale-aware date names follow the browser's casing and can
+  /// be lower-case, so use the `ucfirst` helper (for example
+  /// `{ucfirst point.key}`) if you want a capitalized header.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.headerFormat
 
@@ -132,7 +145,8 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
 
   /// Callback function to format the text of the tooltip for
   /// visible null points.
-  /// Works analogously to formatter.
+  /// Works analogously to formatter, including the
+  /// `ctx` callback argument added in v12.5.0.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.nullFormatter
 
@@ -156,7 +170,9 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
 
   /// A callback function for formatting the HTML output for a single point
   /// in the tooltip. Like the `pointFormat` string, but with more
-  /// flexibility.
+  /// flexibility. Since v12.6.0, the callback also receives `ctx` as the
+  /// first argument, so that arrow functions can access the same context
+  /// as regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.pointFormatter
 
@@ -168,6 +184,13 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.position
 
   HighchartsTooltipPositionOptions? position;
+
+  /// The number of milliseconds to wait until the tooltip is shown when
+  /// mouse over a point. Works on initial hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.cylinder.tooltip.showDelay
+
+  double? showDelay;
 
   /// How many decimals to show in each series' y value. This is
   /// overridable in each series' tooltip options object. The default is to
@@ -208,12 +231,14 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
       this.followTouchMove,
       this.footerFormat,
       this.format,
+      this.header,
       this.headerFormat,
       this.nullFormat,
       this.nullFormatter,
       this.pointFormat,
       this.pointFormatter,
       this.position,
+      this.showDelay,
       this.valueDecimals,
       this.valuePrefix,
       this.valueSuffix,
@@ -245,6 +270,9 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
     if (format != null) {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
+    if (header != null) {
+      buffer.writeAll(['"header":', header?.toJSON(), ','], '');
+    }
     if (headerFormat != null) {
       buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], '');
     }
@@ -262,6 +290,9 @@ class HighchartsCylinderSeriesTooltipOptions extends HighchartsOptionsBase {
     }
     if (position != null) {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');
+    }
+    if (showDelay != null) {
+      buffer.writeAll(['"showDelay":', showDelay, ','], '');
     }
     if (valueDecimals != null) {
       buffer.writeAll(['"valueDecimals":', valueDecimals, ','], '');

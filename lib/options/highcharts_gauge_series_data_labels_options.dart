@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import '../../utilities/highcharts_callback.dart';
+import 'highcharts_gauge_series_data_labels_style_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
 /* *
@@ -29,6 +30,7 @@ import 'highcharts_series_data_labels_text_path_options.dart';
 
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
+export 'highcharts_gauge_series_data_labels_style_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
 
 /* *
@@ -38,7 +40,7 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  * */
 
 /// Data labels for the gauge. For gauges, the data labels are
-/// enabled by default and shown in a bordered box below the point.
+/// enabled by default and shown in the center.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels
 class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
@@ -88,22 +90,34 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.backgroundColor
 
   String? backgroundColor;
 
-  /// Highcharts Options Widget.
+  /// The border color for the data label. Setting it to `auto` will use
+  /// the point's color. Defaults to `undefined`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.borderColor
 
   String? borderColor;
 
-  /// Highcharts Options Widget.
+  /// The border radius in pixels for the data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.borderRadius
 
   double? borderRadius;
 
-  /// Highcharts Options Widget.
+  /// The border width in pixels for the data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.borderWidth
 
   double? borderWidth;
 
@@ -142,6 +156,10 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   /// Highcharts Options Widget.
 
+  double? distance;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
 
   /// A declarative filter to control of which data labels to display.
@@ -150,6 +168,7 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// a pure JSON structure or for use with graphical editors. For
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
+  ///
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.filter
 
@@ -180,6 +199,14 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   bool? inside;
 
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.labelrank
+
+  double? labelrank;
+
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
   /// be applied only to series which support displaying null points.
@@ -194,10 +221,12 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -216,10 +245,7 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   String? overflow;
 
-  /// When either the `borderWidth` or the `backgroundColor` is set,
-  /// this is the padding within the box.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.padding
+  /// Highcharts Options Widget.
 
   double? padding;
 
@@ -254,31 +280,9 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   String? shape;
 
-  /// Styles for the label. The default `color` setting is
-  /// `"contrast"`, which is a pseudo color that Highcharts picks up
-  /// and applies the maximum contrast to the underlying point item,
-  /// for example the bar in a bar chart.
-  ///
-  /// The `textOutline` is a pseudo property that applies an outline of
-  /// the given width with the given color, which by default is the
-  /// maximum contrast to the text. So a bright text color will result
-  /// in a black text outline for maximum readability on a mixed
-  /// background. In some cases, especially with grayscale text, the
-  /// text outline doesn't work well, in which cases it can be disabled
-  /// by setting it to `"none"`. When `useHTML` is true, the
-  /// `textOutline` will not be picked up. In this, case, the same
-  /// effect can be acheived through the `text-shadow` CSS property.
-  ///
-  /// For some series types, where each point has an extent, like for
-  /// example tree maps, the data label may overflow the point. There
-  /// are two strategies for handling overflow. By default, the text
-  /// will wrap to multiple lines. The other strategy is to set
-  /// `style.textOverflow` to `ellipsis`, which will keep the text on
-  /// one line plus it will break inside long words.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.style
+  /// Highcharts Options Widget.
 
-  Map<String, String>? style;
+  HighchartsGaugeSeriesDataLabelsStyleOptions? style;
 
   /// Options for a label text which should follow marker's shape.
   /// Border and background are disabled for a label that follows a
@@ -286,6 +290,10 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
   ///
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
+  ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels.textPath
 
@@ -318,7 +326,7 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   double? zIndex;
 
-  /// Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point.
+  /// Data labels for the gauge. For gauges, the data labels are enabled by default and shown in the center.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.dataLabels
   HighchartsGaugeSeriesDataLabelsOptions(
@@ -334,11 +342,13 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
       this.color,
       this.crop,
       this.defer,
+      this.distance,
       this.enabled,
       this.filter,
       this.format,
       this.formatter,
       this.inside,
+      this.labelrank,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
@@ -396,6 +406,9 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -410,6 +423,9 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
+    }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
     }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
@@ -440,11 +456,7 @@ class HighchartsGaugeSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"shape":', jsonEncode(shape), ','], '');
     }
     if (style != null) {
-      buffer.write('"style":{');
-      for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
     if (textPath != null) {
       buffer.writeAll(['"textPath":', textPath?.toJSON(), ','], '');

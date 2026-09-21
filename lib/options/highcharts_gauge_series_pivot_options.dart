@@ -42,9 +42,7 @@ class HighchartsGaugeSeriesPivotOptions extends HighchartsOptionsBase {
 
   String? backgroundColor;
 
-  /// The border or stroke color of the pivot. In able to change
-  /// this, the borderWidth must also be set to something other
-  /// than the default 0.
+  /// The border or stroke color of the pivot.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.pivot.borderColor
 
@@ -56,11 +54,13 @@ class HighchartsGaugeSeriesPivotOptions extends HighchartsOptionsBase {
 
   double? borderWidth;
 
-  /// The pixel radius of the pivot.
+  /// The radius of the pivot, the center point of the gauge.
+  /// Accepts a pixel value if given as a number, or a percentage
+  /// of the full gauge radius if given as a percentage string.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gauge.pivot.radius
 
-  double? radius;
+  dynamic radius;
 
   /// Options for the pivot or the center point of the gauge.
   ///
@@ -83,7 +83,7 @@ class HighchartsGaugeSeriesPivotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
     }
     if (radius != null) {
-      buffer.writeAll(['"radius":', radius, ','], '');
+      buffer.writeAll(['"radius":', jsonEncode(radius), ','], '');
     }
   }
 }

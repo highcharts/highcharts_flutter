@@ -52,6 +52,12 @@ class HighchartsChartZoomingMouseWheelOptions extends HighchartsOptionsBase {
 
   double? sensitivity;
 
+  /// Whether to enable the reset zoom button when zooming with the mouse wheel.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.mouseWheel.showResetButton
+
+  bool? showResetButton;
+
   /// Decides in what dimensions the user can zoom scrolling the wheel. Can be one
   /// of `x`, `y` or `xy`. In Highcharts Core, if not specified here, it will
   /// inherit the type from chart.zooming.type. In Highcharts
@@ -71,7 +77,7 @@ class HighchartsChartZoomingMouseWheelOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.mouseWheel
   HighchartsChartZoomingMouseWheelOptions(
-      {this.enabled, this.sensitivity, this.type});
+      {this.enabled, this.sensitivity, this.showResetButton, this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -82,6 +88,9 @@ class HighchartsChartZoomingMouseWheelOptions extends HighchartsOptionsBase {
     }
     if (sensitivity != null) {
       buffer.writeAll(['"sensitivity":', sensitivity, ','], '');
+    }
+    if (showResetButton != null) {
+      buffer.writeAll(['"showResetButton":', showResetButton, ','], '');
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');

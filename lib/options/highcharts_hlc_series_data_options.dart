@@ -63,6 +63,14 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
 
   HighchartsHLCSeriesDataAccessibilityOptions? accessibility;
 
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.hlc.data.className
+
+  String? className;
+
   /// The closing value of each data point.
   ///
   /// API Docs: https://api.highcharts.com/highstock/series.hlc.data.close
@@ -91,13 +99,6 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
 
   HighchartsHLCSeriesDataDataLabelsOptions? dataLabels;
 
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.hlc.data.description
-
-  String? description;
-
   /// Point specific options for the draggable-points module. Overrides options
   /// on `series.dragDrop`.
   ///
@@ -124,9 +125,11 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.hlc.data.labelrank
 
@@ -166,11 +169,11 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highstock/series.hlc.data
   HighchartsHLCSeriesDataOptions(
       {this.accessibility,
+      this.className,
       this.close,
       this.color,
       this.custom,
       this.dataLabels,
-      this.description,
       this.dragDrop,
       this.events,
       this.high,
@@ -188,6 +191,9 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
+    }
     if (close != null) {
       buffer.writeAll(['"close":', close, ','], '');
     }
@@ -203,9 +209,6 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
-    }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');

@@ -42,10 +42,6 @@ class HighchartsGanttSeriesConnectorsStartMarkerOptions
 
   /// Highcharts Options Widget.
 
-  String? fill;
-
-  /// Highcharts Options Widget.
-
   double? radius;
 
   /// Highcharts Options Widget.
@@ -54,7 +50,7 @@ class HighchartsGanttSeriesConnectorsStartMarkerOptions
 
   /// Highcharts Options Widget.
   HighchartsGanttSeriesConnectorsStartMarkerOptions(
-      {this.align, this.enabled, this.fill, this.radius, this.symbol});
+      {this.align, this.enabled, this.radius, this.symbol});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -65,9 +61,6 @@ class HighchartsGanttSeriesConnectorsStartMarkerOptions
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
-    }
-    if (fill != null) {
-      buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
     if (radius != null) {
       buffer.writeAll(['"radius":', radius, ','], '');

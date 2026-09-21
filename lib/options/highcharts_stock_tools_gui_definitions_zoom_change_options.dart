@@ -44,7 +44,7 @@ class HighchartsStockToolsGuiDefinitionsZoomChangeOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.zoomChange.items
 
-  String? items;
+  List<String>? items;
 
   /// Highcharts Options Widget.
 
@@ -67,7 +67,11 @@ class HighchartsStockToolsGuiDefinitionsZoomChangeOptions
     super.toOptionsJSON(buffer);
 
     if (items != null) {
-      buffer.writeAll(['"items":', jsonEncode(items), ','], '');
+      buffer.write('"items":[');
+      for (var item in items!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
     if (zoomX != null) {
       buffer.writeAll(['"zoomX":', zoomX?.toJSON(), ','], '');

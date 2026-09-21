@@ -115,7 +115,8 @@ class HighchartsXAxisScrollbarOptions extends HighchartsOptionsBase {
 
   /// Whether to redraw the main chart as the scrollbar or the navigator
   /// zoomed window is moved. Defaults to `true` for modern browsers and
-  /// `false` for legacy IE browsers as well as mobile devices.
+  /// `false` for legacy IE browsers as well as mobile devices. This option
+  /// works regardless of whether the scrollbar is enabled or not.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.scrollbar.liveRedraw
 

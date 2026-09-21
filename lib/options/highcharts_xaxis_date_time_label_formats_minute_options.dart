@@ -32,7 +32,9 @@ import 'highcharts_options_base.dart';
 /// Highcharts Options Widget.
 class HighchartsXAxisDateTimeLabelFormatsMinuteOptions
     extends HighchartsOptionsBase {
-  /// Highcharts Options Widget.
+  /// List of possible format strings used for this unit.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats.minute.list
 
   List<dynamic>? list;
 
@@ -41,12 +43,7 @@ class HighchartsXAxisDateTimeLabelFormatsMinuteOptions
   String? main;
 
   /// Highcharts Options Widget.
-
-  bool? range;
-
-  /// Highcharts Options Widget.
-  HighchartsXAxisDateTimeLabelFormatsMinuteOptions(
-      {this.list, this.main, this.range});
+  HighchartsXAxisDateTimeLabelFormatsMinuteOptions({this.list, this.main});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -61,9 +58,6 @@ class HighchartsXAxisDateTimeLabelFormatsMinuteOptions
     }
     if (main != null) {
       buffer.writeAll(['"main":', jsonEncode(main), ','], '');
-    }
-    if (range != null) {
-      buffer.writeAll(['"range":', range, ','], '');
     }
   }
 }

@@ -65,6 +65,13 @@ class HighchartsNavigatorYAxisCrosshairOptions extends HighchartsOptionsBase {
 
   HighchartsXAxisCrosshairLabelOptions? label;
 
+  /// The number of milliseconds to wait until the crosshair is shown when
+  /// the mouse is over a point. Works on initial hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.crosshair.showDelay
+
+  double? showDelay;
+
   /// Whether the crosshair should snap to the point or follow the pointer
   /// independent of points.
   ///
@@ -92,6 +99,7 @@ class HighchartsNavigatorYAxisCrosshairOptions extends HighchartsOptionsBase {
       this.color,
       this.dashStyle,
       this.label,
+      this.showDelay,
       this.snap,
       this.width,
       this.zIndex});
@@ -111,6 +119,9 @@ class HighchartsNavigatorYAxisCrosshairOptions extends HighchartsOptionsBase {
     }
     if (label != null) {
       buffer.writeAll(['"label":', label?.toJSON(), ','], '');
+    }
+    if (showDelay != null) {
+      buffer.writeAll(['"showDelay":', showDelay, ','], '');
     }
     if (snap != null) {
       buffer.writeAll(['"snap":', snap, ','], '');

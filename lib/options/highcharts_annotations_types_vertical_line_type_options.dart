@@ -42,19 +42,19 @@ class HighchartsAnnotationsTypesVerticalLineTypeOptions
     extends HighchartsOptionsBase {
   /// Connector options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.connector
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.connector
 
   HighchartsAnnotationsTypesVerticalLineTypeConnectorOptions? connector;
 
   /// Label options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.label
 
   HighchartsAnnotationsTypesVerticalLineTypeLabelOptions? label;
 
   /// Line options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.line
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.line
 
   HighchartsAnnotationsTypesCrookedLineTypeLineOptions? line;
 
@@ -62,19 +62,19 @@ class HighchartsAnnotationsTypesVerticalLineTypeOptions
 
   List<HighchartsAnnotationsTypesCrookedLineTypePointsOptions>? points;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.yAxis
 
   double? yAxis;
 

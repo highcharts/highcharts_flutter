@@ -36,6 +36,7 @@ import 'highcharts_options_base.dart';
 /// programmatic control, use the `formatter` instead, and return
 /// `undefined` to disable a single data label.
 ///
+///
 /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.filter
 class HighchartsSeriesDataLabelsFilterOptions extends HighchartsOptionsBase {
   /// The operator to compare by. Can be one of `>`, `<`, `>=`, `<=`,

@@ -32,7 +32,9 @@ import 'highcharts_options_base.dart';
 /// Highcharts Options Widget.
 class HighchartsXAxisDateTimeLabelFormatsWeekOptions
     extends HighchartsOptionsBase {
-  /// Highcharts Options Widget.
+  /// List of possible format strings used for this unit.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats.week.list
 
   List<dynamic>? list;
 

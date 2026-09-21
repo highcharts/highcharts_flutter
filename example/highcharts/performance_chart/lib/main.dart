@@ -357,7 +357,7 @@ class _ToggleChip extends StatelessWidget {
 
 class _GlassCard extends StatelessWidget {
   final Widget child;
-  const _GlassCard({super.key, required this.child});
+  const _GlassCard({required this.child});
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

@@ -59,6 +59,14 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
   bool? affectsMapView;
 
+  /// Whether all areas of the map defined in `mapData` should be rendered.
+  /// If `true`, areas which don't correspond to a data point, are rendered
+  /// as `null` points. If `false`, those areas are skipped.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.map.allAreas
+
+  bool? allAreas;
+
   /// Highcharts Options Widget.
 
   bool? animation;
@@ -86,7 +94,7 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.map.colors
 
-  List<dynamic>? colors;
+  List<String>? colors;
 
   /// Highcharts Options Widget.
 
@@ -117,11 +125,7 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
   String? legendSymbol;
 
-  /// The SVG value used for the `stroke-linecap` and `stroke-linejoin` of
-  /// the map borders. Round means that borders are rounded in the ends and
-  /// bends.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.map.linecap
+  /// Highcharts Options Widget.
 
   String? linecap;
 
@@ -150,6 +154,14 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
   bool? nullInteraction;
 
+  /// Whether to apply a drop shadow to the map shapes. The shadow can be an
+  /// object configuration containing `color`, `offsetX`, `offsetY`, `opacity`
+  /// and `width`.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.map.shadow
+
+  Map<String, dynamic>? shadow;
+
   /// Highcharts Options Widget.
 
   HighchartsMapSeriesStatesOptions? states;
@@ -158,21 +170,12 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsMapSeriesTooltipOptions? tooltip;
 
-  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
-  /// allows to disable zooming on an individual non-cartesian series. By default
-  /// zooming is enabled for all series.
-  ///
-  /// Note: This option works only for non-cartesian series.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.map.zoomEnabled
-
-  bool? zoomEnabled;
-
   /// A `map` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.map
   HighchartsMapSeriesOptions(
       {this.affectsMapView,
+      this.allAreas,
       this.animation,
       this.colorByPoint,
       this.colorKey,
@@ -186,9 +189,9 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
       this.mapData,
       this.nullColor,
       this.nullInteraction,
+      this.shadow,
       this.states,
-      this.tooltip,
-      this.zoomEnabled});
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -196,6 +199,9 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
     if (affectsMapView != null) {
       buffer.writeAll(['"affectsMapView":', affectsMapView, ','], '');
+    }
+    if (allAreas != null) {
+      buffer.writeAll(['"allAreas":', allAreas, ','], '');
     }
     if (animation != null) {
       buffer.writeAll(['"animation":', animation, ','], '');
@@ -240,14 +246,18 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
     if (nullInteraction != null) {
       buffer.writeAll(['"nullInteraction":', nullInteraction, ','], '');
     }
+    if (shadow != null) {
+      buffer.write('"shadow":{');
+      for (var item in shadow!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
+    }
     if (states != null) {
       buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (tooltip != null) {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
-    }
-    if (zoomEnabled != null) {
-      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

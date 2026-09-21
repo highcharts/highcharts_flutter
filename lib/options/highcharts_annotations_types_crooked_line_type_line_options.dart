@@ -31,7 +31,7 @@ import 'highcharts_options_base.dart';
 
 /// Line options.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.line
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.line
 class HighchartsAnnotationsTypesCrookedLineTypeLineOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -40,7 +40,7 @@ class HighchartsAnnotationsTypesCrookedLineTypeLineOptions
 
   /// Line options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.line
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine.typeOptions.line
   HighchartsAnnotationsTypesCrookedLineTypeLineOptions({this.fill});
 
   @override

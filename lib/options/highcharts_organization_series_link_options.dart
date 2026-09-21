@@ -52,7 +52,7 @@ class HighchartsOrganizationSeriesLinkOptions extends HighchartsOptionsBase {
   double? offset;
 
   /// Radius for the rounded corners of the links between nodes.
-  /// Works for `default` link type.
+  /// Works for the `orthogonal` link type.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.organization.link.radius
 

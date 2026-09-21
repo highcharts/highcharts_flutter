@@ -67,7 +67,10 @@ class HighchartsWindbarbSeries extends HighchartsSeries {
   /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data
   List<List<dynamic>>? data;
 
-  /// The name of the series as shown in the legend, tooltip etc.
+  /// The name of the series as shown in the legend, tooltip etc. If a `dataTable`
+  /// and `dataMapping` are used, the name defaults to the id of the primary data
+  /// table column. Otherwise, it defaults to "Series {n}", where n is the index of
+  /// the series, starting at 1.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.name
   String? name;

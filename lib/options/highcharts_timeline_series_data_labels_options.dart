@@ -179,6 +179,7 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
   ///
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dataLabels.filter
 
   HighchartsSeriesDataLabelsFilterOptions? filter;
@@ -204,6 +205,14 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   bool? inside;
 
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dataLabels.labelrank
+
+  double? labelrank;
+
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
   /// be applied only to series which support displaying null points.
@@ -218,10 +227,12 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -240,10 +251,7 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   String? overflow;
 
-  /// When either the `borderWidth` or the `backgroundColor` is set,
-  /// this is the padding within the box.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dataLabels.padding
+  /// Highcharts Options Widget.
 
   double? padding;
 
@@ -286,6 +294,10 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
   ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dataLabels.textPath
 
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
@@ -325,8 +337,11 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dataLabels.zIndex
 
@@ -355,6 +370,7 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
       this.format,
       this.formatter,
       this.inside,
+      this.labelrank,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
@@ -440,6 +456,9 @@ class HighchartsTimelineSeriesDataLabelsOptions extends HighchartsOptionsBase {
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
+    }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
     }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');

@@ -31,7 +31,7 @@ import 'highcharts_options_base.dart';
 
 /// CSS styles for the measure label.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.label.style
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.label.style
 class HighchartsAnnotationsTypesMeasureTypeLabelStyleOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -44,7 +44,7 @@ class HighchartsAnnotationsTypesMeasureTypeLabelStyleOptions
 
   /// CSS styles for the measure label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.label.style
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.label.style
   HighchartsAnnotationsTypesMeasureTypeLabelStyleOptions(
       {this.color, this.fontSize});
 

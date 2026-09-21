@@ -29,8 +29,8 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/// Progress indicator, how much of the task completed. If it is a number, the
-/// `fill` will be applied automatically.
+/// Progress indicator, how much of the task completed. When set as a number,
+/// works as `{ amount: number }`.
 ///
 /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.completed
 class HighchartsGanttSeriesDataCompletedOptions extends HighchartsOptionsBase {
@@ -46,9 +46,9 @@ class HighchartsGanttSeriesDataCompletedOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gantt.data.completed.fill
 
-  Map<String, dynamic>? fill;
+  String? fill;
 
-  /// Progress indicator, how much of the task completed. If it is a number, the `fill` will be applied automatically.
+  /// Progress indicator, how much of the task completed. When set as a number, works as `{ amount: number }`.
   ///
   /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.completed
   HighchartsGanttSeriesDataCompletedOptions({this.amount, this.fill});
@@ -61,11 +61,7 @@ class HighchartsGanttSeriesDataCompletedOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"amount":', amount, ','], '');
     }
     if (fill != null) {
-      buffer.write('"fill":{');
-      for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
   }
 }

@@ -181,6 +181,12 @@ class HighchartsColumnPyramidSeriesDataGroupingOptions
 
   String? lastAnchor;
 
+  /// Deprecated. Use
+  /// anchor, or
+  /// firstAnchor and
+  /// lastAnchor
+  /// instead.
+  ///
   /// Normally, a group is indexed by the start of that group, so for example
   /// when 30 daily values are grouped into one month, that month's x value
   /// will be the 1st of the month. This apparently shifts the data to
@@ -255,7 +261,7 @@ class HighchartsColumnPyramidSeriesDataGroupingOptions
     if (units != null) {
       buffer.write('"units":[');
       for (var item in units!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }

@@ -62,7 +62,7 @@ class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.crookedLines.items
 
-  String? items;
+  List<String>? items;
 
   /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsCrookedLinesOptions(
@@ -85,7 +85,11 @@ class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions
       buffer.writeAll(['"elliott5":', elliott5?.toJSON(), ','], '');
     }
     if (items != null) {
-      buffer.writeAll(['"items":', jsonEncode(items), ','], '');
+      buffer.write('"items":[');
+      for (var item in items!) {
+        buffer.writeAll([jsonEncode(item), ','], '');
+      }
+      buffer.write('],');
     }
   }
 }

@@ -52,14 +52,14 @@ class HighchartsAnnotationsTypesMeasureTypeOptions
   /// Configure a crosshair that is horizontally placed in middle of
   /// rectangle.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairX
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairX
 
   HighchartsAnnotationsTypesMeasureTypeCrosshairXOptions? crosshairX;
 
   /// Configure a crosshair that is vertically placed in middle of
   /// rectangle.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.crosshairY
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.crosshairY
 
   HighchartsAnnotationsTypesMeasureTypeCrosshairYOptions? crosshairY;
 
@@ -70,7 +70,7 @@ class HighchartsAnnotationsTypesMeasureTypeOptions
   /// Decides in what dimensions the user can resize by dragging the
   /// mouse. Can be one of x, y or xy.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.selectType
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.selectType
 
   String? selectType;
 
@@ -78,7 +78,7 @@ class HighchartsAnnotationsTypesMeasureTypeOptions
   /// It refers to either the axis id or the index of the axis
   /// in the xAxis array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.xAxis
 
   double? xAxis;
 
@@ -86,13 +86,13 @@ class HighchartsAnnotationsTypesMeasureTypeOptions
   /// It refers to either the axis id or the index of the axis
   /// in the yAxis array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.yAxis
 
   double? yAxis;
 
   /// Line options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.measure.typeOptions.line
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.measure.typeOptions.line
 
   HighchartsAnnotationsTypesCrookedLineTypeLineOptions? line;
 

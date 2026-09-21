@@ -22,6 +22,7 @@ import 'highcharts_color_axis_events_options.dart';
 import 'highcharts_color_axis_labels_options.dart';
 import 'highcharts_color_axis_marker_options.dart';
 import '../../utilities/highcharts_callback.dart';
+import 'highcharts_color_axis_title_options.dart';
 
 /* *
  *
@@ -34,6 +35,7 @@ export 'highcharts_color_axis_data_classes_options.dart';
 export 'highcharts_color_axis_events_options.dart';
 export 'highcharts_color_axis_labels_options.dart';
 export 'highcharts_color_axis_marker_options.dart';
+export 'highcharts_color_axis_title_options.dart';
 
 /* *
  *
@@ -66,7 +68,7 @@ export 'highcharts_color_axis_marker_options.dart';
 /// convenient to add each category to a separate series.
 ///
 /// Color axis does not work with: `sankey`, `sunburst`, `dependencywheel`,
-/// `networkgraph`, `wordcloud`, `venn`, `gauge` and `solidgauge` series
+/// `networkgraph`, `venn`, `gauge` and `solidgauge` series
 /// types.
 ///
 /// Since v7.2.0 `colorAxis` can also be an array of options objects.
@@ -402,6 +404,8 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   /// The number of minor ticks per major tick. Works for `linear`,
   /// `logarithmic` and `datetime` axes.
   ///
+  /// For radial axes in gauges, the default value is 10.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.minorTicksPerMajor
 
   double? minorTicksPerMajor;
@@ -459,11 +463,6 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   /// Whether to reverse the axis so that the highest number is closest
   /// to the origin. Defaults to `false`.
   ///
-  /// Whether to reverse the axis so that the highest number is closest
-  /// to the origin. Defaults to `false` in a horizontal legend and
-  /// `true` in a vertical legend, where the smallest value starts on
-  /// top.
-  ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.reversed
 
   bool? reversed;
@@ -516,6 +515,16 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.startOnTick
 
   bool? startOnTick;
+
+  /// For vertical axes only. Setting the static scale ensures that each tick unit
+  /// is translated into a fixed pixel height. For example, setting the static
+  /// scale to 24 results in each Y axis category taking up 24 pixels, and the
+  /// height of the chart adjusts. Adding or removing items will make the chart
+  /// resize.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.staticScale
+
+  double? staticScale;
 
   /// Color stops for the gradient of a scalar color axis. Use this in
   /// cases where a linear gradient between a `minColor` and `maxColor`
@@ -576,16 +585,19 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   String? tickPosition;
 
   /// A callback function returning array defining where the ticks are
-  /// laid out on the axis. This overrides the default behaviour of
+  /// laid out on the axis. This overrides the default behavior of
   /// tickPixelInterval and tickInterval. The automatic tick positions are accessible
   /// through `this.tickPositions` and can be modified by the callback.
+  /// Since v12.6.0, the callback also receives `ctx` as the third
+  /// argument, so that arrow functions can access the same context as
+  /// regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.tickPositioner
 
   HighchartsCallback? tickPositioner;
 
   /// An array defining where the ticks are laid out on the axis. This
-  /// overrides the default behaviour of tickPixelInterval and tickInterval.
+  /// overrides the default behavior of tickPixelInterval and tickInterval.
   ///
   /// Note: When working with date-time axes, be aware of time zone
   /// handling. See the documentation on time options
@@ -615,6 +627,13 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.tickmarkPlacement
 
   String? tickmarkPlacement;
+
+  /// The color axis title. Displayed alongside the color axis. When the
+  /// legend is vertical the title is rotated accordingly.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.title
+
+  HighchartsColorAxisTitleOptions? title;
 
   /// The type of interpolation to use for the color axis. Can be
   /// `linear` or `logarithmic`.
@@ -725,6 +744,7 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       this.softMin,
       this.startOfWeek,
       this.startOnTick,
+      this.staticScale,
       this.stops,
       this.tickAmount,
       this.tickColor,
@@ -736,6 +756,7 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       this.tickPositions,
       this.tickWidth,
       this.tickmarkPlacement,
+      this.title,
       this.type,
       this.uniqueNames,
       this.units,
@@ -919,10 +940,13 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
     if (startOnTick != null) {
       buffer.writeAll(['"startOnTick":', startOnTick, ','], '');
     }
+    if (staticScale != null) {
+      buffer.writeAll(['"staticScale":', staticScale, ','], '');
+    }
     if (stops != null) {
       buffer.write('"stops":[');
       for (var item in stops!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }
@@ -961,6 +985,9 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(
           ['"tickmarkPlacement":', jsonEncode(tickmarkPlacement), ','], '');
     }
+    if (title != null) {
+      buffer.writeAll(['"title":', title?.toJSON(), ','], '');
+    }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
@@ -970,7 +997,7 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
     if (units != null) {
       buffer.write('"units":[');
       for (var item in units!) {
-        buffer.writeAll([item, ','], '');
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
     }

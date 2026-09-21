@@ -36,6 +36,10 @@ import 'highcharts_options_base.dart';
 /// requires two fingers. To allow panning with one finger, set
 /// `followTouchMove` to `false`.
 ///
+/// **Note:** If both zooming and panning are enabled without keys, zooming
+/// will take precedence by default. To prioritize panning, either set
+/// chart.zooming.key or panKey.
+///
 /// API Docs: https://api.highcharts.com/highcharts/chart.panning
 class HighchartsChartPanningOptions extends HighchartsOptionsBase {
   /// Enable or disable chart panning.

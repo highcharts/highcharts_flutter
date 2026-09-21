@@ -14,10 +14,9 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_types_time_cycles_type_options.dart';
-import 'highcharts_annotations_types_crooked_line_shape_options.dart';
+import 'highcharts_annotations_types_crooked_line_control_point_options.dart';
 
 /* *
  *
@@ -26,7 +25,7 @@ import 'highcharts_annotations_types_crooked_line_shape_options.dart';
  * */
 
 export 'highcharts_annotations_types_time_cycles_type_options.dart';
-export 'highcharts_annotations_types_crooked_line_shape_options.dart';
+export 'highcharts_annotations_types_crooked_line_control_point_options.dart';
 
 /* *
  *
@@ -34,9 +33,9 @@ export 'highcharts_annotations_types_crooked_line_shape_options.dart';
  *
  * */
 
-/// Options for the  time cycles annotation type.
+/// Options for the time cycles annotation type.
 ///
-/// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.timeCycles
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.timeCycles
 class HighchartsAnnotationsTypesTimeCyclesOptions
     extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
@@ -45,17 +44,13 @@ class HighchartsAnnotationsTypesTimeCyclesOptions
 
   /// Highcharts Options Widget.
 
-  dynamic controlPointOptions;
+  HighchartsAnnotationsTypesCrookedLineControlPointOptions? controlPointOptions;
 
-  /// Highcharts Options Widget.
-
-  HighchartsAnnotationsTypesCrookedLineShapeOptions? shapeOptions;
-
-  /// Options for the  time cycles annotation type.
+  /// Options for the time cycles annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.timeCycles
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.timeCycles
   HighchartsAnnotationsTypesTimeCyclesOptions(
-      {this.typeOptions, this.controlPointOptions, this.shapeOptions});
+      {this.typeOptions, this.controlPointOptions});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -66,10 +61,7 @@ class HighchartsAnnotationsTypesTimeCyclesOptions
     }
     if (controlPointOptions != null) {
       buffer.writeAll(
-          ['"controlPointOptions":', jsonEncode(controlPointOptions), ','], '');
-    }
-    if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ','], '');
+          ['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
     }
   }
 }

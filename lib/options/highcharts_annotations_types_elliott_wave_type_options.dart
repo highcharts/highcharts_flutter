@@ -44,19 +44,19 @@ class HighchartsAnnotationsTypesElliottWaveTypeOptions
 
   HighchartsAnnotationsTypesElliottWaveTypePointsOptions? points;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.elliottWave.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.elliottWave.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave.typeOptions.yAxis
 
   double? yAxis;
 

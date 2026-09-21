@@ -80,10 +80,6 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
 
   /// Highcharts Options Widget.
 
-  dynamic events;
-
-  /// Highcharts Options Widget.
-
   bool? grouping;
 
   /// An id for the series. This can be used after render time to get a pointer
@@ -108,9 +104,9 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
   double? legendIndex;
 
   /// A partial fill for each point, typically used to visualize how much
-  /// of a task is performed. See completed.
+  /// of a task is performed.
   ///
-  /// API Docs: https://api.highcharts.com/gantt/series.gantt.partialFill
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.partialFill
 
   HighchartsGanttSeriesPartialFillOptions? partialFill;
 
@@ -122,16 +118,6 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsGanttSeriesTooltipOptions? tooltip;
 
-  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
-  /// allows to disable zooming on an individual non-cartesian series. By default
-  /// zooming is enabled for all series.
-  ///
-  /// Note: This option works only for non-cartesian series.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.zoomEnabled
-
-  bool? zoomEnabled;
-
   /// A `gantt` series.
   ///
   /// API Docs: https://api.highcharts.com/gantt/series.gantt
@@ -141,15 +127,13 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
       this.connectors,
       this.dataLabels,
       this.dragDrop,
-      this.events,
       this.grouping,
       this.id,
       this.index,
       this.legendIndex,
       this.partialFill,
       this.pointRange,
-      this.tooltip,
-      this.zoomEnabled});
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -169,9 +153,6 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
     }
     if (dragDrop != null) {
       buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');
-    }
-    if (events != null) {
-      buffer.writeAll(['"events":', jsonEncode(events), ','], '');
     }
     if (grouping != null) {
       buffer.writeAll(['"grouping":', grouping, ','], '');
@@ -193,9 +174,6 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
     }
     if (tooltip != null) {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
-    }
-    if (zoomEnabled != null) {
-      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

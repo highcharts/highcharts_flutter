@@ -35,12 +35,12 @@ export 'highcharts_annotations_types_crooked_line_type_points_options.dart';
 
 /// Additional options for an annotation with the type.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.infinityLine.typeOptions
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.infinityLine.typeOptions
 class HighchartsAnnotationsTypesCrookedLineTypeOptions
     extends HighchartsOptionsBase {
   /// Line options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.infinityLine.typeOptions.line
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.infinityLine.typeOptions.line
 
   HighchartsAnnotationsTypesCrookedLineTypeLineOptions? line;
 
@@ -48,25 +48,25 @@ class HighchartsAnnotationsTypesCrookedLineTypeOptions
 
   List<HighchartsAnnotationsTypesCrookedLineTypePointsOptions>? points;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.infinityLine.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.infinityLine.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.infinityLine.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.infinityLine.typeOptions.yAxis
 
   double? yAxis;
 
   /// Additional options for an annotation with the type.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.infinityLine.typeOptions
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.infinityLine.typeOptions
   HighchartsAnnotationsTypesCrookedLineTypeOptions(
       {this.line, this.points, this.xAxis, this.yAxis});
 

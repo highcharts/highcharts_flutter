@@ -31,42 +31,42 @@ import '../../utilities/highcharts_callback.dart';
 
 /// Events available in annotations.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.events
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events
 class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
   /// Event callback when annotation is added to the chart.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.add
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events.add
 
   HighchartsCallback? add;
 
   /// Event callback when annotation is updated (e.g. drag and
   /// dropped or resized by control points).
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.afterUpdate
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events.afterUpdate
 
   HighchartsCallback? afterUpdate;
 
   /// Fires when the annotation is clicked.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.click
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events.click
 
   HighchartsCallback? click;
 
   /// Fires when the annotation is dragged.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.drag
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events.drag
 
   HighchartsCallback? drag;
 
   /// Event callback when annotation is removed from the chart.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.remove
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events.remove
 
   HighchartsCallback? remove;
 
   /// Events available in annotations.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.events
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.events
   HighchartsAnnotationsEventsOptions(
       {this.add, this.afterUpdate, this.click, this.drag, this.remove});
 

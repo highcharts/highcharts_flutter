@@ -37,8 +37,6 @@ export 'highcharts_scatter3d_series_data_options.dart';
 /// A `scatter3d` series. If the type option is
 /// not specified, it is inherited from chart.type.
 ///
-/// scatter3d](#plotOptions.scatter3d).
-///
 /// Configuration options for the series are given in three levels:
 /// 1. Options for all series in a chart are defined in the
 ///    plotOptions.series object.
@@ -71,7 +69,10 @@ class HighchartsScatter3DSeries extends HighchartsSeries {
   /// API Docs: https://api.highcharts.com/highcharts/series.scatter3d.data
   List<List<dynamic>>? data;
 
-  /// The name of the series as shown in the legend, tooltip etc.
+  /// The name of the series as shown in the legend, tooltip etc. If a `dataTable`
+  /// and `dataMapping` are used, the name defaults to the id of the primary data
+  /// table column. Otherwise, it defaults to "Series {n}", where n is the index of
+  /// the series, starting at 1.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.scatter3d.name
   String? name;

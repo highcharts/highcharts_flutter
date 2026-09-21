@@ -194,7 +194,9 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
 
   List<String>? locale;
 
-  /// Highcharts Options Widget.
+  /// The text for the main breadcrumb.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.mainBreadcrumb
 
   String? mainBreadcrumb;
 
@@ -202,11 +204,6 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   /// in `Highcharts.dateFormat()`. Defaults to 'undefined',
   /// meaning the default month names are used according to the
   /// `lang.locale` or browser settings.
-  ///
-  /// An array containing the months names. Corresponds to the `%B` format
-  /// in `Highcharts.dateFormat()`. Defaults to 'undefined',
-  /// meaning the default month names are used according to the
-  /// `lang.locale` setting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.months
 
@@ -293,7 +290,9 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
 
   String? resetZoom;
 
-  /// Highcharts Options Widget.
+  /// The tooltip title for the label appearing when a chart is zoomed.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.resetZoomTitle
 
   String? resetZoomTitle;
 
@@ -308,11 +307,6 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   /// 'undefined', meaning the default short month names are used according
   /// to the `lang.locale` or browser settings.
   ///
-  /// An array containing the months names in abbreviated form. Corresponds
-  /// to the `%b` format in `Highcharts.dateFormat()`. Defaults to
-  /// 'undefined', meaning the default short month names are used according
-  /// to the `lang.locale` setting.
-  ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.shortMonths
 
   List<String>? shortMonths;
@@ -321,10 +315,6 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   /// `Highcharts.dateFormat()`. Defaults to 'undefined', meaning
   /// the default short weekday names are used according to the
   /// `lang.locale` or browser settings.
-  ///
-  /// Short week days, starting Sunday. Defaults to 'undefined', meaning
-  /// the default short weekday names are used according to the
-  /// `lang.locale` setting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.shortWeekdays
 
@@ -366,10 +356,6 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   /// to the `%A` format in `Highcharts.dateFormat()`. Defaults to
   /// 'undefined', meaning the default weekday names are used according to
   /// the `lang.locale` or browser settings.
-  ///
-  /// An array containing the weekday names. Defaults to 'undefined',
-  /// meaning the default weekday names are used according to the
-  /// `lang.locale` setting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.weekdays
 

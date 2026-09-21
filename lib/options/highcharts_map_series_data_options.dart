@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_series_data_events_options.dart';
 import 'highcharts_map_series_data_geometry_options.dart';
+import 'highcharts_map_series_data_states_options.dart';
 
 /* *
  *
@@ -27,6 +28,7 @@ import 'highcharts_map_series_data_geometry_options.dart';
 
 export 'highcharts_map_series_data_events_options.dart';
 export 'highcharts_map_series_data_geometry_options.dart';
+export 'highcharts_map_series_data_states_options.dart';
 
 /* *
  *
@@ -151,6 +153,10 @@ class HighchartsMapSeriesDataOptions extends HighchartsOptionsBase {
 
   String? path;
 
+  /// Highcharts Options Widget.
+
+  HighchartsMapSeriesDataStatesOptions? states;
+
   /// The numeric value of the data point.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.map.data.value
@@ -172,6 +178,7 @@ class HighchartsMapSeriesDataOptions extends HighchartsOptionsBase {
       this.middleY,
       this.name,
       this.path,
+      this.states,
       this.value});
 
   @override
@@ -210,6 +217,9 @@ class HighchartsMapSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (path != null) {
       buffer.writeAll(['"path":', jsonEncode(path), ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (value != null) {
       buffer.writeAll(['"value":', value, ','], '');

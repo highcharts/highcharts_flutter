@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_animation_options.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
 import '../../utilities/highcharts_callback.dart';
+import 'highcharts_tooltip_header_options.dart';
 import 'highcharts_tooltip_position_options.dart';
 import 'highcharts_tooltip_style_options.dart';
 
@@ -30,6 +31,7 @@ import 'highcharts_tooltip_style_options.dart';
 
 export 'highcharts_tooltip_animation_options.dart';
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
+export 'highcharts_tooltip_header_options.dart';
 export 'highcharts_tooltip_position_options.dart';
 export 'highcharts_tooltip_style_options.dart';
 
@@ -59,12 +61,13 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   String? backgroundColor;
 
-  /// The color of the tooltip border. When `undefined`, the border takes
-  /// the color of the corresponding series or point.
+  /// The color of the tooltip border. When `undefined` or `null`, the
+  /// border takes the color of the corresponding series or point.
   ///
-  /// Note that the borderWidth is usually 0 by
-  /// default, so the border color may not be visible until a border width
-  /// is set.
+  /// By default, in light mode the border color matches the background
+  /// color because the shadow makes the tooltip stand out. In dark mode, a
+  /// visible line is used because the default shadow is too dark to be
+  /// visible on a dark background.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.borderColor
 
@@ -76,8 +79,9 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   double? borderRadius;
 
-  /// The pixel width of the tooltip border. Defaults to 0 for single
-  /// tooltips and fixed tooltips, otherwise 1 for split tooltips.
+  /// The pixel width of the tooltip border. Defaults to 1, but with a
+  /// `borderColor` to match the background in light mode, and a visible
+  /// lighter border in dark mode.
   ///
   /// In styled mode, the stroke width is set in the
   /// `.highcharts-tooltip-box` class.
@@ -95,19 +99,28 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   double? changeDecimals;
 
-  /// A CSS class name to apply to the tooltip's container div,
-  /// allowing unique CSS styling for each chart.
+  /// A CSS class name to apply to the tooltip, allowing unique CSS
+  /// styling for each chart.
+  ///
+  /// **Note:** The class is applied to the SVG element of the tooltip
+  /// (the tooltip label group), not to a container div. This allows you
+  /// to style the tooltip using CSS applicable to SVG elements.
+  ///
+  /// When tooltip.outside is `true`, a separate
+  /// container div with class `highcharts-tooltip-container` is created
+  /// as the parent to the SVG tooltip element, but the `className` option
+  /// is still applied to the SVG element itself, not to the container.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.className
 
   String? className;
 
-  /// The HTML of the grouped point's nodes in the tooltip. Works only for
-  /// Treemap series grouping and analogously to
+  /// The HTML of the cluster point's in the tooltip. Works only with
+  /// marker-clusters module and analogously to
   /// pointFormat.
   ///
-  /// The grouped nodes point tooltip can be also formatted using
-  /// `tooltip.formatter` callback function and `point.isGroupNode` flag.
+  /// The cluster tooltip can be also formatted using
+  /// `tooltip.formatter` callback function and `point.isCluster` flag.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.clusterFormat
 
@@ -246,6 +259,14 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   HighchartsCallback? formatter;
 
+  /// Options for the tooltip header when tooltip.split
+  /// is enabled. The header is the box containing the X value in a split
+  /// tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/tooltip.header
+
+  HighchartsTooltipHeaderOptions? header;
+
   /// The HTML of the tooltip header line. The context is the
   /// Point class.
   /// Variables are enclosed in curly brackets. Examples of common
@@ -254,6 +275,9 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   /// contains the category name, x value or datetime string depending on
   /// the type of axis. For datetime axes, the `point.key` date format can
   /// be set using `tooltip.xDateFormat`.
+  /// In v12+, locale-aware date names follow the browser's casing and can
+  /// be lower-case, so use the `ucfirst` helper (for example
+  /// `{ucfirst point.key}`) if you want a capitalized header.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.headerFormat
 
@@ -287,7 +311,8 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   /// Callback function to format the text of the tooltip for
   /// visible null points.
-  /// Works analogously to formatter.
+  /// Works analogously to formatter, including the
+  /// `ctx` callback argument added in v12.5.0.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.nullFormatter
 
@@ -335,7 +360,9 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   /// A callback function for formatting the HTML output for a single point
   /// in the tooltip. Like the `pointFormat` string, but with more
-  /// flexibility.
+  /// flexibility. Since v12.6.0, the callback also receives `ctx` as the
+  /// first argument, so that arrow functions can access the same context
+  /// as regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.pointFormatter
 
@@ -349,10 +376,13 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   HighchartsTooltipPositionOptions? position;
 
   /// A callback function to place the tooltip in a custom position. The
-  /// callback receives three parameters: `labelWidth`, `labelHeight` and
-  /// `point`, where point contains values for `plotX` and `plotY` telling
-  /// where the reference point is in the plot area. Add `chart.plotLeft`
-  /// and `chart.plotTop` to get the full coordinates.
+  /// callback receives four parameters: `labelWidth`, `labelHeight`,
+  /// `point`, and `ctx`, where point contains values for `plotX` and
+  /// `plotY` telling where the reference point is in the plot area, and
+  /// `ctx` is the tooltip context (so that arrow-functions can access the
+  /// same context as a normal function using `this`). Add
+  /// `chart.plotLeft` and `chart.plotTop` to get the full coordinates.
+  /// Since v12.6.0, the callback receives `ctx`.
   ///
   /// To find the actual hovered `Point` instance, use
   /// `this.chart.hoverPoint`. For shared or split tooltips, all the hover
@@ -414,6 +444,13 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   bool? shared;
 
+  /// The number of milliseconds to wait until the tooltip is shown when
+  /// mouse over a point. Works on initial hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/tooltip.showDelay
+
+  double? showDelay;
+
   /// Proximity snap for graphs or single points. It defaults to 10 for
   /// mouse-powered devices and 25 for touch devices.
   ///
@@ -439,7 +476,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
   bool? split;
 
-  /// Prevents the tooltip from switching or closing when touched or
+  /// Prevents the tooltip from switching or closing, when touched or
   /// pointed.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.stickOnContact
@@ -518,6 +555,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       this.footerFormat,
       this.format,
       this.formatter,
+      this.header,
       this.headerFormat,
       this.headerShape,
       this.hideDelay,
@@ -532,6 +570,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       this.shadow,
       this.shape,
       this.shared,
+      this.showDelay,
       this.snap,
       this.split,
       this.stickOnContact,
@@ -602,6 +641,9 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
     if (formatter != null) {
       buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
+    if (header != null) {
+      buffer.writeAll(['"header":', header?.toJSON(), ','], '');
+    }
     if (headerFormat != null) {
       buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], '');
     }
@@ -647,6 +689,9 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
     }
     if (shared != null) {
       buffer.writeAll(['"shared":', shared, ','], '');
+    }
+    if (showDelay != null) {
+      buffer.writeAll(['"showDelay":', showDelay, ','], '');
     }
     if (snap != null) {
       buffer.writeAll(['"snap":', jsonEncode(snap), ','], '');

@@ -1,3 +1,16 @@
+## 1.3.0
+
+* Added `scrollParentOnWheel` option to forward mouse-wheel/trackpad scrolling
+  from the chart WebView to the parent `Scrollable`. (#76)
+* Added a demo for hex color stops on the color axis.
+* Added a heatmap demo and bundled the `heatmap` module. (#77)
+* Fixed hex codes being interpreted as private fields. (#73)
+* Fixed missing `event` reference in JavaScript-based callbacks. (#82)
+* Updated bundled Highcharts to v13.1.1.
+* Updated license statements with EULA and SLA v19.0.
+* Updated the example project to iOS deployment target 15.0 for current
+  Xcode.
+
 ## 1.2.0
 
 * Fixed wrong scroll position after hard reload when using ScrollablePlotArea (#69)

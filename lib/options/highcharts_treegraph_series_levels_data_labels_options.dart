@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import '../../utilities/highcharts_callback.dart';
+import 'highcharts_treegraph_series_levels_data_labels_link_text_path_options.dart';
 import 'highcharts_treegraph_series_levels_data_labels_style_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
@@ -30,6 +31,7 @@ import 'highcharts_series_data_labels_text_path_options.dart';
 
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
+export 'highcharts_treegraph_series_levels_data_labels_link_text_path_options.dart';
 export 'highcharts_treegraph_series_levels_data_labels_style_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
 
@@ -41,8 +43,8 @@ export 'highcharts_series_data_labels_text_path_options.dart';
 
 /// Can set the options of dataLabels on each point which lies on the
 /// level.
-/// plotOptions.treemap.dataLabels for
-/// possible values.
+/// plotOptions.treegraph.dataLabels
+/// for possible values.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels
 class HighchartsTreegraphSeriesLevelsDataLabelsOptions
@@ -93,8 +95,13 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
 
   HighchartsSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.backgroundColor
 
@@ -154,14 +161,17 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
 
   bool? crop;
 
-  /// Whether to defer displaying the data labels until the initial
-  /// series animation has finished. Setting to `false` renders the
-  /// data label immediately. If set to `true` inherits the defer
-  /// time set in plotOptions.series.animation.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.defer
+  /// Highcharts Options Widget.
 
   bool? defer;
+
+  /// The distance of the data label from the data point. Note that the
+  /// `padding` setting also affects the rendered distance, but is not
+  /// visible unless the data label has a border or background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.distance
+
+  double? distance;
 
   /// Highcharts Options Widget.
 
@@ -173,6 +183,7 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
   /// a pure JSON structure or for use with graphical editors. For
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
+  ///
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.filter
 
@@ -207,6 +218,25 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
 
   bool? inside;
 
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.labelrank
+
+  double? labelrank;
+
+  /// Options for a _link_ label text which should follow link
+  /// connection. Border and background are disabled for a label
+  /// that follows a path.
+  ///
+  /// **Note:** Only SVG-based renderer supports this option.
+  /// Setting `useHTML` to true will disable this option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.linkTextPath
+
+  HighchartsTreegraphSeriesLevelsDataLabelsLinkTextPathOptions? linkTextPath;
+
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
   /// be applied only to series which support displaying null points.
@@ -221,10 +251,12 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -246,6 +278,16 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
   /// Highcharts Options Widget.
 
   double? padding;
+
+  /// The
+  /// format string
+  /// specifying what to show for _nodes_ in the treegraph. Overrides
+  /// `format`. Use `pointFormat` and `linkFormat` to differentiate between
+  /// node and link data labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.pointFormat
+
+  String? pointFormat;
 
   /// Aligns data labels relative to points. If `center` alignment is
   /// not possible, it defaults to `right`.
@@ -289,6 +331,10 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
   /// **Note:** Only SVG-based renderer supports this option. Setting
   /// `useHTML` to true will disable this option.
   ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.textPath
 
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
@@ -319,14 +365,17 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels.zIndex
 
   double? zIndex;
 
-  /// Can set the options of dataLabels on each point which lies on the level. plotOptions.treemap.dataLabels for possible values.
+  /// Can set the options of dataLabels on each point which lies on the level. plotOptions.treegraph.dataLabels for possible values.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.dataLabels
   HighchartsTreegraphSeriesLevelsDataLabelsOptions(
@@ -342,16 +391,20 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
       this.color,
       this.crop,
       this.defer,
+      this.distance,
       this.enabled,
       this.filter,
       this.format,
       this.formatter,
       this.headers,
       this.inside,
+      this.labelrank,
+      this.linkTextPath,
       this.nullFormat,
       this.nullFormatter,
       this.overflow,
       this.padding,
+      this.pointFormat,
       this.position,
       this.rotation,
       this.shadow,
@@ -405,6 +458,9 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -423,6 +479,12 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
     }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
+    if (linkTextPath != null) {
+      buffer.writeAll(['"linkTextPath":', linkTextPath?.toJSON(), ','], '');
+    }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
@@ -434,6 +496,9 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
     }
     if (padding != null) {
       buffer.writeAll(['"padding":', padding, ','], '');
+    }
+    if (pointFormat != null) {
+      buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');

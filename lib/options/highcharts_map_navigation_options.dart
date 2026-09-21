@@ -48,10 +48,9 @@ class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
 
   /// The individual buttons for the map navigation. This usually includes
   /// the zoom in and zoom out buttons. Properties for each button is
-  /// inherited from
-  /// mapNavigation.buttonOptions, while
-  /// individual options can be overridden. But default, the `onclick`, `text`
-  /// and `y` options are individual.
+  /// inherited from mapNavigation.buttonOptions,
+  /// while individual options can be overridden. But default, the `onclick`,
+  /// `text` and `y` options are individual.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/mapNavigation.buttons
 
@@ -96,7 +95,7 @@ class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
   /// Whether to enable map navigation. The default is not to enable
   /// navigation, as many choropleth maps are simple and don't need it.
   /// Additionally, when touch zoom and mouse wheel zoom is enabled, it breaks
-  /// the default behaviour of these interactions in the website, and the
+  /// the default behavior of these interactions in the website, and the
   /// implementer should be aware of this.
   ///
   /// Individual interactions can be enabled separately, namely buttons,

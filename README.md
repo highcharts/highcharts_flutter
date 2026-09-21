@@ -11,6 +11,19 @@ You'll discover key features including cross-platform compatibility, extensive c
 
 
 
+Links
+-----
+
+* Official website: [www.highcharts.com](https://www.highcharts.com)
+* Product page: [www.highcharts.com/integrations](https://www.highcharts.com/integrations/flutter)
+* Download: [www.highcharts.com/download](https://www.highcharts.com/download)
+* License: [www.highcharts.com/license](https://www.highcharts.com/license)
+* Documentation: [www.highcharts.com/docs](https://www.highcharts.com/docs/flutter/getting-started)
+* Support: [www.highcharts.com/support](https://www.highcharts.com/support)
+* Issues: [Working repo](https://github.com/highcharts/highcharts/issues)
+
+
+
 Examples
 --------
 

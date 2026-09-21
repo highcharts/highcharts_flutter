@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_point_series_data_events_options.dart';
 import 'highcharts_map_point_series_data_geometry_options.dart';
+import 'highcharts_map_point_series_data_states_options.dart';
 
 /* *
  *
@@ -27,6 +28,7 @@ import 'highcharts_map_point_series_data_geometry_options.dart';
 
 export 'highcharts_map_point_series_data_events_options.dart';
 export 'highcharts_map_point_series_data_geometry_options.dart';
+export 'highcharts_map_point_series_data_states_options.dart';
 
 /* *
  *
@@ -124,6 +126,10 @@ class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
 
   String? name;
 
+  /// Highcharts Options Widget.
+
+  HighchartsMapPointSeriesDataStatesOptions? states;
+
   /// The x coordinate of the point in terms of projected units.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.mappoint.data.x
@@ -149,6 +155,7 @@ class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
       this.lat,
       this.lon,
       this.name,
+      this.states,
       this.x,
       this.y});
 
@@ -182,6 +189,9 @@ class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (name != null) {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (x != null) {
       buffer.writeAll(['"x":', x, ','], '');

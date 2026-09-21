@@ -107,10 +107,12 @@ class HighchartsMapViewInsetsOptions extends HighchartsOptionsBase {
   List<dynamic>? padding;
 
   /// What coordinate system the `field` and `borderPath` should relate to.
+  ///
   /// If `plotBox`, they will be fixed to the plot box and responsively
-  /// move in relation to the main map. If `mapBoundingBox`, they will be
-  /// fixed to the map bounding box, which is constant and centered in
-  /// different chart sizes and ratios.
+  /// move in relation to the main map.
+  ///
+  /// If `mapBoundingBox`, they will be fixed to the map bounding box,
+  /// which is constant and centered in different chart sizes and ratios.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/mapView.insets.relativeTo
 

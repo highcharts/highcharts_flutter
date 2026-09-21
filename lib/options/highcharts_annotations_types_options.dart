@@ -52,71 +52,71 @@ export 'highcharts_annotations_types_vertical_line_options.dart';
 /// Option override for specific advanced annotation types. This collection
 /// is intended for general theming using `Highcharts.setOptions()`.
 ///
-/// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types
 class HighchartsAnnotationsTypesOptions extends HighchartsOptionsBase {
   /// Options for the crooked line annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.crookedLine
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.crookedLine
 
   HighchartsAnnotationsTypesCrookedLineOptions? crookedLine;
 
   /// Options for the elliott wave annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.elliottWave
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.elliottWave
 
   HighchartsAnnotationsTypesElliottWaveOptions? elliottWave;
 
   /// Options for the fibonacci annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.fibonacci
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci
 
   HighchartsAnnotationsTypesFibonacciOptions? fibonacci;
 
   /// Options for the fibonacci time zones annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.fibonacciTimeZones
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.fibonacciTimeZones
 
   HighchartsAnnotationsTypesFibonacciTimeZonesOptions? fibonacciTimeZones;
 
-  /// An infinity line annotation.
+  /// Options for the infinity line annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.infinityLine
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.infinityLine
 
   HighchartsAnnotationsTypesInfinityLineOptions? infinityLine;
 
   /// Options for the measure annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.measure
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.measure
 
   HighchartsAnnotationsTypesMeasureOptions? measure;
 
   /// Options for the pitchfork annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.pitchfork
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.pitchfork
 
   HighchartsAnnotationsTypesPitchforkOptions? pitchfork;
 
-  /// Options for the  time cycles annotation type.
+  /// Options for the time cycles annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.timeCycles
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.timeCycles
 
   HighchartsAnnotationsTypesTimeCyclesOptions? timeCycles;
 
   /// Options for the tunnel annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.tunnel
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.tunnel
 
   HighchartsAnnotationsTypesTunnelOptions? tunnel;
 
   /// Options for the vertical line annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.verticalLine
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.verticalLine
 
   HighchartsAnnotationsTypesVerticalLineOptions? verticalLine;
 
   /// Option override for specific advanced annotation types. This collection is intended for general theming using `Highcharts.setOptions()`.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types
   HighchartsAnnotationsTypesOptions(
       {this.crookedLine,
       this.elliottWave,

@@ -34,19 +34,19 @@ export 'highcharts_annotations_label_accessibility_options.dart';
 
 /// An array with options for the labels.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels
+/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels
 class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
     extends HighchartsOptionsBase {
   /// Accessibility options for an annotation label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.accessibility
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.accessibility
 
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
 
   /// The alignment of the annotation's label. If right,
   /// the right side of the label should be touching the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.align
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.align
 
   String? align;
 
@@ -54,51 +54,50 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// To make the labels less sensitive for overlapping,
   /// the can be set to 0.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.allowOverlap
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.allowOverlap
 
   bool? allowOverlap;
 
-  /// The background color or gradient for the annotation's
-  /// label.
+  /// The background color or gradient for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.backgroundColor
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.backgroundColor
 
   String? backgroundColor;
 
   /// The border color for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.borderColor
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.borderColor
 
   String? borderColor;
 
   /// The border radius in pixels for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.borderRadius
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.borderRadius
 
   double? borderRadius;
 
-  /// The border width in pixels for the annotation's label
+  /// The border width in pixels for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.borderWidth
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.borderWidth
 
   double? borderWidth;
 
   /// A class name for styling by CSS.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.className
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.className
 
   String? className;
 
   /// Whether to hide the annotation's label
   /// that is outside the plot area.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.crop
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.crop
 
   bool? crop;
 
   /// The label's pixel distance from the point.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.distance
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.distance
 
   double? distance;
 
@@ -106,23 +105,26 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// format
   /// string for the data label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.format
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.format
 
   String? format;
 
   /// Callback JavaScript function to format the annotation's
   /// label. Note that if a `format` or `text` are defined,
   /// the format or text take precedence and the formatter is
-  /// ignored. `This` refers to a point object.
+  /// ignored. `This` refers to a point object. The callback also receives
+  /// an argument `ctx` so that arrow-functions can access the same
+  /// context (the point in this case) as normal functions can using
+  /// `this`. Since v12.6.0, the callback receives `ctx`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.formatter
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.formatter
 
   String? formatter;
 
-  /// Whether the annotation is visible in the exported data
-  /// table.
+  /// Whether all the labels for an annotation are visible in the exported
+  /// data table.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.includeInDataExport
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.includeInDataExport
 
   bool? includeInDataExport;
 
@@ -130,14 +132,14 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// the plot area. The justify option aligns the label inside
   /// the plot area.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.overflow
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.overflow
 
   String? overflow;
 
   /// When either the borderWidth or the backgroundColor is
   /// set, this is the padding within the box.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.padding
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.padding
 
   double? padding;
 
@@ -145,7 +147,7 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// configuration containing `color`, `offsetX`, `offsetY`,
   /// `opacity` and `width`.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.shadow
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.shadow
 
   Map<String, dynamic>? shadow;
 
@@ -153,32 +155,32 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// label. Symbols are predefined functions on the Renderer
   /// object.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.shape
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.shape
 
   String? shape;
 
   /// Styles for the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.style
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.style
 
   Map<String, String>? style;
 
   /// Alias for the format option.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.text
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.text
 
   String? text;
 
   /// Whether to use HTML
   /// to render the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.useHTML
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.useHTML
 
   bool? useHTML;
 
   /// The vertical alignment of the annotation's label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.verticalAlign
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.verticalAlign
 
   String? verticalAlign;
 
@@ -186,7 +188,7 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// Note that if a `distance` is defined, the distance takes
   /// precedence over `x` and `y` options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.x
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.x
 
   double? x;
 
@@ -194,13 +196,13 @@ class HighchartsAnnotationsTypesFibonacciTypeLabelsOptions
   /// Note that if a `distance` is defined, the distance takes
   /// precedence over `x` and `y` options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels.y
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels.y
 
   double? y;
 
   /// An array with options for the labels.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.fibonacci.typeOptions.labels
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.fibonacci.typeOptions.labels
   HighchartsAnnotationsTypesFibonacciTypeLabelsOptions(
       {this.accessibility,
       this.align,

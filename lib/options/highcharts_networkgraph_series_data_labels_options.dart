@@ -79,8 +79,13 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
 
   HighchartsNetworkgraphSeriesDataLabelsAnimationOptions? animation;
 
-  /// The background color or gradient for the data label. Setting it to
-  /// `auto` will use the point's color.
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.backgroundColor
 
@@ -144,6 +149,14 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
 
   bool? defer;
 
+  /// The distance of the data label from the data point. Note that the
+  /// `padding` setting also affects the rendered distance, but is not
+  /// visible unless the data label has a border or background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.distance
+
+  double? distance;
+
   /// Enable or disable the data labels.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.enabled
@@ -156,6 +169,7 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
   /// a pure JSON structure or for use with graphical editors. For
   /// programmatic control, use the `formatter` instead, and return
   /// `undefined` to disable a single data label.
+  ///
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.filter
 
@@ -186,6 +200,14 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.inside
 
   bool? inside;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.labelrank
+
+  double? labelrank;
 
   /// The
   /// format string
@@ -229,10 +251,12 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
   String? nullFormat;
 
   /// Callback JavaScript function that defines formatting for points
-  /// with the value of null. Works analogously to formatter.
+  /// with the value of null. Works analogously to
+  /// formatter.
   /// `nullFormatter` can be applied only to series which support
   /// displaying null points. `heatmap` and `tilemap` supports
-  /// `nullFormatter` by default while the following series requires [#series.nullInteraction]
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
   /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
   /// `bar`, and `timeline`. Does not work with series that don't display
   /// null points, like `pie`.
@@ -254,9 +278,13 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
   /// When either the `borderWidth` or the `backgroundColor` is set,
   /// this is the padding within the box.
   ///
+  /// An array of numbers sets padding for the respective sides. An array
+  /// of two numbers repeats the values for the horizontal and vertical
+  /// sides.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.padding
 
-  double? padding;
+  List<double>? padding;
 
   /// Aligns data labels relative to points. If `center` alignment is
   /// not possible, it defaults to `right`.
@@ -328,8 +356,11 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
 
   double? y;
 
-  /// The z index of the data labels. Use a `zIndex` of 6 to display it above
-  /// the series, or use a `zIndex` of 2 to display it behind the series.
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.zIndex
 
@@ -349,11 +380,13 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
       this.color,
       this.crop,
       this.defer,
+      this.distance,
       this.enabled,
       this.filter,
       this.format,
       this.formatter,
       this.inside,
+      this.labelrank,
       this.linkFormat,
       this.linkFormatter,
       this.linkTextPath,
@@ -414,6 +447,9 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
@@ -428,6 +464,9 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
+    }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
     }
     if (linkFormat != null) {
       buffer.writeAll(['"linkFormat":', jsonEncode(linkFormat), ','], '');
@@ -448,7 +487,11 @@ class HighchartsNetworkgraphSeriesDataLabelsOptions
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');
     }
     if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], '');
+      buffer.write('"padding":[');
+      for (var item in padding!) {
+        buffer.writeAll([item, ','], '');
+      }
+      buffer.write('],');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');

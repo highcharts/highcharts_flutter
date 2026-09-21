@@ -35,6 +35,9 @@ export 'highcharts_xaxis_crosshair_label_options.dart';
 /// Configure a crosshair that follows either the mouse pointer or the
 /// hovered point.
 ///
+/// Support boolean or object definition. If `true`, a crosshair with
+/// default settings will be displayed.
+///
 /// In styled mode, the crosshairs are styled in the
 /// `.highcharts-crosshair`, `.highcharts-crosshair-thin` or
 /// `.highcharts-xaxis-category` classes.
@@ -72,6 +75,13 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
 
   HighchartsXAxisCrosshairLabelOptions? label;
 
+  /// The number of milliseconds to wait until the crosshair is shown when
+  /// the mouse is over a point. Works on initial hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.showDelay
+
+  double? showDelay;
+
   /// Whether the crosshair should snap to the point or follow the pointer
   /// independent of points.
   ///
@@ -101,6 +111,7 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
       this.color,
       this.dashStyle,
       this.label,
+      this.showDelay,
       this.snap,
       this.width,
       this.zIndex});
@@ -120,6 +131,9 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
     }
     if (label != null) {
       buffer.writeAll(['"label":', label?.toJSON(), ','], '');
+    }
+    if (showDelay != null) {
+      buffer.writeAll(['"showDelay":', showDelay, ','], '');
     }
     if (snap != null) {
       buffer.writeAll(['"snap":', snap, ','], '');

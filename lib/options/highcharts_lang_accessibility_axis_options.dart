@@ -16,12 +16,15 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_lang_accessibility_axis_default_axis_names_options.dart';
 
 /* *
  *
  *  Exports
  *
  * */
+
+export 'highcharts_lang_accessibility_axis_default_axis_names_options.dart';
 
 /* *
  *
@@ -33,6 +36,10 @@ import 'highcharts_options_base.dart';
 ///
 /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.axis
 class HighchartsLangAccessibilityAxisOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
+  HighchartsLangAccessibilityAxisDefaultAxisNamesOptions? defaultAxisNames;
+
   /// Highcharts Options Widget.
 
   String? rangeCategories;
@@ -77,7 +84,8 @@ class HighchartsLangAccessibilityAxisOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.axis
   HighchartsLangAccessibilityAxisOptions(
-      {this.rangeCategories,
+      {this.defaultAxisNames,
+      this.rangeCategories,
       this.rangeFromTo,
       this.timeRangeDays,
       this.timeRangeHours,
@@ -92,6 +100,10 @@ class HighchartsLangAccessibilityAxisOptions extends HighchartsOptionsBase {
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
+    if (defaultAxisNames != null) {
+      buffer.writeAll(
+          ['"defaultAxisNames":', defaultAxisNames?.toJSON(), ','], '');
+    }
     if (rangeCategories != null) {
       buffer.writeAll(
           ['"rangeCategories":', jsonEncode(rangeCategories), ','], '');

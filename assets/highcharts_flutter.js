@@ -1,4 +1,6 @@
 (function (win, H) {
+    const wheelPassthroughBound = new WeakSet();
+
     function applyScrollableFix(chart) {
         if (!chart?.scrollablePlotArea || chart.scrollablePlotArea.__scrollFixedApplied) return;
         chart.scrollablePlotArea.__scrollFixedApplied = true;
@@ -22,7 +24,31 @@
         });
     };
 
+    function composeWheelEvent(chart) {
+        const container = chart?.container;
+
+        if (!container || wheelPassthroughBound.has(container)) {
+            return;
+        }
+
+        wheelPassthroughBound.add(container);
+        container.addEventListener('wheel', function (event) {
+            if (!highcharts_flutter.scrollParentOnWheel) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            highcharts_flutter.callback(
+                'highcharts_flutter.scroll',
+                [event.deltaX || 0, event.deltaY || 0]
+            );
+        }, { passive: false });
+    }
+
     const api = {
+        scrollParentOnWheel: true,
         defaults: {
             chart: {
                 backgroundColor: '#FFF0'
@@ -134,6 +160,7 @@
             let chart = highcharts_flutter.chart;
 
             composeRenderEvent();
+            composeWheelEvent(chart);
 
             if (!chart) {
                 // Create chart on initial update.
@@ -156,6 +183,8 @@
                 // Regular chart update.
                 chart.update(options, redraw, true, animation);
             }
+
+            composeWheelEvent(chart);
 
             // Sync the document title with the chart title for accessibility.
             if (document.title !== chart?.title) {

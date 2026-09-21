@@ -84,6 +84,9 @@ class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
   String? format;
 
   /// Formatter function for the label text.
+  /// Since v12.6.0, the callback also receives `ctx` as the second
+  /// argument, so that arrow functions can access the same context as
+  /// regular functions using `this`.
   ///
   /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.formatter
 

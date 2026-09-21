@@ -17,6 +17,10 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_venn_series_cluster_data_labels_style_options.dart';
+import 'highcharts_series_data_labels_animation_options.dart';
+import 'highcharts_series_data_labels_filter_options.dart';
+import '../../utilities/highcharts_callback.dart';
+import 'highcharts_series_data_labels_text_path_options.dart';
 
 /* *
  *
@@ -25,6 +29,9 @@ import 'highcharts_venn_series_cluster_data_labels_style_options.dart';
  * */
 
 export 'highcharts_venn_series_cluster_data_labels_style_options.dart';
+export 'highcharts_series_data_labels_animation_options.dart';
+export 'highcharts_series_data_labels_filter_options.dart';
+export 'highcharts_series_data_labels_text_path_options.dart';
 
 /* *
  *
@@ -61,6 +68,279 @@ class HighchartsVennSeriesClusterDataLabelsOptions
 
   String? verticalAlign;
 
+  /// Alignment method for data labels. If set to `plotEdges`, the labels
+  /// are aligned within the plot area in the direction of the y-axis. So
+  /// in a regular column chart, the labels are aligned vertically
+  /// according to the `verticalAlign` setting. In a bar chart, which is
+  /// inverted, the labels are aligned horizontally according to the
+  /// `align` setting. Applies to cartesian series only.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.alignTo
+
+  String? alignTo;
+
+  /// Whether to allow data labels to overlap. To make the labels less
+  /// sensitive for overlapping, the
+  /// dataLabels.padding
+  /// can be set to 0.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.allowOverlap
+
+  bool? allowOverlap;
+
+  /// Enable or disable the initial animation when a series is displayed
+  /// for the `dataLabels`. The animation can also be set as a
+  /// configuration object. Please note that this option only applies to
+  /// the initial animation.
+  ///
+  /// For other animations, see chart.animation and the
+  /// animation parameter under the API methods. The following properties
+  /// are supported:
+  ///
+  /// - `defer`: The animation delay time in milliseconds.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.animation
+
+  HighchartsSeriesDataLabelsAnimationOptions? animation;
+
+  /// The background color or gradient for the data label. In addition to
+  /// regular colors, there are two special setting for this option:
+  /// - `auto` will set the background color the point's color.
+  /// - `contrast` will set it to a contrast against the text color, with
+  ///   an opacity allowing to see the underlying content. The contrast is
+  ///   great enough to ensure readability for the text according to
+  ///   accessibility standards.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.backgroundColor
+
+  String? backgroundColor;
+
+  /// The border color for the data label. Setting it to `auto` will use
+  /// the point's color. Defaults to `undefined`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.borderColor
+
+  String? borderColor;
+
+  /// The border radius in pixels for the data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.borderRadius
+
+  double? borderRadius;
+
+  /// The border width in pixels for the data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.borderWidth
+
+  double? borderWidth;
+
+  /// A class name for the data label. Particularly in styled mode,
+  /// this can be used to give each series' or point's data label
+  /// unique styling. In addition to this option, a default color class
+  /// name is added so that we can give the labels a contrast text
+  /// shadow.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.className
+
+  String? className;
+
+  /// This options is deprecated.
+  /// Use style.color instead.
+  ///
+  /// The text color for the data labels. Defaults to `undefined`. For
+  /// certain series types, like column or map, the data labels can be
+  /// drawn inside the points. In this case the data label will be
+  /// drawn with maximum contrast by default. Additionally, it will be
+  /// given a `text-outline` style with the opposite color, to further
+  /// increase the contrast. This can be overridden by setting the
+  /// `text-outline` style to `none` in the `dataLabels.style` option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.color
+
+  String? color;
+
+  /// Whether to hide data labels that are outside the plot area. By
+  /// default, the data label is moved inside the plot area according
+  /// to the
+  /// overflow
+  /// option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.crop
+
+  bool? crop;
+
+  /// Whether to defer displaying the data labels until the initial
+  /// series animation has finished. Setting to `false` renders the
+  /// data label immediately. If set to `true` inherits the defer
+  /// time set in plotOptions.series.animation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.defer
+
+  bool? defer;
+
+  /// The distance of the data label from the data point. Note that the
+  /// `padding` setting also affects the rendered distance, but is not
+  /// visible unless the data label has a border or background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.distance
+
+  double? distance;
+
+  /// A declarative filter to control of which data labels to display.
+  /// The declarative filter is designed for use when callback
+  /// functions are not available, like when the chart options require
+  /// a pure JSON structure or for use with graphical editors. For
+  /// programmatic control, use the `formatter` instead, and return
+  /// `undefined` to disable a single data label.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.filter
+
+  HighchartsSeriesDataLabelsFilterOptions? filter;
+
+  /// Callback JavaScript function to format the data label. Note that if a
+  /// `format` is defined, the format takes precedence and the formatter is
+  /// ignored.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.formatter
+
+  HighchartsCallback? formatter;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest
+  /// `labelrank` will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.labelrank
+
+  double? labelrank;
+
+  /// Format for points with the value of null. Works analogously to
+  /// format. `nullFormat` can
+  /// be applied only to series which support displaying null points.
+  /// `heatmap` and `tilemap` supports `nullFormat` by default while the
+  /// following series requires [#series.nullInteraction] set to `true`:
+  /// `line`, `spline`, `area`, `area-spline`, `column`, `bar`, and
+  /// `timeline`. Does not work with series that don't display null
+  /// points, like `pie`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.nullFormat
+
+  String? nullFormat;
+
+  /// Callback JavaScript function that defines formatting for points
+  /// with the value of null. Works analogously to
+  /// formatter.
+  /// `nullFormatter` can be applied only to series which support
+  /// displaying null points. `heatmap` and `tilemap` supports
+  /// `nullFormatter` by default while the following series requires
+  /// (series.nullInteraction)[#series.nullInteraction]
+  /// set to `true`: `line`, `spline`, `area`, `area-spline`, `column`,
+  /// `bar`, and `timeline`. Does not work with series that don't display
+  /// null points, like `pie`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.nullFormatter
+
+  HighchartsCallback? nullFormatter;
+
+  /// How to handle data labels that flow outside the plot area. The
+  /// default is `"justify"`, which aligns them inside the plot area.
+  /// For columns and bars, this means it will be moved inside the bar.
+  /// To display data labels outside the plot area, set `crop` to
+  /// `false` and `overflow` to `"allow"`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.overflow
+
+  String? overflow;
+
+  /// When either the `borderWidth` or the `backgroundColor` is set,
+  /// this is the padding within the box.
+  ///
+  /// An array of numbers sets padding for the respective sides. An array
+  /// of two numbers repeats the values for the horizontal and vertical
+  /// sides.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.padding
+
+  List<double>? padding;
+
+  /// Aligns data labels relative to points. If `center` alignment is
+  /// not possible, it defaults to `right`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.position
+
+  String? position;
+
+  /// Text rotation in degrees. Note that due to a more complex
+  /// structure, backgrounds, borders and padding will be lost on a
+  /// rotated data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.rotation
+
+  double? rotation;
+
+  /// The shadow of the box. Works best with `borderWidth` or
+  /// `backgroundColor`. Since 2.3 the shadow can be an object
+  /// configuration containing `color`, `offsetX`, `offsetY`, `opacity`
+  /// and `width`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.shadow
+
+  Map<String, dynamic>? shadow;
+
+  /// The name of a symbol to use for the border around the label.
+  /// Symbols are predefined functions on the Renderer object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.shape
+
+  String? shape;
+
+  /// Options for a label text which should follow marker's shape.
+  /// Border and background are disabled for a label that follows a
+  /// path.
+  ///
+  /// **Note:** Only SVG-based renderer supports this option. Setting
+  /// `useHTML` to true will disable this option.
+  ///
+  /// Text path support is not bundled into `highcharts.js`, and requires the
+  /// `modules/textpath.js` file. However, it is included in the script files of
+  /// those series types that use it by default.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.textPath
+
+  HighchartsSeriesDataLabelsTextPathOptions? textPath;
+
+  /// Whether to
+  /// use HTML
+  /// to render the labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.useHTML
+
+  bool? useHTML;
+
+  /// The x position offset of the label relative to the point in
+  /// pixels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.x
+
+  double? x;
+
+  /// The y position offset of the label relative to the point in
+  /// pixels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.y
+
+  double? y;
+
+  /// The z index of the data labels group. Does not apply below series
+  /// level options.
+  ///
+  /// Use a `zIndex` of 6 to display it above the series,
+  /// or use a `zIndex` of 2 to display it behind the series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels.zIndex
+
+  double? zIndex;
+
   /// Options for the cluster data labels.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.dataLabels
@@ -70,7 +350,35 @@ class HighchartsVennSeriesClusterDataLabelsOptions
       this.format,
       this.inside,
       this.style,
-      this.verticalAlign});
+      this.verticalAlign,
+      this.alignTo,
+      this.allowOverlap,
+      this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.crop,
+      this.defer,
+      this.distance,
+      this.filter,
+      this.formatter,
+      this.labelrank,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.textPath,
+      this.useHTML,
+      this.x,
+      this.y,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -93,6 +401,99 @@ class HighchartsVennSeriesClusterDataLabelsOptions
     }
     if (verticalAlign != null) {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
+    }
+    if (alignTo != null) {
+      buffer.writeAll(['"alignTo":', jsonEncode(alignTo), ','], '');
+    }
+    if (allowOverlap != null) {
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
+    }
+    if (animation != null) {
+      buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
+    }
+    if (backgroundColor != null) {
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+    }
+    if (borderColor != null) {
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
+    }
+    if (borderRadius != null) {
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], '');
+    }
+    if (borderWidth != null) {
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
+    }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
+    }
+    if (color != null) {
+      buffer.writeAll(['"color":', jsonEncode(color), ','], '');
+    }
+    if (crop != null) {
+      buffer.writeAll(['"crop":', crop, ','], '');
+    }
+    if (defer != null) {
+      buffer.writeAll(['"defer":', defer, ','], '');
+    }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], '');
+    }
+    if (filter != null) {
+      buffer.writeAll(['"filter":', filter?.toJSON(), ','], '');
+    }
+    if (formatter != null) {
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
+    }
+    if (labelrank != null) {
+      buffer.writeAll(['"labelrank":', labelrank, ','], '');
+    }
+    if (nullFormat != null) {
+      buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
+    }
+    if (nullFormatter != null) {
+      buffer.writeAll(['"nullFormatter":', nullFormatter?.toJSON(), ','], '');
+    }
+    if (overflow != null) {
+      buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');
+    }
+    if (padding != null) {
+      buffer.write('"padding":[');
+      for (var item in padding!) {
+        buffer.writeAll([item, ','], '');
+      }
+      buffer.write('],');
+    }
+    if (position != null) {
+      buffer.writeAll(['"position":', jsonEncode(position), ','], '');
+    }
+    if (rotation != null) {
+      buffer.writeAll(['"rotation":', rotation, ','], '');
+    }
+    if (shadow != null) {
+      buffer.write('"shadow":{');
+      for (var item in shadow!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
+    }
+    if (shape != null) {
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], '');
+    }
+    if (textPath != null) {
+      buffer.writeAll(['"textPath":', textPath?.toJSON(), ','], '');
+    }
+    if (useHTML != null) {
+      buffer.writeAll(['"useHTML":', useHTML, ','], '');
+    }
+    if (x != null) {
+      buffer.writeAll(['"x":', x, ','], '');
+    }
+    if (y != null) {
+      buffer.writeAll(['"y":', y, ','], '');
+    }
+    if (zIndex != null) {
+      buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
 }

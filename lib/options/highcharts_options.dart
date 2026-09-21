@@ -25,6 +25,7 @@ import 'highcharts_color_axis_options.dart';
 import 'highcharts_connectors_options.dart';
 import 'highcharts_credits_options.dart';
 import 'highcharts_data_options.dart';
+import 'highcharts_data_table_options.dart';
 import 'highcharts_defs_options.dart';
 import 'highcharts_drilldown_options.dart';
 import 'highcharts_exporting_options.dart';
@@ -37,6 +38,7 @@ import 'highcharts_map_view_options.dart';
 import 'highcharts_navigation_options.dart';
 import 'highcharts_navigator_options.dart';
 import 'highcharts_no_data_options.dart';
+import 'highcharts_palette_options.dart';
 import 'highcharts_pane_options.dart';
 import 'highcharts_plot_options.dart';
 import 'highcharts_range_selector_options.dart';
@@ -68,6 +70,7 @@ export 'highcharts_color_axis_options.dart';
 export 'highcharts_connectors_options.dart';
 export 'highcharts_credits_options.dart';
 export 'highcharts_data_options.dart';
+export 'highcharts_data_table_options.dart';
 export 'highcharts_defs_options.dart';
 export 'highcharts_drilldown_options.dart';
 export 'highcharts_exporting_options.dart';
@@ -80,6 +83,7 @@ export 'highcharts_map_view_options.dart';
 export 'highcharts_navigation_options.dart';
 export 'highcharts_navigator_options.dart';
 export 'highcharts_no_data_options.dart';
+export 'highcharts_palette_options.dart';
 export 'highcharts_pane_options.dart';
 export 'highcharts_plot_options.dart';
 export 'highcharts_range_selector_options.dart';
@@ -186,7 +190,7 @@ class HighchartsOptions extends HighchartsOptionsBase {
   /// convenient to add each category to a separate series.
   ///
   /// Color axis does not work with: `sankey`, `sunburst`, `dependencywheel`,
-  /// `networkgraph`, `wordcloud`, `venn`, `gauge` and `solidgauge` series
+  /// `networkgraph`, `venn`, `gauge` and `solidgauge` series
   /// types.
   ///
   /// Since v7.2.0 `colorAxis` can also be an array of options objects.
@@ -209,9 +213,12 @@ class HighchartsOptions extends HighchartsOptionsBase {
   /// are defined in CSS and applied either through series or point class
   /// names, or through the chart.colorCount option.
   ///
+  /// The defaults from v13 invoke CSS variables that are set by the
+  /// `palette` option's light and dark themes.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/colors
 
-  List<dynamic>? colors;
+  List<String>? colors;
 
   /// The Pathfinder module allows you to define connections between any two
   /// points, represented as lines - optionally with markers for the start
@@ -225,7 +232,7 @@ class HighchartsOptions extends HighchartsOptionsBase {
 
   HighchartsConnectorsOptions? connectors;
 
-  /// Highchart by default puts a credits label in the lower right corner
+  /// Highcharts by default puts a credits label in the lower right corner
   /// of the chart. This can be changed using these options.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/credits
@@ -245,6 +252,22 @@ class HighchartsOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/data
 
   HighchartsDataOptions? data;
+
+  /// Options for one or many chart-level data tables. The `dataTable` option,
+  /// or its array members, can be either configuration objects or instances of
+  /// the `DataTable` class. If a `DataTable` instance is passed, it
+  /// will be used directly. If a configuration object is passed, a new
+  /// `DataTable` instance will be created based on the provided
+  /// configuration.
+  ///
+  /// The data table is mapped to the series data points based on the
+  /// series.dataMapping option, unless the
+  /// column keys match the point property names (`x`, `y` etc.), in which case
+  /// the mapping is automatic.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/dataTable
+
+  HighchartsDataTableOptions? dataTable;
 
   /// Options for configuring markers for annotations.
   ///
@@ -275,10 +298,6 @@ class HighchartsOptions extends HighchartsOptionsBase {
 
   /// Options for drill down, the concept of inspecting increasingly high
   /// resolution data through clicking on chart items like columns or pie slices.
-  ///
-  /// The drilldown feature requires the drilldown.js file to be loaded,
-  /// found in the modules directory of the download package, or online at
-  /// code.highcharts.com/modules/drilldown.js.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/drilldown
 
@@ -372,6 +391,37 @@ class HighchartsOptions extends HighchartsOptionsBase {
 
   HighchartsNoDataOptions? noData;
 
+  /// The palette object specifies colors for the charts and how to apply them.
+  ///
+  /// Each color scheme (`light` and `dark`) has three primary colors:
+  /// `backgroundColor`, `neutralColor`, and `highlightColor`. For the neutral and
+  /// highlight colors, a series of interpolated color variants are generated, and
+  /// accessed as CSS variables in the chart settings in their prefixed and
+  /// hyphenated form. For example,
+  ///
+  /// * `var(--highcharts-neutral-color-80)` is a blend of the `neutralColor` and
+  ///   the `backgroundColor`, with a weight of 80% `neutralColor` and 20%
+  ///   `backgroundColor`. It is the default for the main title
+  ///   (`title.style.color`), axis labels and more.
+  /// * `var(--highcharts-highlight-color-80)` is a blend of the `highlightColor`
+  ///   and the `backgroundColor`, with a weight of 80% `highlightColor` and 20%
+  ///   `backgroundColor`. It is used for the zoom selection marker (with opacity),
+  ///   Stock Range Selector date input boxes and more.
+  ///
+  /// The `colors` array is used for data series and points, and is not blended
+  /// with the `backgroundColor`. It is also accessible as CSS variables, and this
+  /// is the recommended way to hard-code colors to match series and data.
+  /// For example, `var(--highcharts-color-0)` is the first color in the `colors`
+  /// array, `var(--highcharts-color-1)` is the second color, and so on.
+  ///
+  /// The palette only accepts plain color strings in the options. Gradients and
+  /// patterns are only supported in other color settings, such as `series.color`
+  /// or `point.color`, but they can use CSS variables from the palette.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/palette
+
+  HighchartsPaletteOptions? palette;
+
   /// The pane serves as a container for axes and backgrounds for circular
   /// gauges and polar charts.
   ///
@@ -431,15 +481,12 @@ class HighchartsOptions extends HighchartsOptionsBase {
   /// have to cast the series options to specific series types, to get all
   /// possible options for a series.
   ///
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/series
 
   List<HighchartsSeries>? series;
 
-  /// Options for configuring sonification and audio charts. Requires the
-  /// sonification module
-  /// to be loaded.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/sonification
+  /// Highcharts Options Widget.
 
   HighchartsSonificationOptions? sonification;
 
@@ -535,6 +582,7 @@ class HighchartsOptions extends HighchartsOptionsBase {
       this.connectors,
       this.credits,
       this.data,
+      this.dataTable,
       this.defs,
       this.drilldown,
       this.exporting,
@@ -547,6 +595,7 @@ class HighchartsOptions extends HighchartsOptionsBase {
       this.navigation,
       this.navigator,
       this.noData,
+      this.palette,
       this.pane,
       this.plotOptions,
       this.rangeSelector,
@@ -609,6 +658,9 @@ class HighchartsOptions extends HighchartsOptionsBase {
     if (data != null) {
       buffer.writeAll(['"data":', data?.toJSON(), ','], '');
     }
+    if (dataTable != null) {
+      buffer.writeAll(['"dataTable":', dataTable?.toJSON(), ','], '');
+    }
     if (defs != null) {
       buffer.writeAll(['"defs":', defs?.toJSON(), ','], '');
     }
@@ -644,6 +696,9 @@ class HighchartsOptions extends HighchartsOptionsBase {
     }
     if (noData != null) {
       buffer.writeAll(['"noData":', noData?.toJSON(), ','], '');
+    }
+    if (palette != null) {
+      buffer.writeAll(['"palette":', palette?.toJSON(), ','], '');
     }
     if (pane != null) {
       buffer.write('"pane":[');

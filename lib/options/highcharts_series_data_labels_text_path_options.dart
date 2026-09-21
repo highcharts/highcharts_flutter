@@ -36,13 +36,17 @@ import 'highcharts_options_base.dart';
 /// **Note:** Only SVG-based renderer supports this option. Setting
 /// `useHTML` to true will disable this option.
 ///
+/// Text path support is not bundled into `highcharts.js`, and requires the
+/// `modules/textpath.js` file. However, it is included in the script files of
+/// those series types that use it by default.
+///
 /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.textPath
 class HighchartsSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
   /// Presentation attributes for the text path.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.textPath.attributes
 
-  dynamic attributes;
+  String? attributes;
 
   /// Enable or disable `textPath` option for link's or marker's data
   /// labels.

@@ -37,7 +37,12 @@ export 'highcharts_series_states_select_options.dart';
  *
  * */
 
-/// Highcharts Options Widget.
+/// A collection of options for different series states.
+///
+/// In addition to the options documented under each state, any option from
+/// the parent series type can be set, with exception of `data` and `states`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.states
 class HighchartsSeriesStatesOptions extends HighchartsOptionsBase {
   /// Options for the hovered series. These settings override the
   /// normal state options when a series is moused over or touched.
@@ -69,7 +74,9 @@ class HighchartsSeriesStatesOptions extends HighchartsOptionsBase {
 
   HighchartsSeriesStatesSelectOptions? select;
 
-  /// Highcharts Options Widget.
+  /// A collection of options for different series states.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.states
   HighchartsSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

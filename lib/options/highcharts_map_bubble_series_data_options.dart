@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_bubble_series_data_events_options.dart';
 import 'highcharts_map_bubble_series_data_geometry_options.dart';
+import 'highcharts_map_bubble_series_data_states_options.dart';
 
 /* *
  *
@@ -27,6 +28,7 @@ import 'highcharts_map_bubble_series_data_geometry_options.dart';
 
 export 'highcharts_map_bubble_series_data_events_options.dart';
 export 'highcharts_map_bubble_series_data_geometry_options.dart';
+export 'highcharts_map_bubble_series_data_states_options.dart';
 
 /* *
  *
@@ -105,6 +107,10 @@ class HighchartsMapBubbleSeriesDataOptions extends HighchartsOptionsBase {
 
   String? name;
 
+  /// Highcharts Options Widget.
+
+  HighchartsMapBubbleSeriesDataStatesOptions? states;
+
   /// While the `x` and `y` values of the bubble are determined by the
   /// underlying map, the `z` indicates the actual value that gives the
   /// size of the bubble.
@@ -124,6 +130,7 @@ class HighchartsMapBubbleSeriesDataOptions extends HighchartsOptionsBase {
       this.geometry,
       this.id,
       this.name,
+      this.states,
       this.z});
 
   @override
@@ -150,6 +157,9 @@ class HighchartsMapBubbleSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (name != null) {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (z != null) {
       buffer.writeAll(['"z":', z, ','], '');

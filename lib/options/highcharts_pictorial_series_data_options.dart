@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_pictorial_series_data_accessibility_options.dart';
 import 'highcharts_pictorial_series_data_data_labels_options.dart';
 import 'highcharts_pictorial_series_data_events_options.dart';
+import 'highcharts_pictorial_series_data_states_options.dart';
 
 /* *
  *
@@ -29,6 +30,7 @@ import 'highcharts_pictorial_series_data_events_options.dart';
 export 'highcharts_pictorial_series_data_accessibility_options.dart';
 export 'highcharts_pictorial_series_data_data_labels_options.dart';
 export 'highcharts_pictorial_series_data_events_options.dart';
+export 'highcharts_pictorial_series_data_states_options.dart';
 
 /* *
  *
@@ -101,18 +103,12 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? custom;
 
   /// Individual data label for each point. The options are the same as
-  /// the ones for plotOptions.series.dataLabels.
+  /// the ones for plotOptions.series.dataLabels with exception of `zIndex` which is applied
+  /// on the data label's parent group.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.data.dataLabels
 
   List<HighchartsPictorialSeriesDataDataLabelsOptions>? dataLabels;
-
-  /// A description of the point to add to the screen reader information
-  /// about the point.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.data.description
-
-  String? description;
 
   /// The `id` of a series in the drilldown.series array to
   /// use for a drilldown for this point.
@@ -134,9 +130,11 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// The rank for this point's data label in case of collision. If two
+  /// The rank for all this point's data labels in case of collision. If two
   /// data labels are about to overlap, only the one with the highest `labelrank`
   /// will be drawn.
+  ///
+  /// The `labelrank` set on `series.dataLabels` takes precedence over this.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.data.labelrank
 
@@ -161,6 +159,10 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.data.selected
 
   bool? selected;
+
+  /// Highcharts Options Widget.
+
+  HighchartsPictorialSeriesDataStatesOptions? states;
 
   /// The x value of the point.
   ///
@@ -189,7 +191,6 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
       this.colorIndex,
       this.custom,
       this.dataLabels,
-      this.description,
       this.drilldown,
       this.events,
       this.id,
@@ -197,6 +198,7 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
       this.name,
       this.pointWidth,
       this.selected,
+      this.states,
       this.x,
       this.y});
 
@@ -230,9 +232,6 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
-    if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
-    }
     if (drilldown != null) {
       buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], '');
     }
@@ -253,6 +252,9 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
     }
     if (selected != null) {
       buffer.writeAll(['"selected":', selected, ','], '');
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (x != null) {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');

@@ -16,12 +16,29 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_navigation_bindings_ellipse_annotation_options.dart';
+import 'highcharts_navigation_bindings_vertical_label_options.dart';
+import 'highcharts_navigation_bindings_arrow_infinity_line_options.dart';
+import 'highcharts_navigation_bindings_arrow_ray_options.dart';
+import 'highcharts_navigation_bindings_arrow_segment_options.dart';
+import 'highcharts_navigation_bindings_crooked3options.dart';
+import 'highcharts_navigation_bindings_crooked5options.dart';
+import 'highcharts_navigation_bindings_elliott3options.dart';
+import 'highcharts_navigation_bindings_elliott5options.dart';
 import 'highcharts_navigation_bindings_fibonacci_options.dart';
-import 'highcharts_navigation_bindings_full_screen_options.dart';
-import 'highcharts_navigation_bindings_save_chart_options.dart';
-import 'highcharts_navigation_bindings_series_type_hlc_options.dart';
+import 'highcharts_navigation_bindings_fibonacci_time_zones_options.dart';
+import 'highcharts_navigation_bindings_horizontal_line_options.dart';
+import 'highcharts_navigation_bindings_infinity_line_options.dart';
+import 'highcharts_navigation_bindings_measure_xoptions.dart';
+import 'highcharts_navigation_bindings_measure_xy_options.dart';
+import 'highcharts_navigation_bindings_measure_yoptions.dart';
+import 'highcharts_navigation_bindings_parallel_channel_options.dart';
+import 'highcharts_navigation_bindings_pitchfork_options.dart';
+import 'highcharts_navigation_bindings_ray_options.dart';
+import 'highcharts_navigation_bindings_segment_options.dart';
 import 'highcharts_navigation_bindings_time_cycles_options.dart';
+import 'highcharts_navigation_bindings_vertical_arrow_options.dart';
+import 'highcharts_navigation_bindings_vertical_counter_options.dart';
+import 'highcharts_navigation_bindings_vertical_line_options.dart';
 
 /* *
  *
@@ -29,12 +46,29 @@ import 'highcharts_navigation_bindings_time_cycles_options.dart';
  *
  * */
 
-export 'highcharts_navigation_bindings_ellipse_annotation_options.dart';
+export 'highcharts_navigation_bindings_vertical_label_options.dart';
+export 'highcharts_navigation_bindings_arrow_infinity_line_options.dart';
+export 'highcharts_navigation_bindings_arrow_ray_options.dart';
+export 'highcharts_navigation_bindings_arrow_segment_options.dart';
+export 'highcharts_navigation_bindings_crooked3options.dart';
+export 'highcharts_navigation_bindings_crooked5options.dart';
+export 'highcharts_navigation_bindings_elliott3options.dart';
+export 'highcharts_navigation_bindings_elliott5options.dart';
 export 'highcharts_navigation_bindings_fibonacci_options.dart';
-export 'highcharts_navigation_bindings_full_screen_options.dart';
-export 'highcharts_navigation_bindings_save_chart_options.dart';
-export 'highcharts_navigation_bindings_series_type_hlc_options.dart';
+export 'highcharts_navigation_bindings_fibonacci_time_zones_options.dart';
+export 'highcharts_navigation_bindings_horizontal_line_options.dart';
+export 'highcharts_navigation_bindings_infinity_line_options.dart';
+export 'highcharts_navigation_bindings_measure_xoptions.dart';
+export 'highcharts_navigation_bindings_measure_xy_options.dart';
+export 'highcharts_navigation_bindings_measure_yoptions.dart';
+export 'highcharts_navigation_bindings_parallel_channel_options.dart';
+export 'highcharts_navigation_bindings_pitchfork_options.dart';
+export 'highcharts_navigation_bindings_ray_options.dart';
+export 'highcharts_navigation_bindings_segment_options.dart';
 export 'highcharts_navigation_bindings_time_cycles_options.dart';
+export 'highcharts_navigation_bindings_vertical_arrow_options.dart';
+export 'highcharts_navigation_bindings_vertical_counter_options.dart';
+export 'highcharts_navigation_bindings_vertical_line_options.dart';
 
 /* *
  *
@@ -42,84 +76,46 @@ export 'highcharts_navigation_bindings_time_cycles_options.dart';
  *
  * */
 
-/// Bindings definitions for custom HTML buttons. Each binding implements
-/// simple event-driven interface:
-///
-/// - `className`: classname used to bind event to
-///
-/// - `init`: initial event, fired on button click
-///
-/// - `start`: fired on first click on a chart
-///
-/// - `steps`: array of sequential events fired one after another on each
-///   of users clicks
-///
-/// - `end`: last event to be called after last step event
-///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.bindings
+/// Highcharts Options Widget.
 class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
-  /// A circle annotation bindings. Includes `start` and one event in
-  /// `steps` array.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.circleAnnotation
+  /// Highcharts Options Widget.
 
-  Map<String, dynamic>? circleAnnotation;
-
-  /// A ellipse annotation bindings. Includes `start` and two events in
-  /// `steps` array. First updates the second point, responsible for a
-  /// rx width, and second updates the ry width.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.ellipseAnnotation
-
-  HighchartsNavigationBindingsEllipseAnnotationOptions? ellipseAnnotation;
-
-  /// A label annotation bindings. Includes `start` event only.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.labelAnnotation
-
-  Map<String, dynamic>? labelAnnotation;
-
-  /// A rectangle annotation bindings. Includes `start` and one event
-  /// in `steps` array.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.rectangleAnnotation
-
-  Map<String, dynamic>? rectangleAnnotation;
+  HighchartsNavigationBindingsVerticalLabelOptions? verticalLabel;
 
   /// A line with arrow annotation. Includes `start` and one event in `steps`
   /// array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.arrowInfinityLine
 
-  Map<String, dynamic>? arrowInfinityLine;
+  HighchartsNavigationBindingsArrowInfinityLineOptions? arrowInfinityLine;
 
   /// A ray with an arrow annotation bindings. Includes `start` and one event
   /// in `steps` array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.arrowRay
 
-  Map<String, dynamic>? arrowRay;
+  HighchartsNavigationBindingsArrowRayOptions? arrowRay;
 
   /// A segment with an arrow annotation bindings. Includes `start` and one
   /// event in `steps` array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.arrowSegment
 
-  Map<String, dynamic>? arrowSegment;
+  HighchartsNavigationBindingsArrowSegmentOptions? arrowSegment;
 
   /// Crooked line (three points) annotation bindings. Includes `start` and two
   /// events in `steps` (for second and third points in crooked line) array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.crooked3
 
-  Map<String, dynamic>? crooked3;
+  HighchartsNavigationBindingsCrooked3Options? crooked3;
 
   /// Crooked line (five points) annotation bindings. Includes `start` and four
   /// events in `steps` (for all consequent points in crooked line) array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.crooked5
 
-  Map<String, dynamic>? crooked5;
+  HighchartsNavigationBindingsCrooked5Options? crooked5;
 
   /// Hides/shows two price indicators:
   /// - last price in the dataset
@@ -134,14 +130,14 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.elliott3
 
-  Map<String, dynamic>? elliott3;
+  HighchartsNavigationBindingsElliott3Options? elliott3;
 
   /// Elliott wave (five points) annotation bindings. Includes `start` and four
   /// event in `steps` (for all consequent points in Elliott wave) array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.elliott5
 
-  Map<String, dynamic>? elliott5;
+  HighchartsNavigationBindingsElliott5Options? elliott5;
 
   /// A fibonacci annotation bindings. Includes `start` and two events in
   /// `steps` array (updates second point, then height).
@@ -155,7 +151,7 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.fibonacciTimeZones
 
-  Map<String, dynamic>? fibonacciTimeZones;
+  HighchartsNavigationBindingsFibonacciTimeZonesOptions? fibonacciTimeZones;
 
   /// A flag series bindings. Includes `start` event. On click, finds the
   /// closest point and marks it with a flag with `'circlepin'` shape.
@@ -193,13 +189,13 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.fullScreen
 
-  HighchartsNavigationBindingsFullScreenOptions? fullScreen;
+  Map<String, dynamic>? fullScreen;
 
   /// A horizontal line annotation. Includes `start` event.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.horizontalLine
 
-  Map<String, dynamic>? horizontalLine;
+  HighchartsNavigationBindingsHorizontalLineOptions? horizontalLine;
 
   /// Indicators bindings. Includes `init` event to show a popup.
   ///
@@ -216,49 +212,49 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.infinityLine
 
-  Map<String, dynamic>? infinityLine;
+  HighchartsNavigationBindingsInfinityLineOptions? infinityLine;
 
   /// A measure (x-dimension) annotation bindings. Includes `start` and one
   /// event in `steps` array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.measureX
 
-  Map<String, dynamic>? measureX;
+  HighchartsNavigationBindingsMeasureXOptions? measureX;
 
   /// A measure (xy-dimension) annotation bindings. Includes `start` and one
   /// event in `steps` array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.measureXY
 
-  Map<String, dynamic>? measureXY;
+  HighchartsNavigationBindingsMeasureXYOptions? measureXY;
 
   /// A measure (y-dimension) annotation bindings. Includes `start` and one
   /// event in `steps` array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.measureY
 
-  Map<String, dynamic>? measureY;
+  HighchartsNavigationBindingsMeasureYOptions? measureY;
 
   /// A parallel channel (tunnel) annotation bindings. Includes `start` and
   /// two events in `steps` array (updates second point, then height).
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.parallelChannel
 
-  Map<String, dynamic>? parallelChannel;
+  HighchartsNavigationBindingsParallelChannelOptions? parallelChannel;
 
   /// An Andrew's pitchfork annotation bindings. Includes `start` and two
   /// events in `steps` array (sets second and third control points).
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.pitchfork
 
-  Map<String, dynamic>? pitchfork;
+  HighchartsNavigationBindingsPitchforkOptions? pitchfork;
 
   /// A ray annotation bindings. Includes `start` and one event in `steps`
   /// array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.ray
 
-  Map<String, dynamic>? ray;
+  HighchartsNavigationBindingsRayOptions? ray;
 
   /// Save a chart in localStorage under `highcharts-chart` key.
   /// Stored items:
@@ -268,14 +264,14 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.saveChart
 
-  HighchartsNavigationBindingsSaveChartOptions? saveChart;
+  Map<String, dynamic>? saveChart;
 
   /// A segment annotation bindings. Includes `start` and one event in `steps`
   /// array.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.segment
 
-  Map<String, dynamic>? segment;
+  HighchartsNavigationBindingsSegmentOptions? segment;
 
   /// Changes main series to `'candlestick'` type.
   ///
@@ -287,7 +283,7 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.seriesTypeHLC
 
-  HighchartsNavigationBindingsSeriesTypeHLCOptions? seriesTypeHLC;
+  Map<String, dynamic>? seriesTypeHLC;
 
   /// Changes main series to `'heikinashi'` type.
   ///
@@ -329,13 +325,13 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
 
   /// A vertical arrow annotation bindings. Includes `start` event. On click,
   /// finds the closest point and marks it with an arrow.
-  /// `#06b535` is the color of the arrow when
-  /// pointing from above and `#f21313`
+  /// `var(--highcharts-positive-color)` is the color of the arrow when
+  /// pointing from above and `var(--highcharts-negative-color)`
   /// when pointing from below the point.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalArrow
 
-  Map<String, dynamic>? verticalArrow;
+  HighchartsNavigationBindingsVerticalArrowOptions? verticalArrow;
 
   /// A vertical counter annotation bindings. Includes `start` event. On click,
   /// finds the closest point and marks it with a numeric annotation -
@@ -343,13 +339,13 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalCounter
 
-  Map<String, dynamic>? verticalCounter;
+  HighchartsNavigationBindingsVerticalCounterOptions? verticalCounter;
 
   /// A vertical line annotation. Includes `start` event.
   ///
   /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine
 
-  Map<String, dynamic>? verticalLine;
+  HighchartsNavigationBindingsVerticalLineOptions? verticalLine;
 
   /// Enables zooming in xAxis on a chart. Includes `start` event which
   /// changes chart.zoomType.
@@ -372,14 +368,9 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
 
   Map<String, dynamic>? zoomY;
 
-  /// Bindings definitions for custom HTML buttons. Each binding implements simple event-driven interface:
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings
+  /// Highcharts Options Widget.
   HighchartsNavigationBindingsOptions(
-      {this.circleAnnotation,
-      this.ellipseAnnotation,
-      this.labelAnnotation,
-      this.rectangleAnnotation,
+      {this.verticalLabel,
       this.arrowInfinityLine,
       this.arrowRay,
       this.arrowSegment,
@@ -425,65 +416,24 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-    if (circleAnnotation != null) {
-      buffer.write('"circleAnnotation":{');
-      for (var item in circleAnnotation!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
-    }
-    if (ellipseAnnotation != null) {
-      buffer.writeAll(
-          ['"ellipseAnnotation":', ellipseAnnotation?.toJSON(), ','], '');
-    }
-    if (labelAnnotation != null) {
-      buffer.write('"labelAnnotation":{');
-      for (var item in labelAnnotation!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
-    }
-    if (rectangleAnnotation != null) {
-      buffer.write('"rectangleAnnotation":{');
-      for (var item in rectangleAnnotation!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+    if (verticalLabel != null) {
+      buffer.writeAll(['"verticalLabel":', verticalLabel?.toJSON(), ','], '');
     }
     if (arrowInfinityLine != null) {
-      buffer.write('"arrowInfinityLine":{');
-      for (var item in arrowInfinityLine!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(
+          ['"arrowInfinityLine":', arrowInfinityLine?.toJSON(), ','], '');
     }
     if (arrowRay != null) {
-      buffer.write('"arrowRay":{');
-      for (var item in arrowRay!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"arrowRay":', arrowRay?.toJSON(), ','], '');
     }
     if (arrowSegment != null) {
-      buffer.write('"arrowSegment":{');
-      for (var item in arrowSegment!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"arrowSegment":', arrowSegment?.toJSON(), ','], '');
     }
     if (crooked3 != null) {
-      buffer.write('"crooked3":{');
-      for (var item in crooked3!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"crooked3":', crooked3?.toJSON(), ','], '');
     }
     if (crooked5 != null) {
-      buffer.write('"crooked5":{');
-      for (var item in crooked5!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"crooked5":', crooked5?.toJSON(), ','], '');
     }
     if (currentPriceIndicator != null) {
       buffer.write('"currentPriceIndicator":{');
@@ -493,28 +443,17 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (elliott3 != null) {
-      buffer.write('"elliott3":{');
-      for (var item in elliott3!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"elliott3":', elliott3?.toJSON(), ','], '');
     }
     if (elliott5 != null) {
-      buffer.write('"elliott5":{');
-      for (var item in elliott5!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"elliott5":', elliott5?.toJSON(), ','], '');
     }
     if (fibonacci != null) {
       buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ','], '');
     }
     if (fibonacciTimeZones != null) {
-      buffer.write('"fibonacciTimeZones":{');
-      for (var item in fibonacciTimeZones!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(
+          ['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
     }
     if (flagCirclepin != null) {
       buffer.write('"flagCirclepin":{');
@@ -545,14 +484,14 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (fullScreen != null) {
-      buffer.writeAll(['"fullScreen":', fullScreen?.toJSON(), ','], '');
-    }
-    if (horizontalLine != null) {
-      buffer.write('"horizontalLine":{');
-      for (var item in horizontalLine!.entries) {
+      buffer.write('"fullScreen":{');
+      for (var item in fullScreen!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
       buffer.write('},');
+    }
+    if (horizontalLine != null) {
+      buffer.writeAll(['"horizontalLine":', horizontalLine?.toJSON(), ','], '');
     }
     if (indicators != null) {
       buffer.write('"indicators":{');
@@ -562,63 +501,36 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (infinityLine != null) {
-      buffer.write('"infinityLine":{');
-      for (var item in infinityLine!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"infinityLine":', infinityLine?.toJSON(), ','], '');
     }
     if (measureX != null) {
-      buffer.write('"measureX":{');
-      for (var item in measureX!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"measureX":', measureX?.toJSON(), ','], '');
     }
     if (measureXY != null) {
-      buffer.write('"measureXY":{');
-      for (var item in measureXY!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"measureXY":', measureXY?.toJSON(), ','], '');
     }
     if (measureY != null) {
-      buffer.write('"measureY":{');
-      for (var item in measureY!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"measureY":', measureY?.toJSON(), ','], '');
     }
     if (parallelChannel != null) {
-      buffer.write('"parallelChannel":{');
-      for (var item in parallelChannel!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer
+          .writeAll(['"parallelChannel":', parallelChannel?.toJSON(), ','], '');
     }
     if (pitchfork != null) {
-      buffer.write('"pitchfork":{');
-      for (var item in pitchfork!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"pitchfork":', pitchfork?.toJSON(), ','], '');
     }
     if (ray != null) {
-      buffer.write('"ray":{');
-      for (var item in ray!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"ray":', ray?.toJSON(), ','], '');
     }
     if (saveChart != null) {
-      buffer.writeAll(['"saveChart":', saveChart?.toJSON(), ','], '');
-    }
-    if (segment != null) {
-      buffer.write('"segment":{');
-      for (var item in segment!.entries) {
+      buffer.write('"saveChart":{');
+      for (var item in saveChart!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
       buffer.write('},');
+    }
+    if (segment != null) {
+      buffer.writeAll(['"segment":', segment?.toJSON(), ','], '');
     }
     if (seriesTypeCandlestick != null) {
       buffer.write('"seriesTypeCandlestick":{');
@@ -628,7 +540,11 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (seriesTypeHLC != null) {
-      buffer.writeAll(['"seriesTypeHLC":', seriesTypeHLC?.toJSON(), ','], '');
+      buffer.write('"seriesTypeHLC":{');
+      for (var item in seriesTypeHLC!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
     }
     if (seriesTypeHeikinAshi != null) {
       buffer.write('"seriesTypeHeikinAshi":{');
@@ -669,25 +585,14 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (verticalArrow != null) {
-      buffer.write('"verticalArrow":{');
-      for (var item in verticalArrow!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"verticalArrow":', verticalArrow?.toJSON(), ','], '');
     }
     if (verticalCounter != null) {
-      buffer.write('"verticalCounter":{');
-      for (var item in verticalCounter!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer
+          .writeAll(['"verticalCounter":', verticalCounter?.toJSON(), ','], '');
     }
     if (verticalLine != null) {
-      buffer.write('"verticalLine":{');
-      for (var item in verticalLine!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"verticalLine":', verticalLine?.toJSON(), ','], '');
     }
     if (zoomX != null) {
       buffer.write('"zoomX":{');

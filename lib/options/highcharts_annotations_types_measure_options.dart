@@ -35,7 +35,7 @@ export 'highcharts_annotations_types_measure_type_options.dart';
 
 /// Options for the measure annotation type.
 ///
-/// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.measure
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.measure
 class HighchartsAnnotationsTypesMeasureOptions extends HighchartsOptionsBase {
   /// Highcharts Options Widget.
 
@@ -47,7 +47,7 @@ class HighchartsAnnotationsTypesMeasureOptions extends HighchartsOptionsBase {
 
   /// Options for the measure annotation type.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types.measure
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.verticalLine.annotationsOptions.types.measure
   HighchartsAnnotationsTypesMeasureOptions(
       {this.controlPointOptions, this.typeOptions});
 

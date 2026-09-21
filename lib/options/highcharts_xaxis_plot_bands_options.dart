@@ -53,7 +53,7 @@ class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotBands.borderRadius
 
-  dynamic borderRadius;
+  Map<String, dynamic>? borderRadius;
 
   /// Border width for the plot band. Also requires `borderColor` to be set.
   ///
@@ -142,7 +142,11 @@ class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], '');
+      buffer.write('"borderRadius":{');
+      for (var item in borderRadius!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');

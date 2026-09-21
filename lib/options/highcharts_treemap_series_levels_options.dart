@@ -88,6 +88,13 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
 
   HighchartsTreemapSeriesLevelsDataLabelsOptions? dataLabels;
 
+  /// Can set the group padding on a specific level. Overrides the series
+  /// option of the same name.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.levels.groupPadding
+
+  double? groupPadding;
+
   /// Can set the layoutAlgorithm option on a specific level.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.levels.layoutAlgorithm
@@ -107,6 +114,14 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
 
   double? level;
 
+  /// Whether the `level` number is absolute, or relative to the currently
+  /// visible root. Overrides the series option of the same name for this
+  /// level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.levels.levelIsConstant
+
+  bool? levelIsConstant;
+
   /// Set options on specific levels. Takes precedence over series options, but not point options.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.levels
@@ -117,9 +132,11 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
       this.color,
       this.colorVariation,
       this.dataLabels,
+      this.groupPadding,
       this.layoutAlgorithm,
       this.layoutStartingDirection,
-      this.level});
+      this.level,
+      this.levelIsConstant});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -144,6 +161,9 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
+    if (groupPadding != null) {
+      buffer.writeAll(['"groupPadding":', groupPadding, ','], '');
+    }
     if (layoutAlgorithm != null) {
       buffer.writeAll(
           ['"layoutAlgorithm":', jsonEncode(layoutAlgorithm), ','], '');
@@ -157,6 +177,9 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
     }
     if (level != null) {
       buffer.writeAll(['"level":', level, ','], '');
+    }
+    if (levelIsConstant != null) {
+      buffer.writeAll(['"levelIsConstant":', levelIsConstant, ','], '');
     }
   }
 }

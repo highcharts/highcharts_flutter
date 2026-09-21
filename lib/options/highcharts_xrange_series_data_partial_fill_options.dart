@@ -48,7 +48,7 @@ class HighchartsXRangeSeriesDataPartialFillOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.partialFill.fill
 
-  Map<String, dynamic>? fill;
+  String? fill;
 
   /// A partial fill for each point, typically used to visualize how much of a task is performed. The partial fill object can be set either on series or point level.
   ///
@@ -63,11 +63,7 @@ class HighchartsXRangeSeriesDataPartialFillOptions
       buffer.writeAll(['"amount":', amount, ','], '');
     }
     if (fill != null) {
-      buffer.write('"fill":{');
-      for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
   }
 }

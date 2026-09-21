@@ -42,20 +42,20 @@ class HighchartsAnnotationsTypesTunnelTypeOptions
     extends HighchartsOptionsBase {
   /// Background options.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.background
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.background
 
   HighchartsAnnotationsTypesTunnelTypeBackgroundOptions? background;
 
   /// The height of the annotation in terms of yAxis.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.height
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.height
 
   double? height;
 
   /// Options for the control point which controls
   /// the annotation's height.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.heightControlPoint
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.heightControlPoint
 
   HighchartsAnnotationsTypesTunnelTypeHeightControlPointOptions?
       heightControlPoint;
@@ -68,19 +68,19 @@ class HighchartsAnnotationsTypesTunnelTypeOptions
 
   List<HighchartsAnnotationsTypesCrookedLineTypePointsOptions>? points;
 
-  /// This number defines which xAxis the point is connected to.
+  /// This option defines which `xAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `xAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.xAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.xAxis
 
   double? xAxis;
 
-  /// This number defines which yAxis the point is connected to.
+  /// This option defines which `yAxis` the point is connected to.
   /// It refers to either the axis id or the index of the axis
-  /// in the xAxis array.
+  /// in the `yAxis` array.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.tunnel.typeOptions.yAxis
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.bindings.verticalLine.annotationsOptions.types.tunnel.typeOptions.yAxis
 
   double? yAxis;
 

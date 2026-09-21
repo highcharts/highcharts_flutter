@@ -43,12 +43,6 @@ export 'highcharts_connectors_start_marker_options.dart';
 ///
 /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.dependency
 class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
-  /// The ID of the point to connect to.
-  ///
-  /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.dependency.to
-
-  String? to;
-
   /// Set the default dash style for this chart's connecting lines.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.gantt.data.dependency.dashStyle
@@ -97,6 +91,12 @@ class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
 
   HighchartsConnectorsStartMarkerOptions? startMarker;
 
+  /// The ID of the point to connect to.
+  ///
+  /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.dependency.to
+
+  String? to;
+
   /// Set the default pathfinder algorithm to use for this chart. It is
   /// possible to define your own algorithms by adding them to the
   /// Highcharts.Pathfinder.prototype.algorithms object before the chart
@@ -128,23 +128,20 @@ class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/gantt/series.gantt.data.dependency
   HighchartsGanttSeriesDataDependencyOptions(
-      {this.to,
-      this.dashStyle,
+      {this.dashStyle,
       this.endMarker,
       this.lineColor,
       this.lineWidth,
       this.marker,
       this.radius,
       this.startMarker,
+      this.to,
       this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-    if (to != null) {
-      buffer.writeAll(['"to":', jsonEncode(to), ','], '');
-    }
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
     }
@@ -165,6 +162,9 @@ class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
     }
     if (startMarker != null) {
       buffer.writeAll(['"startMarker":', startMarker?.toJSON(), ','], '');
+    }
+    if (to != null) {
+      buffer.writeAll(['"to":', jsonEncode(to), ','], '');
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');

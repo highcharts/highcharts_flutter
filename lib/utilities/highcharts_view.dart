@@ -30,6 +30,7 @@ class HighchartsView extends StatefulWidget {
     this.head,
     this.javaScriptModules = const [],
     this.keepAlive = true,
+    this.scrollParentOnWheel = true,
     this.onError,
     this.onLoaded,
     this.onLoading,
@@ -51,6 +52,10 @@ class HighchartsView extends StatefulWidget {
   final List<String> javaScriptModules;
 
   final bool keepAlive;
+
+  /// Whether to pass mouse-wheel/trackpad scroll deltas to the parent
+  /// [Scrollable] instead of letting the embedded WebView consume them.
+  final bool scrollParentOnWheel;
 
   final Widget Function(HighchartsView, Object?)? onError;
 
@@ -119,6 +124,39 @@ class _HighchartsViewState extends State<HighchartsView>
   bool _prepared = false;
 
   late _HighchartsViewStateBridge _stateBridge;
+
+  void _handleScrollDelta(double deltaX, double deltaY) {
+    if (!widget.scrollParentOnWheel) {
+      return;
+    }
+
+    final scrollable = Scrollable.maybeOf(context);
+    if (scrollable == null) {
+      return;
+    }
+
+    final position = scrollable.position;
+    final axisDirection = scrollable.widget.axisDirection;
+    final delta = switch (axisDirection) {
+      AxisDirection.up => -deltaY,
+      AxisDirection.down => deltaY,
+      AxisDirection.left => -deltaX,
+      AxisDirection.right => deltaX,
+    };
+
+    if (delta == 0) {
+      return;
+    }
+
+    final target = (position.pixels + delta)
+        .clamp(position.minScrollExtent, position.maxScrollExtent);
+
+    if (target == position.pixels) {
+      return;
+    }
+
+    position.jumpTo(target.toDouble());
+  }
 
   @override
   bool get wantKeepAlive {
@@ -234,6 +272,8 @@ class _HighchartsViewState extends State<HighchartsView>
   @override
   void dispose() {
     _disposed = true;
+    _stateBridge.onScrollDelta = null;
+    widget._stateBridge.onScrollDelta = null;
     widget._stateBridge.dispose();
     super.dispose();
   }
@@ -242,6 +282,7 @@ class _HighchartsViewState extends State<HighchartsView>
   void didUpdateWidget(HighchartsView oldWidget) {
     super.didUpdateWidget(oldWidget);
     widget._stateBridge.transfer(_stateBridge);
+    widget._stateBridge.onScrollDelta = _handleScrollDelta;
   }
 
   @override
@@ -249,6 +290,7 @@ class _HighchartsViewState extends State<HighchartsView>
     super.initState();
     _disposed = false;
     _stateBridge = widget._stateBridge;
+    _stateBridge.onScrollDelta = _handleScrollDelta;
   }
 }
 
@@ -279,6 +321,8 @@ class _HighchartsViewStateBridge {
   }
 
   HighchartsView widget;
+
+  void Function(double deltaX, double deltaY)? onScrollDelta;
 
   void dispose() {
     this._webView = null;
@@ -332,6 +376,19 @@ class _HighchartsViewStateBridge {
           if (callbackKey == 'highcharts_flutter.chart') {
             if (widget.onLoaded != null) {
               widget.onLoaded!(widget);
+            }
+            return;
+          }
+
+          if (callbackKey == 'highcharts_flutter.scroll') {
+            if (onScrollDelta != null) {
+              final deltaX = data.isNotEmpty && data[0] is num
+                  ? (data[0] as num).toDouble()
+                  : 0.0;
+              final deltaY = data.length > 1 && data[1] is num
+                  ? (data[1] as num).toDouble()
+                  : 0.0;
+              onScrollDelta!(deltaX, deltaY);
             }
             return;
           }

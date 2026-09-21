@@ -104,7 +104,7 @@ class HighchartsNavigatorOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.maskFill
 
-  Map<String, dynamic>? maskFill;
+  String? maskFill;
 
   /// Whether the mask should be inside the range marking the zoomed
   /// range, or outside. In Highcharts Stock 1.x it was always `false`.
@@ -216,11 +216,7 @@ class HighchartsNavigatorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"margin":', margin, ','], '');
     }
     if (maskFill != null) {
-      buffer.write('"maskFill":{');
-      for (var item in maskFill!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
-      }
-      buffer.write('},');
+      buffer.writeAll(['"maskFill":', jsonEncode(maskFill), ','], '');
     }
     if (maskInside != null) {
       buffer.writeAll(['"maskInside":', maskInside, ','], '');
